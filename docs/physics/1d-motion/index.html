@@ -58,7 +58,6 @@
   --toc-font: "Dancing Script", cursive;
   --content-font: "Open Sans", sans-serif;
   --monospace-font: "Inconsolata", monospace;
-  --force-single-column: 0;
 }
 
 /* UNIVERSAL BOX SIZING WITH INHERITANCE */
@@ -106,6 +105,11 @@ html, body {
   shape-rendering: geometricPrecision;
   image-rendering: optimizeQuality;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
 }
 
 header#page-header {
@@ -399,7 +403,7 @@ button#set-single-col-to-off-btn {
   display: flex;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   #site-settings-wrapper {
     visibility: hidden;
   }
@@ -737,17 +741,17 @@ main > hr {
     column-count: 2;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="4"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="3"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="2"] {
     column-count: 1;
   }
@@ -907,37 +911,37 @@ main > hr {
 
 @media (max-width: 1200px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="2"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 body {
@@ -990,332 +994,332 @@ function setForceSingleColumnToOn() {
     updateColumns();
 }
 
-</script></head><body><header id="page-header"><div class="site-header-row" id="site-title-wrapper" data-col="2"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav id="site-nav-wrapper" class="site-header-row two-col"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li top-level="true" data-source="local" data-level="h1"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li top-level="true" data-source="local" data-level="h1"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#conventions">Conventions</a></li><li top-level="false" data-source="local" data-level="h5"><a href="/all-school-notes/physics/1d-motion/index.html#graphicalrepresentation">Graphical Representation</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#standardequations">Standard Equations</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#summary">Summary</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#basics">Basics</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#constantvelocity">Constant Velocity</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#uniformacceleration">Uniform acceleration</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#miscellaneous">Miscellaneous</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#derivingdisplacementformulas">Deriving Displacement Formulas</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectmoveswithconstantvelocity">Displacement when object moves with constant velocity</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#deriving">Deriving <span data-math-target="ID26403218517884356" data-math-node="inline" data-cmd="inline-math"></span></a></li><li data-source="local" data-level="h3" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectacceleratesfromrest">Displacement when object accelerates from rest</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#deriving1">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID9141616382577021861"></span></a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectaccelerateswithinitialvelocity">Displacement when object accelerates with initial velocity</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/1d-motion/index.html#deriving2">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID4728455207954924387"></span></a></li><li data-level="h1" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#derivingtheotherkinematicformulas">Deriving The Other Kinematic Formulas</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#deriving3">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID155520666002558440"></span></a></li><li data-source="local" top-level="false" data-level="h3"><a href="/all-school-notes/physics/1d-motion/index.html#deriving4">Deriving <span data-math-node="inline" data-math-target="ID5172867013378591136" data-cmd="inline-math"></span></a></li></ul></div></nav><div id="site-settings-wrapper"><button onclick="setForceSingleColumnToOff()" id="set-single-col-to-off-btn" class="pill"><span>Force Single Column</span><span>On</span></button><button class="pill" onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn"><span>Force Single Column</span><span>Off</span></button></div></header><main>
-<h1 top-level="" id="kinematicequationsin1d"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></h1><div boxed="" data-cmd="grid" data-col="1">
+</script></head><body><header id="page-header"><div class="site-header-row" data-col="2" id="site-title-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav id="site-nav-wrapper" class="site-header-row two-col"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></li></ul><p id="toc-list-info" class="toc-info-banner">Table Of Contents</p><ul id="toc-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#conventions">Conventions</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#graphicalrepresentation">Graphical Representation</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#standardequations">Standard Equations</a></li><li data-level="h2" data-source="local" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#summary">Summary</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#basics">Basics</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#constantvelocity">Constant Velocity</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#uniformacceleration">Uniform acceleration</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/1d-motion/index.html#miscellaneous">Miscellaneous</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#derivingdisplacementformulas">Deriving Displacement Formulas</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectmoveswithconstantvelocity">Displacement when object moves with constant velocity</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#deriving">Deriving <span data-math-node="inline" data-math-target="ID6835509509180827799" data-cmd="inline-math"></span></a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectacceleratesfromrest">Displacement when object accelerates from rest</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#deriving1">Deriving <span data-math-target="ID3014588635738129773" data-math-node="inline" data-cmd="inline-math"></span></a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectaccelerateswithinitialvelocity">Displacement when object accelerates with initial velocity</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#deriving2">Deriving <span data-math-target="ID12538620049816308663" data-cmd="inline-math" data-math-node="inline"></span></a></li><li data-source="local" data-level="h1" top-level="false"><a href="/all-school-notes/physics/1d-motion/index.html#derivingtheotherkinematicformulas">Deriving The Other Kinematic Formulas</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#deriving3">Deriving <span data-cmd="inline-math" data-math-target="ID13332595222405960698" data-math-node="inline"></span></a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/physics/1d-motion/index.html#deriving4">Deriving <span data-math-node="inline" data-math-target="ID5302579875779678762" data-cmd="inline-math"></span></a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" class="pill" onclick="setForceSingleColumnToOff()"><span>Force Single Column</span><span>On</span></button><button onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main>
+<h1 top-level="" id="kinematicequationsin1d"><a href="/all-school-notes/physics/1d-motion/index.html#kinematicequationsin1d">Kinematic Equations in 1D</a></h1><div data-col="1" boxed="" data-cmd="grid">
    <section data-cmd="note">
-      <div data-col="2" data-cmd="grid">
+      <div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <h2 id="conventions"><a href="/all-school-notes/physics/1d-motion/index.html#conventions">Conventions</a></h2><div data-math-node="block" id="ID5118227074897585652" data-cmd="equation"></div></section><section data-cmd="note">
-            <h5 id="graphicalrepresentation"><a href="/all-school-notes/physics/1d-motion/index.html#graphicalrepresentation">Graphical Representation</a></h5><img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/4.svg"></img></section></div></section></div><div data-cmd="grid" boxed="" data-col="1">
+            <h2 id="conventions"><a href="/all-school-notes/physics/1d-motion/index.html#conventions">Conventions</a></h2><div id="ID14573341922246143615" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+            <h5 id="graphicalrepresentation"><a href="/all-school-notes/physics/1d-motion/index.html#graphicalrepresentation">Graphical Representation</a></h5><img src="/all-school-notes/static-assets/assets/images/physics/4.svg" style="max-width: 900px;"></img></section></div></section></div><div boxed="" data-cmd="grid" data-col="1">
    <section data-cmd="note">
       <h2 id="standardequations"><a href="/all-school-notes/physics/1d-motion/index.html#standardequations">Standard Equations</a></h2><div data-cmd="grid" data-col="3">
-         <div id="ID2732109913320806540" data-math-node="block" data-cmd="equation"></div><div data-math-node="block" data-cmd="equation" id="ID5212355570164335560"></div><div data-cmd="equation" data-math-node="block" id="ID9667770564856531147"></div></div><h2 id="summary"><a href="/all-school-notes/physics/1d-motion/index.html#summary">Summary</a></h2><div data-table-wrapper=""><table data-wrapped-table="">
+         <div data-cmd="equation" data-math-node="block" id="ID18291924792019909750"></div><div data-cmd="equation" data-math-node="block" id="ID373854928803671969"></div><div id="ID1626244484830454689" data-cmd="equation" data-math-node="block"></div></div><h2 id="summary"><a href="/all-school-notes/physics/1d-motion/index.html#summary">Summary</a></h2><div data-table-wrapper=""><table data-wrapped-table="">
          <thead>
             <tr>
                <th>Formula</th><th>Missing</th><th>Quantities Present</th></tr></thead><tbody>
             <tr>
-               <th><span id="ID16385632224837884221" data-math-node="inline" data-cmd="inline-math"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID3672165349828015539"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID10510320020555446657"></span><span id="ID7122365952919538655" data-cmd="inline-math" data-math-node="inline"></span><span id="ID17742252368929456277" data-math-node="inline" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID18036321405922594672" data-math-node="inline"></span></span></td></tr><tr>
-               <th><span data-math-node="inline" data-cmd="inline-math" id="ID14208175677130433683"></span></th><td><span id="ID11064531652971823579" data-cmd="inline-math" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" id="ID3624093000743173650" data-math-node="inline"></span><span data-cmd="inline-math" data-math-node="inline" id="ID7234951904656960480"></span><span id="ID17688440917603688578" data-cmd="inline-math" data-math-node="inline"></span><span id="ID13852330803939411081" data-cmd="inline-math" data-math-node="inline"></span></span></td></tr><tr>
-               <th><span data-math-node="inline" data-cmd="inline-math" id="ID9383265104872437959"></span></th><td><span data-math-node="inline" id="ID2877249983307791888" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" data-math-node="inline" id="ID3423650858466896382"></span><span data-math-node="inline" data-cmd="inline-math" id="ID13686681457535943133"></span><span id="ID419992960249586996" data-math-node="inline" data-cmd="inline-math"></span><span id="ID1486395372140450422" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr><tr>
-               <th><span id="ID17729915347435660450" data-math-node="inline" data-cmd="inline-math"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID14148877061628902178"></span></td><td><span style="display:flex;justify-content:space-between;"><span id="ID5857084364952324159" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID13064885263216590719"></span><span data-math-node="inline" data-cmd="inline-math" id="ID14538595025322660049"></span><span data-cmd="inline-math" data-math-node="inline" id="ID823913604306743781"></span></span></td></tr><tr>
-               <th><span id="ID9053663630352436277" data-math-node="inline" data-cmd="inline-math"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID251724619238328530"></span></td><td><span style="display:flex;justify-content:space-between;"><span id="ID1391641947957363590" data-cmd="inline-math" data-math-node="inline"></span><span id="ID2046788291565485806" data-math-node="inline" data-cmd="inline-math"></span><span id="ID7953394263094642560" data-math-node="inline" data-cmd="inline-math"></span><span id="ID13232086337047831400" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr></tbody></table></div></section></div><div data-col="1" boxed="" data-cmd="grid">
+               <th><span id="ID6663406221272663517" data-math-node="inline" data-cmd="inline-math"></span></th><td><span id="ID15291802947098044108" data-cmd="inline-math" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID11655446283857594580"></span><span data-math-node="inline" id="ID8196471794625442509" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID6786426580848474678" data-math-node="inline"></span><span id="ID15148417513205299713" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr><tr>
+               <th><span data-math-node="inline" data-cmd="inline-math" id="ID17533329425809531900"></span></th><td><span data-cmd="inline-math" id="ID465473373660252125" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span id="ID9002068605256532663" data-math-node="inline" data-cmd="inline-math"></span><span id="ID18046714700002082477" data-math-node="inline" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID9481789668046977951" data-math-node="inline"></span><span data-math-node="inline" id="ID9504991444127880414" data-cmd="inline-math"></span></span></td></tr><tr>
+               <th><span id="ID7356364129165454662" data-cmd="inline-math" data-math-node="inline"></span></th><td><span data-math-node="inline" id="ID11693100669405365482" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" data-math-node="inline" id="ID14986179340972892831"></span><span data-math-node="inline" id="ID10193392714937328086" data-cmd="inline-math"></span><span data-math-node="inline" id="ID16901643148346797072" data-cmd="inline-math"></span><span data-cmd="inline-math" data-math-node="inline" id="ID11194117307712500624"></span></span></td></tr><tr>
+               <th><span data-cmd="inline-math" id="ID6060732890322657624" data-math-node="inline"></span></th><td><span id="ID16673514083752936352" data-math-node="inline" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID4201896780865946941"></span><span data-math-node="inline" data-cmd="inline-math" id="ID14768719849539781238"></span><span data-math-node="inline" data-cmd="inline-math" id="ID14352113714996704926"></span><span data-math-node="inline" data-cmd="inline-math" id="ID10660364563508973833"></span></span></td></tr><tr>
+               <th><span data-math-node="inline" id="ID12626329009995202322" data-cmd="inline-math"></span></th><td><span data-cmd="inline-math" data-math-node="inline" id="ID6580037340218896389"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" id="ID13540864789440747797" data-math-node="inline"></span><span data-cmd="inline-math" data-math-node="inline" id="ID5851057457182495079"></span><span data-cmd="inline-math" data-math-node="inline" id="ID17255619914885967754"></span><span data-cmd="inline-math" id="ID2100104372999285628" data-math-node="inline"></span></span></td></tr></tbody></table></div></section></div><div data-col="1" boxed="" data-cmd="grid">
    <section data-cmd="note">
-      <h2 id="basics"><a href="/all-school-notes/physics/1d-motion/index.html#basics">Basics</a></h2><div data-cmd="grid" data-col="3">
+      <h2 id="basics"><a href="/all-school-notes/physics/1d-motion/index.html#basics">Basics</a></h2><div data-col="3" data-cmd="grid">
          <section data-cmd="note">
-            <h4 id="constantvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#constantvelocity">Constant Velocity</a></h4><div data-math-node="block" id="ID5897088402984051530" data-cmd="equation"></div></section><section data-cmd="note">
-            <h4 id="uniformacceleration"><a href="/all-school-notes/physics/1d-motion/index.html#uniformacceleration">Uniform acceleration</a></h4><div id="ID6595491488466417663" data-cmd="equation" data-math-node="block"></div></section><section data-cmd="note">
-            <h2 id="miscellaneous"><a href="/all-school-notes/physics/1d-motion/index.html#miscellaneous">Miscellaneous</a></h2><div id="ID180438609218584562" data-math-node="block" data-cmd="equation"></div></section></div></section></div><h2 id="derivingdisplacementformulas"><a href="/all-school-notes/physics/1d-motion/index.html#derivingdisplacementformulas">Deriving Displacement Formulas</a></h2><div boxed="" data-col="2" data-cmd="grid">
+            <h4 id="constantvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#constantvelocity">Constant Velocity</a></h4><div data-math-node="block" id="ID8235708659476688523" data-cmd="equation"></div></section><section data-cmd="note">
+            <h4 id="uniformacceleration"><a href="/all-school-notes/physics/1d-motion/index.html#uniformacceleration">Uniform acceleration</a></h4><div data-cmd="equation" id="ID407113506894940158" data-math-node="block"></div></section><section data-cmd="note">
+            <h2 id="miscellaneous"><a href="/all-school-notes/physics/1d-motion/index.html#miscellaneous">Miscellaneous</a></h2><div data-math-node="block" id="ID8529489907626954211" data-cmd="equation"></div></section></div></section></div><h2 id="derivingdisplacementformulas"><a href="/all-school-notes/physics/1d-motion/index.html#derivingdisplacementformulas">Deriving Displacement Formulas</a></h2><div data-cmd="grid" data-col="2" boxed="">
    <section data-cmd="note">
-      <h3 id="displacementwhenobjectmoveswithconstantvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectmoveswithconstantvelocity">Displacement when object moves with constant velocity</a></h3><h4 id="deriving"><a href="/all-school-notes/physics/1d-motion/index.html#deriving">Deriving <span data-math-target="ID26403218517884356" data-math-node="inline" data-cmd="inline-math"></span></a></h4><img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/1.svg"></img><div data-cmd="equation" id="ID15809401675432472856" data-math-node="block"></div></section><section data-cmd="note">
-      <h3 id="displacementwhenobjectacceleratesfromrest"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectacceleratesfromrest">Displacement when object accelerates from rest</a></h3><h4 id="deriving1"><a href="/all-school-notes/physics/1d-motion/index.html#deriving1">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID9141616382577021861"></span></a></h4><img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/2.svg"></img><div data-cmd="equation" data-math-node="block" id="ID4966089567642495646"></div></section></div><div data-col="1" boxed="" data-cmd="grid">
+      <h3 id="displacementwhenobjectmoveswithconstantvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectmoveswithconstantvelocity">Displacement when object moves with constant velocity</a></h3><h4 id="deriving"><a href="/all-school-notes/physics/1d-motion/index.html#deriving">Deriving <span data-math-node="inline" data-math-target="ID6835509509180827799" data-cmd="inline-math"></span></a></h4><img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/1.svg"></img><div data-math-node="block" id="ID3976763458077634843" data-cmd="equation"></div></section><section data-cmd="note">
+      <h3 id="displacementwhenobjectacceleratesfromrest"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectacceleratesfromrest">Displacement when object accelerates from rest</a></h3><h4 id="deriving1"><a href="/all-school-notes/physics/1d-motion/index.html#deriving1">Deriving <span data-math-target="ID3014588635738129773" data-math-node="inline" data-cmd="inline-math"></span></a></h4><img src="/all-school-notes/static-assets/assets/images/physics/2.svg" style="max-width: 900px;"></img><div id="ID15335421499721051398" data-math-node="block" data-cmd="equation"></div></section></div><div data-cmd="grid" data-col="1" boxed="">
    <section data-cmd="note">
-      <h3 id="displacementwhenobjectaccelerateswithinitialvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectaccelerateswithinitialvelocity">Displacement when object accelerates with initial velocity</a></h3><h4 id="deriving2"><a href="/all-school-notes/physics/1d-motion/index.html#deriving2">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID4728455207954924387"></span></a></h4><img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/4.svg"></img><div data-math-node="block" data-cmd="equation" id="ID2358943437391579060"></div></section></div><h1 id="derivingtheotherkinematicformulas"><a href="/all-school-notes/physics/1d-motion/index.html#derivingtheotherkinematicformulas">Deriving The Other Kinematic Formulas</a></h1><div data-col="2" boxed="" data-cmd="grid">
+      <h3 id="displacementwhenobjectaccelerateswithinitialvelocity"><a href="/all-school-notes/physics/1d-motion/index.html#displacementwhenobjectaccelerateswithinitialvelocity">Displacement when object accelerates with initial velocity</a></h3><h4 id="deriving2"><a href="/all-school-notes/physics/1d-motion/index.html#deriving2">Deriving <span data-math-target="ID12538620049816308663" data-cmd="inline-math" data-math-node="inline"></span></a></h4><img src="/all-school-notes/static-assets/assets/images/physics/4.svg" style="max-width: 900px;"></img><div id="ID11024221818283645443" data-math-node="block" data-cmd="equation"></div></section></div><h1 id="derivingtheotherkinematicformulas"><a href="/all-school-notes/physics/1d-motion/index.html#derivingtheotherkinematicformulas">Deriving The Other Kinematic Formulas</a></h1><div data-col="2" boxed="" data-cmd="grid">
    <section data-cmd="note">
-      <h2 id="deriving3"><a href="/all-school-notes/physics/1d-motion/index.html#deriving3">Deriving <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID155520666002558440"></span></a></h2><p>Given</p><div id="ID7551846098909122224" data-math-node="block" data-cmd="equation"></div><p>We can rearrange <span data-math-node="inline" id="ID12481873691132058472" data-cmd="inline-math"></span> from equation （1） like so</p><div data-math-node="block" data-cmd="equation" id="ID15837830046119379832"></div><p>Therefore</p><div id="ID7753122571820534930" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
-      <h3 id="deriving4"><a href="/all-school-notes/physics/1d-motion/index.html#deriving4">Deriving <span data-math-node="inline" data-math-target="ID5172867013378591136" data-cmd="inline-math"></span></a></h3><p>Given</p><div data-math-node="block" data-cmd="equation" id="ID7143415959917712546"></div><p><span data-math-node="inline" data-cmd="inline-math" id="ID9960971882413911165"></span> from equation （1） can be rearranged as</p><div id="ID14474775738838646933" data-cmd="equation" data-math-node="block"></div><p><span data-math-node="inline" id="ID9934094303979429095" data-cmd="inline-math"></span> from equation （2） can be rearranged like so</p><div data-cmd="equation" id="ID8924885148037460291" data-math-node="block"></div><p>Using the following equations from above</p><ul>
-         <li><span id="ID1211219635281502476" data-math-node="inline" data-cmd="inline-math"></span> from equation （3）</li><li><span id="ID13044278588819411881" data-math-node="inline" data-cmd="inline-math"></span> from equation （4）</li></ul><div id="ID15502796708068359530" data-math-node="block" data-cmd="equation"></div><p>Rearranging equation （5）</p><div data-math-node="block" id="ID2082732848119582254" data-cmd="equation"></div><p>Rearrange again to obtain the more common form</p><div id="ID16864829522352391150" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+      <h2 id="deriving3"><a href="/all-school-notes/physics/1d-motion/index.html#deriving3">Deriving <span data-cmd="inline-math" data-math-target="ID13332595222405960698" data-math-node="inline"></span></a></h2><p>Given</p><div data-cmd="equation" id="ID9161432999052052607" data-math-node="block"></div><p>We can rearrange <span data-cmd="inline-math" data-math-node="inline" id="ID10669752440700098087"></span> from equation （1） like so</p><div data-math-node="block" id="ID3428319877807234490" data-cmd="equation"></div><p>Therefore</p><div data-math-node="block" id="ID4316655473223941026" data-cmd="equation"></div></section><section data-cmd="note">
+      <h3 id="deriving4"><a href="/all-school-notes/physics/1d-motion/index.html#deriving4">Deriving <span data-math-node="inline" data-math-target="ID5302579875779678762" data-cmd="inline-math"></span></a></h3><p>Given</p><div data-math-node="block" data-cmd="equation" id="ID2523692271409035496"></div><p><span data-math-node="inline" data-cmd="inline-math" id="ID6870171917826341333"></span> from equation （1） can be rearranged as</p><div id="ID940280702904366721" data-math-node="block" data-cmd="equation"></div><p><span id="ID14914093130910757608" data-math-node="inline" data-cmd="inline-math"></span> from equation （2） can be rearranged like so</p><div data-math-node="block" data-cmd="equation" id="ID13374693713625388492"></div><p>Using the following equations from above</p><ul>
+         <li><span data-cmd="inline-math" data-math-node="inline" id="ID15484140480649540077"></span> from equation （3）</li><li><span id="ID7186613183219343595" data-cmd="inline-math" data-math-node="inline"></span> from equation （4）</li></ul><div data-math-node="block" id="ID1729111793653576598" data-cmd="equation"></div><p>Rearranging equation （5）</p><div data-cmd="equation" id="ID13676286066107362094" data-math-node="block"></div><p>Rearrange again to obtain the more common form</p><div data-cmd="equation" id="ID14936800630288124321" data-math-node="block"></div></section><section data-cmd="note">
       <p>TODO</p></section></div></main><script>try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\text{Average velocity}\\\\\n               \\bar{a} &= \\text{Average acceleration}\\\\\n               \\text{Time} = \\Delta{t} &= t_2 - t_1\\\\\n               \\text{Displacement} = \\Delta{x} &= x_2 - x_1\\\\\n               \\Delta{v} &= v_2 - v_1\n            \\end{split}\\end{equation*}", document.getElementById('ID5118227074897585652'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\text{Average velocity}\\\\\n               \\bar{a} &= \\text{Average acceleration}\\\\\n               \\text{Time} = \\Delta{t} &= t_2 - t_1\\\\\n               \\text{Displacement} = \\Delta{x} &= x_2 - x_1\\\\\n               \\Delta{v} &= v_2 - v_1\n            \\end{split}\\end{equation*}", document.getElementById('ID14573341922246143615'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            v_2 &= v_1 + a\\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID2732109913320806540'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            v_2 &= v_1 + a\\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID18291924792019909750'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            (v_2)^2 &= (v_1)^2 + 2a\\Delta{x}\n         \\end{split}\\end{equation*}", document.getElementById('ID5212355570164335560'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            (v_2)^2 &= (v_1)^2 + 2a\\Delta{x}\n         \\end{split}\\end{equation*}", document.getElementById('ID373854928803671969'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{x} &= v_1 \\Delta{t} + \\frac{1}{2}a\\Delta{t^2}\\\\\n                      &= v_2\\Delta{t} - \\frac{1}{2}a\\Delta{t^2}\\\\\n                      &= \\left(\\frac{v_2 + v_1}{2}\\right)\\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID9667770564856531147'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{x} &= v_1 \\Delta{t} + \\frac{1}{2}a\\Delta{t^2}\\\\\n                      &= v_2\\Delta{t} - \\frac{1}{2}a\\Delta{t^2}\\\\\n                      &= \\left(\\frac{v_2 + v_1}{2}\\right)\\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID1626244484830454689'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2 = v_1 + a\\Delta{t}", document.getElementById('ID16385632224837884221'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2 = v_1 + a\\Delta{t}", document.getElementById('ID6663406221272663517'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID3672165349828015539'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID15291802947098044108'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_1", document.getElementById('ID10510320020555446657'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_1", document.getElementById('ID11655446283857594580'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID7122365952919538655'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID8196471794625442509'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID17742252368929456277'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID6786426580848474678'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID18036321405922594672'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID15148417513205299713'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x} = \\left(\\frac{v_2 + v_1}{2}\\right)\\Delta{t}", document.getElementById('ID14208175677130433683'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x} = \\left(\\frac{v_2 + v_1}{2}\\right)\\Delta{t}", document.getElementById('ID17533329425809531900'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID11064531652971823579'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID465473373660252125'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID3624093000743173650'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID9002068605256532663'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_1", document.getElementById('ID7234951904656960480'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_1", document.getElementById('ID18046714700002082477'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID17688440917603688578'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID9481789668046977951'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID13852330803939411081'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID9504991444127880414'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x} = v_1 \\Delta{t} + \\frac{1}{2}a\\Delta{t^2}", document.getElementById('ID9383265104872437959'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x} = v_1 \\Delta{t} + \\frac{1}{2}a\\Delta{t^2}", document.getElementById('ID7356364129165454662'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID2877249983307791888'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID11693100669405365482'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID3423650858466896382'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID14986179340972892831'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_1", document.getElementById('ID13686681457535943133'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_1", document.getElementById('ID10193392714937328086'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID419992960249586996'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID16901643148346797072'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID1486395372140450422'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID11194117307712500624'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x} = v_2\\Delta{t} - \\frac{1}{2}a\\Delta{t^2}", document.getElementById('ID17729915347435660450'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x} = v_2\\Delta{t} - \\frac{1}{2}a\\Delta{t^2}", document.getElementById('ID6060732890322657624'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_1", document.getElementById('ID14148877061628902178'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_1", document.getElementById('ID16673514083752936352'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID5857084364952324159'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID4201896780865946941'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID13064885263216590719'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID14768719849539781238'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID14538595025322660049'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID14352113714996704926'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID823913604306743781'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID10660364563508973833'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(v_2)^2 = (v_1)^2 + 2a\\Delta{x}", document.getElementById('ID9053663630352436277'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(v_2)^2 = (v_1)^2 + 2a\\Delta{x}", document.getElementById('ID12626329009995202322'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID251724619238328530'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID6580037340218896389'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID1391641947957363590'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID13540864789440747797'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_1", document.getElementById('ID2046788291565485806'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_1", document.getElementById('ID5851057457182495079'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID7953394263094642560'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID17255619914885967754'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID13232086337047831400'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID2100104372999285628'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\\\\n                                   \\Delta{x} &= \\bar{v}\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID5897088402984051530'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\\\\n                                   \\Delta{x} &= \\bar{v}\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID8235708659476688523'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\\\\n                                   v_2 &= v_1 + a\\Delta{t}\\\\\n                                   \\Delta{x} &= v_0\\Delta{t}+\\frac{1}{2}a\\Delta{t^2}\\\\\n                                   (v_2)^2 &= (v_1)^2 - 2\\bar{a}\\Delta{x}\n            \\end{split}\\end{equation*}", document.getElementById('ID6595491488466417663'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\\\\n                                   v_2 &= v_1 + a\\Delta{t}\\\\\n                                   \\Delta{x} &= v_0\\Delta{t}+\\frac{1}{2}a\\Delta{t^2}\\\\\n                                   (v_2)^2 &= (v_1)^2 - 2\\bar{a}\\Delta{x}\n            \\end{split}\\end{equation*}", document.getElementById('ID407113506894940158'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}= \\frac{v_2 + v_1}{2}\\\\\n                                   \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\end{split}\\end{equation*}", document.getElementById('ID180438609218584562'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}= \\frac{v_2 + v_1}{2}\\\\\n                                   \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\end{split}\\end{equation*}", document.getElementById('ID8529489907626954211'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID26403218517884356"]').forEach(function(x){katex.render("\\Delta{x} = \\bar{v}\\Delta{t}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID6835509509180827799"]').forEach(function(x){katex.render("\\Delta{x} = \\bar{v}\\Delta{t}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\bar{v}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID15809401675432472856'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\bar{v}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID3976763458077634843'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID9141616382577021861"]').forEach(function(x){katex.render("\\Delta{x} = \\frac{1}{2}\\bar{a}\\Delta{t^2}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID3014588635738129773"]').forEach(function(x){katex.render("\\Delta{x} = \\frac{1}{2}\\bar{a}\\Delta{t^2}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\frac{1}{2}\\Delta{v}\\Delta{t}\\\\\n                               &= \\frac{1}{2}\\bar{a}\\Delta{t^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID4966089567642495646'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\frac{1}{2}\\Delta{v}\\Delta{t}\\\\\n                               &= \\frac{1}{2}\\bar{a}\\Delta{t^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID15335421499721051398'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID4728455207954924387"]').forEach(function(x){katex.render("\\Delta{x} = v_1\\Delta{t} + \\frac{1}{2}\\bar{a}\\Delta{t^2}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID12538620049816308663"]').forEach(function(x){katex.render("\\Delta{x} = v_1\\Delta{t} + \\frac{1}{2}\\bar{a}\\Delta{t^2}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= v_1\\Delta{t} + \\frac{1}{2}\\Delta{v}\\Delta{t} \\\\\n                               &= v_1\\Delta{t} + \\frac{1}{2}\\bar{a}\\Delta{t^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID2358943437391579060'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= v_1\\Delta{t} + \\frac{1}{2}\\Delta{v}\\Delta{t} \\\\\n                               &= v_1\\Delta{t} + \\frac{1}{2}\\bar{a}\\Delta{t^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID11024221818283645443'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID155520666002558440"]').forEach(function(x){katex.render("v_2 = v_1 + \\bar{a}\\Delta{t}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID13332595222405960698"]').forEach(function(x){katex.render("v_2 = v_1 + \\bar{a}\\Delta{t}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}= \\frac{v_2 - v_1}{\\Delta{t}}\\;(1)\n      \\end{split}\\end{equation*}", document.getElementById('ID7551846098909122224'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}= \\frac{v_2 - v_1}{\\Delta{t}}\\;(1)\n      \\end{split}\\end{equation*}", document.getElementById('ID9161432999052052607'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_2", document.getElementById('ID12481873691132058472'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_2", document.getElementById('ID10669752440700098087'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{v_2 - v_1}{\\Delta{t}}\\\\\n                     \\bar{a}\\Delta{t} &= v_2 - v_1\\\\\n                     v_1 + \\bar{a}\\Delta{t} &= v_2\\\\\n                     \\therefore v_2 &= v_1 + \\bar{a}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID15837830046119379832'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{v_2 - v_1}{\\Delta{t}}\\\\\n                     \\bar{a}\\Delta{t} &= v_2 - v_1\\\\\n                     v_1 + \\bar{a}\\Delta{t} &= v_2\\\\\n                     \\therefore v_2 &= v_1 + \\bar{a}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID3428319877807234490'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         v_2 &= v_1 + \\bar{a}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID7753122571820534930'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         v_2 &= v_1 + \\bar{a}\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID4316655473223941026'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID5172867013378591136"]').forEach(function(x){katex.render("v_2^2 = v_1^2 + 2\\bar{a}\\Delta{x}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID5302579875779678762"]').forEach(function(x){katex.render("v_2^2 = v_1^2 + 2\\bar{a}\\Delta{x}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\;(1)\\\\\n                     \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\;(2)\\\\\n                             &= \\frac{v_2 + v_1}{2}\\;(3)\n      \\end{split}\\end{equation*}", document.getElementById('ID7143415959917712546'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\bar{a} &= \\frac{\\Delta{v}}{\\Delta{t}}\\;(1)\\\\\n                     \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\;(2)\\\\\n                             &= \\frac{v_2 + v_1}{2}\\;(3)\n      \\end{split}\\end{equation*}", document.getElementById('ID2523692271409035496'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID9960971882413911165'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID6870171917826341333'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{t} &= \\frac{\\Delta{v}}{\\bar{a}}= \\frac{v_2 - v_1}{\\bar{a}}\\;(4)\n      \\end{split}\\end{equation*}", document.getElementById('ID14474775738838646933'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{t} &= \\frac{\\Delta{v}}{\\bar{a}}= \\frac{v_2 - v_1}{\\bar{a}}\\;(4)\n      \\end{split}\\end{equation*}", document.getElementById('ID940280702904366721'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{x}", document.getElementById('ID9934094303979429095'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{x}", document.getElementById('ID14914093130910757608'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\\\\n                     \\bar{v}\\Delta{t} &= \\Delta{x}\\\\\n                     \\therefore \\Delta{x} &= \\bar{v}\\cdot\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID8924885148037460291'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\bar{v} &= \\frac{\\Delta{x}}{\\Delta{t}}\\\\\n                     \\bar{v}\\Delta{t} &= \\Delta{x}\\\\\n                     \\therefore \\Delta{x} &= \\bar{v}\\cdot\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID13374693713625388492'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\bar{v} = \\frac{v_2 + v_1}{2}", document.getElementById('ID1211219635281502476'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\bar{v} = \\frac{v_2 + v_1}{2}", document.getElementById('ID15484140480649540077'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t} = \\frac{v_2 - v_1}{\\bar{a}}", document.getElementById('ID13044278588819411881'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t} = \\frac{v_2 - v_1}{\\bar{a}}", document.getElementById('ID7186613183219343595'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\bar{v}\\cdot\\Delta{t}\\\\\n                               &= \\frac{v_2 + v_1}{2}\\cdot\\frac{v_2 - v_1}{\\bar{a}}\\\\\n                               &= \\frac{(v_2)^2 - (v_1)^2}{2\\bar{a}}\\;(5)\n      \\end{split}\\end{equation*}", document.getElementById('ID15502796708068359530'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta{x} &= \\bar{v}\\cdot\\Delta{t}\\\\\n                               &= \\frac{v_2 + v_1}{2}\\cdot\\frac{v_2 - v_1}{\\bar{a}}\\\\\n                               &= \\frac{(v_2)^2 - (v_1)^2}{2\\bar{a}}\\;(5)\n      \\end{split}\\end{equation*}", document.getElementById('ID1729111793653576598'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         2\\bar{a}\\Delta{x} &= (v_2)^2 - (v_1)^2\n      \\end{split}\\end{equation*}", document.getElementById('ID2082732848119582254'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         2\\bar{a}\\Delta{x} &= (v_2)^2 - (v_1)^2\n      \\end{split}\\end{equation*}", document.getElementById('ID13676286066107362094'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         (v_2)^2 &= (v_1)^2 + 2\\bar{a}\\Delta{x}\n      \\end{split}\\end{equation*}", document.getElementById('ID16864829522352391150'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         (v_2)^2 &= (v_1)^2 + 2\\bar{a}\\Delta{x}\n      \\end{split}\\end{equation*}", document.getElementById('ID14936800630288124321'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 </script></body></html>

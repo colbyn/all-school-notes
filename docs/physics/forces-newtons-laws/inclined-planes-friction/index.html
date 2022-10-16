@@ -58,7 +58,6 @@
   --toc-font: "Dancing Script", cursive;
   --content-font: "Open Sans", sans-serif;
   --monospace-font: "Inconsolata", monospace;
-  --force-single-column: 0;
 }
 
 /* UNIVERSAL BOX SIZING WITH INHERITANCE */
@@ -106,6 +105,11 @@ html, body {
   shape-rendering: geometricPrecision;
   image-rendering: optimizeQuality;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
 }
 
 header#page-header {
@@ -399,7 +403,7 @@ button#set-single-col-to-off-btn {
   display: flex;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   #site-settings-wrapper {
     visibility: hidden;
   }
@@ -737,17 +741,17 @@ main > hr {
     column-count: 2;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="4"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="3"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="2"] {
     column-count: 1;
   }
@@ -907,37 +911,37 @@ main > hr {
 
 @media (max-width: 1200px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="2"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 body {
@@ -990,4 +994,4 @@ function setForceSingleColumnToOn() {
     updateColumns();
 }
 
-</script></head><body><header id="page-header"><div class="site-header-row" data-col="2" id="site-title-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-source="local" data-level="h1" top-level="true"><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></li></ul><p id="toc-list-info" class="toc-info-banner">Table Of Contents</p><ul id="toc-list"><li data-source="local" data-level="h1" top-level="true"><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" onclick="setForceSingleColumnToOff()" class="pill"><span>Force Single Column</span><span>On</span></button><button id="set-single-col-to-on-btn" class="pill" onclick="setForceSingleColumnToOn()"><span>Force Single Column</span><span>Off</span></button></div></header><main><h1 id="inclinedplanesandfriction" top-level=""><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></h1></main><script></script></body></html>
+</script></head><body><header id="page-header"><div data-col="2" class="site-header-row" id="site-title-wrapper"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav id="site-nav-wrapper" class="site-header-row two-col"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" onclick="setForceSingleColumnToOff()" class="pill"><span>Force Single Column</span><span>On</span></button><button id="set-single-col-to-on-btn" onclick="setForceSingleColumnToOn()" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main><h1 id="inclinedplanesandfriction" top-level=""><a href="/all-school-notes/physics/forces-newtons-laws/inclined-planes-friction/index.html#inclinedplanesandfriction">Inclined planes and friction</a></h1></main><script></script></body></html>

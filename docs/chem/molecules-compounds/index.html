@@ -58,7 +58,6 @@
   --toc-font: "Dancing Script", cursive;
   --content-font: "Open Sans", sans-serif;
   --monospace-font: "Inconsolata", monospace;
-  --force-single-column: 0;
 }
 
 /* UNIVERSAL BOX SIZING WITH INHERITANCE */
@@ -106,6 +105,11 @@ html, body {
   shape-rendering: geometricPrecision;
   image-rendering: optimizeQuality;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
 }
 
 header#page-header {
@@ -399,7 +403,7 @@ button#set-single-col-to-off-btn {
   display: flex;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   #site-settings-wrapper {
     visibility: hidden;
   }
@@ -737,17 +741,17 @@ main > hr {
     column-count: 2;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="4"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="3"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="2"] {
     column-count: 1;
   }
@@ -907,37 +911,37 @@ main > hr {
 
 @media (max-width: 1200px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="2"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 body {
@@ -990,281 +994,281 @@ function setForceSingleColumnToOn() {
     updateColumns();
 }
 
-</script></head><body><header id="page-header"><div id="site-title-wrapper" class="site-header-row" data-col="2"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li top-level="true" data-level="h1" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li></ul><p id="toc-list-info" class="toc-info-banner">Table Of Contents</p><ul id="toc-list"><li top-level="true" data-level="h1" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/chem/molecules-compounds/index.html#terms">Terms</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#prefixes">Prefixes</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/chem/molecules-compounds/index.html#rememberingthenumberofoxygens">Remembering the number of oxygens</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#general">General</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark font="" data-color="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/chem/molecules-compounds/index.html#generally">Generally</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/all-school-notes/chem/molecules-compounds/index.html#determiningthecharge">Determining The Charge<sup>†</sup></a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#warning">Warning</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforoxalate">Example for <mark font="">Oxalate</mark></a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforhydrogencarbonate">Example for <mark font="">Hydrogen Carbonate</mark></a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></li><li top-level="false" data-source="local" data-level="h5"><a href="/all-school-notes/chem/molecules-compounds/index.html#examples">Examples</a></li><li data-source="local" data-level="h6" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#lewisstructureforsulfateion">Lewis structure for sulfate ion</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/chem/molecules-compounds/index.html#notes">Notes</a></li></ul></div></nav><div id="site-settings-wrapper"><button onclick="setForceSingleColumnToOff()" class="pill" id="set-single-col-to-off-btn"><span>Force Single Column</span><span>On</span></button><button onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main>
-<h1 id="moleculesandcompounds" top-level=""><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></h1><h2 id="terms"><a href="/all-school-notes/chem/molecules-compounds/index.html#terms">Terms</a></h2><dl><dt>Electronegativity</dt><dd>Can be used to to determine type of bond based on electronegativity difference.</dd><dt>Ionic Bond</dt><dt>Covalent Bond</dt><dt>Polar Covalent Bond</dt><dd>Sharing of electrons.</dd><dt>Hydrogen Bond</dt><dd>Hydrogen is bonded with an electronegative element.</dd></dl><h2 id="prefixes"><a href="/all-school-notes/chem/molecules-compounds/index.html#prefixes">Prefixes</a></h2><div data-cmd="grid" data-col="2">
+</script></head><body><header id="page-header"><div id="site-title-wrapper" data-col="2" class="site-header-row"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li></ul><p id="toc-list-info" class="toc-info-banner">Table Of Contents</p><ul id="toc-list"><li data-level="h1" top-level="true" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/chem/molecules-compounds/index.html#terms">Terms</a></li><li data-level="h2" data-source="local" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#prefixes">Prefixes</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#rememberingthenumberofoxygens">Remembering the number of oxygens</a></li><li top-level="false" data-source="local" data-level="h5"><a href="/all-school-notes/chem/molecules-compounds/index.html#general">General</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark font="" data-color="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#generally">Generally</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#determiningthecharge">Determining The Charge<sup>†</sup></a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/chem/molecules-compounds/index.html#warning">Warning</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforoxalate">Example for <mark font="">Oxalate</mark></a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforhydrogencarbonate">Example for <mark font="">Hydrogen Carbonate</mark></a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></li><li data-source="local" data-level="h5" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#examples">Examples</a></li><li data-level="h6" top-level="false" data-source="local"><a href="/all-school-notes/chem/molecules-compounds/index.html#lewisstructureforsulfateion">Lewis structure for sulfate ion</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/chem/molecules-compounds/index.html#notes">Notes</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" onclick="setForceSingleColumnToOff()" class="pill"><span>Force Single Column</span><span>On</span></button><button id="set-single-col-to-on-btn" class="pill" onclick="setForceSingleColumnToOn()"><span>Force Single Column</span><span>Off</span></button></div></header><main>
+<h1 top-level="" id="moleculesandcompounds"><a href="/all-school-notes/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></h1><h2 id="terms"><a href="/all-school-notes/chem/molecules-compounds/index.html#terms">Terms</a></h2><dl><dt>Electronegativity</dt><dd>Can be used to to determine type of bond based on electronegativity difference.</dd><dt>Ionic Bond</dt><dt>Covalent Bond</dt><dt>Polar Covalent Bond</dt><dd>Sharing of electrons.</dd><dt>Hydrogen Bond</dt><dd>Hydrogen is bonded with an electronegative element.</dd></dl><h2 id="prefixes"><a href="/all-school-notes/chem/molecules-compounds/index.html#prefixes">Prefixes</a></h2><div data-col="2" data-cmd="grid">
    <div data-table-wrapper=""><table data-wrapped-table="">
       <thead>
          <tr>
             <th>Prefix</th><th>Value</th></tr></thead><tbody>
          <tr>
-            <th>mono-</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID405948782617397538"></span></td></tr><tr>
-            <th>di-</th><td><span id="ID10728074585036138858" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
-            <th>tri-</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID12761243895733036101"></span></td></tr><tr>
-            <th>tetra-</th><td><span data-cmd="inline-math" id="ID1175574584643651263" data-math-node="inline"></span></td></tr><tr>
-            <th>penta-</th><td><span data-cmd="inline-math" id="ID12651752659181702103" data-math-node="inline"></span></td></tr></tbody></table></div><div data-table-wrapper=""><table data-wrapped-table="">
+            <th>mono-</th><td><span id="ID18371783051933680784" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th>di-</th><td><span id="ID14803329290998713607" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
+            <th>tri-</th><td><span data-cmd="inline-math" id="ID11826672424426915876" data-math-node="inline"></span></td></tr><tr>
+            <th>tetra-</th><td><span id="ID11321679988666322050" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th>penta-</th><td><span data-math-node="inline" id="ID8635030410879806567" data-cmd="inline-math"></span></td></tr></tbody></table></div><div data-table-wrapper=""><table data-wrapped-table="">
       <thead>
          <tr>
             <th>Prefix</th><th>Value</th></tr></thead><tbody>
          <tr>
-            <th>hexa-</th><td><span data-cmd="inline-math" data-math-node="inline" id="ID9446677445134281588"></span></td></tr><tr>
-            <th>hepta-</th><td><span id="ID10235787879826285834" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
-            <th>octa-</th><td><span data-cmd="inline-math" id="ID10783449832006400145" data-math-node="inline"></span></td></tr><tr>
-            <th>nona-</th><td><span id="ID1432736825625799425" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
-            <th>deca-</th><td><span id="ID9594145117707296642" data-math-node="inline" data-cmd="inline-math"></span></td></tr></tbody></table></div></div><h2 id="formulasummary"><a href="/all-school-notes/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></h2><div boxed="" data-cmd="grid" data-col="2">
+            <th>hexa-</th><td><span data-cmd="inline-math" id="ID7382276388239879216" data-math-node="inline"></span></td></tr><tr>
+            <th>hepta-</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID124281858772862674"></span></td></tr><tr>
+            <th>octa-</th><td><span data-cmd="inline-math" id="ID5435416072423194812" data-math-node="inline"></span></td></tr><tr>
+            <th>nona-</th><td><span id="ID5492865256206035892" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th>deca-</th><td><span data-cmd="inline-math" id="ID18061909647134220382" data-math-node="inline"></span></td></tr></tbody></table></div></div><h2 id="formulasummary"><a href="/all-school-notes/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></h2><div data-col="2" boxed="" data-cmd="grid">
    <section data-cmd="note">
-      <h3 id="formalchargeoption1"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></h3><p>Given some element <span data-math-node="inline" id="ID17607399921245489915" data-cmd="inline-math"></span> which has <span data-math-node="inline" id="ID14985946646196073982" data-cmd="inline-math"></span> number of valance electrons, and
-                  a lewis diagram of bonded （<span id="ID16942355933142072040" data-math-node="inline" data-cmd="inline-math"></span>） electrons and non-bonded （<span id="ID6078592124547138112" data-math-node="inline" data-cmd="inline-math"></span>） electrons,
-                  the formal charge for the given element in the lewis structure is</p><div id="ID15360936386109064987" data-math-node="block" data-cmd="equation"></div><p>For the given quantities</p><div id="ID3207579844702602710" data-cmd="equation" data-math-node="block"></div></section><section data-cmd="note">
-      <h3 id="formalchargeoption2"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></h3><p>Given some element <span data-cmd="inline-math" data-math-node="inline" id="ID12228130355806066993"></span> which has <span id="ID7366081674356485359" data-math-node="inline" data-cmd="inline-math"></span> number of valance electrons, and
-                  a lewis diagram of some number of bonds （<span id="ID8423729437714759681" data-cmd="inline-math" data-math-node="inline"></span>） and dots （<span data-cmd="inline-math" id="ID9363705453095821150" data-math-node="inline"></span>）, the formal charge
-                  for the given element in the lewis structure is</p><div data-cmd="equation" id="ID17965049334714543294" data-math-node="block"></div><p>For the given quantities</p><div id="ID5463099836040896117" data-cmd="equation" data-math-node="block"></div><p>Note: each bond is 2 electrons, but counts as one bond.</p></section></div><h3 id="polyatomicions"><a href="/all-school-notes/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></h3><div data-col="1" data-cmd="grid" boxed="">
+      <h3 id="formalchargeoption1"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></h3><p>Given some element <span id="ID2001092511270879840" data-math-node="inline" data-cmd="inline-math"></span> which has <span id="ID18402680977534980805" data-math-node="inline" data-cmd="inline-math"></span> number of valance electrons, and
+                  a lewis diagram of bonded （<span id="ID9844454537333094354" data-math-node="inline" data-cmd="inline-math"></span>） electrons and non-bonded （<span id="ID6929721209699597150" data-math-node="inline" data-cmd="inline-math"></span>） electrons,
+                  the formal charge for the given element in the lewis structure is</p><div data-cmd="equation" id="ID309420336130565662" data-math-node="block"></div><p>For the given quantities</p><div data-cmd="equation" id="ID17485160944713445171" data-math-node="block"></div></section><section data-cmd="note">
+      <h3 id="formalchargeoption2"><a href="/all-school-notes/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></h3><p>Given some element <span id="ID6073056310176266474" data-math-node="inline" data-cmd="inline-math"></span> which has <span data-cmd="inline-math" data-math-node="inline" id="ID3101819959214592504"></span> number of valance electrons, and
+                  a lewis diagram of some number of bonds （<span data-cmd="inline-math" id="ID3341754171508962624" data-math-node="inline"></span>） and dots （<span data-math-node="inline" data-cmd="inline-math" id="ID16746999308647220538"></span>）, the formal charge
+                  for the given element in the lewis structure is</p><div data-cmd="equation" data-math-node="block" id="ID14228201915872766462"></div><p>For the given quantities</p><div id="ID5686217247258940112" data-math-node="block" data-cmd="equation"></div><p>Note: each bond is 2 electrons, but counts as one bond.</p></section></div><h3 id="polyatomicions"><a href="/all-school-notes/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></h3><div data-col="1" boxed="" data-cmd="grid">
    <section data-cmd="note">
       <h4 id="rememberingthenumberofoxygens"><a href="/all-school-notes/chem/molecules-compounds/index.html#rememberingthenumberofoxygens">Remembering the number of oxygens</a></h4><h5 id="general"><a href="/all-school-notes/chem/molecules-compounds/index.html#general">General</a></h5><div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <p>Given a set of oxygens in increasing order</p><div data-math-node="block" data-cmd="math" id="ID10095153767120759041"></div><p>Where</p><div id="ID12069789870972551569" data-math-node="block" data-cmd="math"></div></section><section data-cmd="note">
-            <p>For example</p><div data-math-node="block" data-cmd="math" id="ID4280790017371176102"></div></section></div><div data-cmd="grid" data-col="2">
+            <p>Given a set of oxygens in increasing order</p><div id="ID12729273901660744712" data-cmd="math" data-math-node="block"></div><p>Where</p><div data-math-node="block" data-cmd="math" id="ID11913276144005508224"></div></section><section data-cmd="note">
+            <p>For example</p><div data-math-node="block" data-cmd="math" id="ID12656523582838391420"></div></section></div><div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <p>Given some element or compound <span data-cmd="inline-math" id="ID2204283155718799914" data-math-node="inline"></span> ionically bonded with such</p><div id="ID17109137548718779002" data-math-node="block" data-cmd="math"></div></section><section data-cmd="note">
-            <p>For example</p><div data-math-node="block" data-cmd="math" id="ID15892045545840665388"></div></section></div><p>The following table denotes the naming conventions therein</p><div data-table-wrapper=""><table data-wrapped-table="">
+            <p>Given some element or compound <span data-math-node="inline" id="ID4025267155154888181" data-cmd="inline-math"></span> ionically bonded with such</p><div data-cmd="math" id="ID7276911447082859353" data-math-node="block"></div></section><section data-cmd="note">
+            <p>For example</p><div data-math-node="block" data-cmd="math" id="ID14255256008727933759"></div></section></div><p>The following table denotes the naming conventions therein</p><div data-table-wrapper=""><table data-wrapped-table="">
          <tbody>
             <tr>
                <th rowspan="2">Prefix</th><th rowspan="2">Prefix Meaning <br></br><small>（relative to suffix）</small></th><th rowspan="2">Suffix</th><th rowspan="2">Oxygen Order</th><th colspan="2">Example</th></tr><tr>
                <th>Formula</th><th>Name</th></tr><tr>
-               <th><span data-color1="" data-table-list=""><span>Per-</span></span></th><td><span data-color1="" data-table-list=""><span>More than</span></span></td><td><span data-table-list="" data-color=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Highest #</span></span></td><td><span data-math-node="inline" id="ID13552530579918714966" data-cmd="inline-math"></span></td><td><mark font="" data-color1="">Per</mark>chlor<mark font="" data-color="">ate</mark></td></tr><tr>
-               <th></th><td></td><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Higher #</span></span></td><td><span data-cmd="inline-math" id="ID12402511327573820005" data-math-node="inline"></span></td><td>Chlor<mark font="" data-color="">ate</mark></td></tr><tr>
-               <th></th><td></td><td><span data-table-list="" data-color=""><span>-ite</span></span></td><td><span data-table-list="" data-color=""><span>Lower #</span></span></td><td><span id="ID13610935647189809751" data-math-node="inline" data-cmd="inline-math"></span></td><td>Chlor<mark font="" data-color="">ite</mark></td></tr><tr>
-               <th><span data-color1="" data-table-list=""><span>Hypo-</span></span></th><td><span data-color1="" data-table-list=""><span>less than</span></span></td><td><span data-table-list="" data-color=""><span>-ite</span></span></td><td><span data-table-list="" data-color=""><span>Lowest #</span></span></td><td><span data-math-node="inline" data-cmd="inline-math" id="ID6765729985421556188"></span></td><td><mark data-color1="" font="">Hypo</mark>chlor<mark font="" data-color="">ite</mark></td></tr></tbody></table></div><h5 id="oxygenvsnooxygencomparison"><a href="/all-school-notes/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark font="" data-color="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></h5><div data-table-wrapper=""><table data-wrapped-table="">
+               <th><span data-color1="" data-table-list=""><span>Per-</span></span></th><td><span data-table-list="" data-color1=""><span>More than</span></span></td><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Highest #</span></span></td><td><span id="ID6092666240932937450" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark font="" data-color1="">Per</mark>chlor<mark data-color="" font="">ate</mark></td></tr><tr>
+               <th></th><td></td><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Higher #</span></span></td><td><span data-cmd="inline-math" data-math-node="inline" id="ID12592823872688211228"></span></td><td>Chlor<mark data-color="" font="">ate</mark></td></tr><tr>
+               <th></th><td></td><td><span data-color="" data-table-list=""><span>-ite</span></span></td><td><span data-color="" data-table-list=""><span>Lower #</span></span></td><td><span data-math-node="inline" data-cmd="inline-math" id="ID12989755369723263706"></span></td><td>Chlor<mark font="" data-color="">ite</mark></td></tr><tr>
+               <th><span data-color1="" data-table-list=""><span>Hypo-</span></span></th><td><span data-table-list="" data-color1=""><span>less than</span></span></td><td><span data-table-list="" data-color=""><span>-ite</span></span></td><td><span data-color="" data-table-list=""><span>Lowest #</span></span></td><td><span id="ID806197947319709243" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark data-color1="" font="">Hypo</mark>chlor<mark data-color="" font="">ite</mark></td></tr></tbody></table></div><h5 id="oxygenvsnooxygencomparison"><a href="/all-school-notes/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark font="" data-color="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></h5><div data-table-wrapper=""><table data-wrapped-table="">
          <thead>
             <tr>
                <th>Prefix</th><th>Suffix</th><th>Meaning</th><th>Example</th><th>Name</th></tr></thead><tbody>
             <tr>
-               <th><span data-table-list="" data-color1=""><span>Per-</span></span></th><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td></td><td><span data-table-list=""><span data-cmd="inline-math" id="ID9532293143492076858" data-math-node="inline"></span> or <span data-math-node="inline" id="ID13324564507627788790" data-cmd="inline-math"></span></span></td><td><mark data-color1="" font="">Per</mark>sulf<mark font="" data-color="">ate</mark></td></tr><tr>
-               <td></td><th><span data-color="" data-table-list=""><span>-ate</span></span></th><td></td><td><span id="ID12415682507117353250" data-math-node="inline" data-cmd="inline-math"></span></td><td>Sulf<mark font="" data-color="">ate</mark></td></tr><tr>
-               <td></td><th><span data-table-list="" data-color=""><span>-ite</span></span></th><td></td><td><span data-math-node="inline" id="ID87293295304656073" data-cmd="inline-math"></span></td><td>Sulf<mark data-color="" font="">ite</mark></td></tr><tr>
-               <td><span data-color1="" data-table-list=""><span>Hypo-</span></span></td><th><span data-table-list="" data-color=""><span>-ite</span></span></th><td></td><td><span id="ID10818974238421508603" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark font="" data-color1="">Hypo</mark>sulf<mark data-color="" font="">ite</mark></td></tr><tr>
-               <td></td><th><span data-table-list="" data-color2=""><span>-ide</span></span></th><td><span data-color2="" data-table-list=""><span>No oxygen</span><span>non-metal</span></span></td><td><span data-math-node="inline" id="ID4107425767989422545" data-cmd="inline-math"></span></td><td>Sulf<mark data-color2="" font="">ide</mark></td></tr></tbody></table></div><p>In summary</p><div data-col="4" boxed="" data-cmd="grid">
+               <th><span data-table-list="" data-color1=""><span>Per-</span></span></th><td><span data-table-list="" data-color=""><span>-ate</span></span></td><td></td><td><span data-table-list=""><span id="ID14100027532898969323" data-math-node="inline" data-cmd="inline-math"></span> or <span data-cmd="inline-math" data-math-node="inline" id="ID7759533930784748873"></span></span></td><td><mark data-color1="" font="">Per</mark>sulf<mark font="" data-color="">ate</mark></td></tr><tr>
+               <td></td><th><span data-table-list="" data-color=""><span>-ate</span></span></th><td></td><td><span id="ID171123523420101081" data-math-node="inline" data-cmd="inline-math"></span></td><td>Sulf<mark data-color="" font="">ate</mark></td></tr><tr>
+               <td></td><th><span data-color="" data-table-list=""><span>-ite</span></span></th><td></td><td><span data-math-node="inline" id="ID1243966486527047646" data-cmd="inline-math"></span></td><td>Sulf<mark font="" data-color="">ite</mark></td></tr><tr>
+               <td><span data-color1="" data-table-list=""><span>Hypo-</span></span></td><th><span data-color="" data-table-list=""><span>-ite</span></span></th><td></td><td><span id="ID4858773719395935178" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark font="" data-color1="">Hypo</mark>sulf<mark font="" data-color="">ite</mark></td></tr><tr>
+               <td></td><th><span data-color2="" data-table-list=""><span>-ide</span></span></th><td><span data-table-list="" data-color2=""><span>No oxygen</span><span>non-metal</span></span></td><td><span data-cmd="inline-math" data-math-node="inline" id="ID15877973478394510640"></span></td><td>Sulf<mark data-color2="" font="">ide</mark></td></tr></tbody></table></div><p>In summary</p><div data-cmd="grid" boxed="" data-col="4">
          <section data-cmd="note">
             <p center=""><mark data-color1="" font="">Per</mark><span>*</span><mark font="" data-color="">ate</mark></p><hr></hr><p>Greater than</p><ul>
-               <li><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark data-color="" font="">ite</mark></li><li><mark data-color1="" font="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></li></ul></section><section data-cmd="note">
+               <li><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark data-color="" font="">ite</mark></li><li><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></li></ul></section><section data-cmd="note">
             <p center=""><span>*</span><mark data-color="" font="">ate</mark></p><hr></hr><p>Less than</p><ul>
-               <li><mark font="" data-color1="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li></ul><p>Greater than</p><ul>
-               <li><span>*</span><mark data-color="" font="">ite</mark></li><li><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></li></ul></section><section data-cmd="note">
-            <p center=""><span>*</span><mark data-color="" font="">ite</mark></p><hr></hr><p>Less than</p><ul>
-               <li><mark font="" data-color1="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark font="" data-color="">ate</mark></li></ul><p>Greater than</p><ul>
-               <li><mark data-color1="" font="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></li></ul></section><section data-cmd="note">
-            <p center=""><mark font="" data-color1="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></p><hr></hr><p>Less than</p><ul>
-               <li><mark data-color1="" font="">Per</mark><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark data-color="" font="">ite</mark></li></ul></section></div><h3 id="generally"><a href="/all-school-notes/chem/molecules-compounds/index.html#generally">Generally</a></h3><div data-table-wrapper=""><table data-wrapped-table="">
+               <li><mark data-color1="" font="">Per</mark><span>*</span><mark font="" data-color="">ate</mark></li></ul><p>Greater than</p><ul>
+               <li><span>*</span><mark font="" data-color="">ite</mark></li><li><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></li></ul></section><section data-cmd="note">
+            <p center=""><span>*</span><mark font="" data-color="">ite</mark></p><hr></hr><p>Less than</p><ul>
+               <li><mark data-color1="" font="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark data-color="" font="">ate</mark></li></ul><p>Greater than</p><ul>
+               <li><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></li></ul></section><section data-cmd="note">
+            <p center=""><mark data-color1="" font="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></p><hr></hr><p>Less than</p><ul>
+               <li><mark font="" data-color1="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark font="" data-color="">ite</mark></li></ul></section></div><h3 id="generally"><a href="/all-school-notes/chem/molecules-compounds/index.html#generally">Generally</a></h3><div data-table-wrapper=""><table data-wrapped-table="">
          <tbody>
             <tr>
                <th><span data-color2="" data-table-list=""><span>per-ate</span></span></th><td>Used in the ion with the largest number of oxygen atoms</td></tr><tr>
-               <th><span data-table-list="" data-color2=""><span>-ate</span><span>-ite</span></span></th><td>Polyatomic ions of oxygen</td></tr><tr>
-               <th><span data-color2="" data-table-list=""><span>hypo-ite</span></span></th><td>Used in the ion with the lowest number of oxygen atoms</td></tr><tr>
+               <th><span data-color2="" data-table-list=""><span>-ate</span><span>-ite</span></span></th><td>Polyatomic ions of oxygen</td></tr><tr>
+               <th><span data-table-list="" data-color2=""><span>hypo-ite</span></span></th><td>Used in the ion with the lowest number of oxygen atoms</td></tr><tr>
                <th><span data-table-list="" data-color2=""><span>-ide</span></span></th><td>Non-metal, no oxygens</td></tr></tbody></table></div><h3 id="determiningthecharge"><a href="/all-school-notes/chem/molecules-compounds/index.html#determiningthecharge">Determining The Charge<sup>†</sup></a></h3><div data-cmd="grid" data-col="1" boxed="">
          <section data-cmd="note">
-            <h4 id="warning"><a href="/all-school-notes/chem/molecules-compounds/index.html#warning">Warning</a></h4><p center="">Phosphate （<span data-cmd="inline-math" id="ID6210166165166718622" data-math-node="inline"></span>） is the only one that violates this rule!</p></section></div><div boxed="" data-col="2" data-cmd="grid">
+            <h4 id="warning"><a href="/all-school-notes/chem/molecules-compounds/index.html#warning">Warning</a></h4><p center="">Phosphate （<span id="ID6007181074850464666" data-math-node="inline" data-cmd="inline-math"></span>） is the only one that violates this rule!</p></section></div><div boxed="" data-col="2" data-cmd="grid">
          <section data-cmd="note">
-            <h4 id="examplefornitrate"><a href="/all-school-notes/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></h4><img src="/all-school-notes/static-assets/assets/images/chem/13.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
-            <h4 id="exampleforcyanide"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></h4><img style="max-width: 600px;" src="/all-school-notes/static-assets/assets/images/chem/14.svg"></img></section><section data-cmd="note">
+            <h4 id="examplefornitrate"><a href="/all-school-notes/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></h4><img style="max-width: 600px;" src="/all-school-notes/static-assets/assets/images/chem/13.svg"></img></section><section data-cmd="note">
+            <h4 id="exampleforcyanide"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></h4><img src="/all-school-notes/static-assets/assets/images/chem/14.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
             <h4 id="exampleforoxalate"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforoxalate">Example for <mark font="">Oxalate</mark></a></h4><img src="/all-school-notes/static-assets/assets/images/chem/15.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
             <h4 id="exampleforhydrogencarbonate"><a href="/all-school-notes/chem/molecules-compounds/index.html#exampleforhydrogencarbonate">Example for <mark font="">Hydrogen Carbonate</mark></a></h4><img src="/all-school-notes/static-assets/assets/images/chem/16.svg" style="max-width: 600px;"></img></section></div><div data-table-wrapper=""><table data-wrapped-table="">
          <tbody>
             <tr style="width:100%;">
-               <td>†</td><td style="width:100%;"><a href="https://www.youtube.com/watch?v=Iva9ISbxbOw">Source</a></td></tr></tbody></table></div></section></div><h4 id="ioniclewisstructures"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></h4><h4 id="ioniclewisstructures1"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></h4><h5 id="examples"><a href="/all-school-notes/chem/molecules-compounds/index.html#examples">Examples</a></h5><div boxed="" data-cmd="grid" data-col="1">
+               <td>†</td><td style="width:100%;"><a href="https://www.youtube.com/watch?v=Iva9ISbxbOw">Source</a></td></tr></tbody></table></div></section></div><h4 id="ioniclewisstructures"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></h4><h4 id="ioniclewisstructures1"><a href="/all-school-notes/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></h4><h5 id="examples"><a href="/all-school-notes/chem/molecules-compounds/index.html#examples">Examples</a></h5><div data-col="1" boxed="" data-cmd="grid">
    <section data-cmd="note">
       <h6 id="lewisstructureforsulfateion"><a href="/all-school-notes/chem/molecules-compounds/index.html#lewisstructureforsulfateion">Lewis structure for sulfate ion</a></h6><img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/chem/17.svg"></img></section></div><h2 id="notes"><a href="/all-school-notes/chem/molecules-compounds/index.html#notes">Notes</a></h2><ul>
    <li>When naming an ionic compound, the name of the cation is followed by the name of the anion.
            Monatomic anions are named with the ending -ide.</li></ul></main><script>try{
-katex.render("1", document.getElementById('ID405948782617397538'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("1", document.getElementById('ID18371783051933680784'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("2", document.getElementById('ID10728074585036138858'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("2", document.getElementById('ID14803329290998713607'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("3", document.getElementById('ID12761243895733036101'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("3", document.getElementById('ID11826672424426915876'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("4", document.getElementById('ID1175574584643651263'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("4", document.getElementById('ID11321679988666322050'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("5", document.getElementById('ID12651752659181702103'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("5", document.getElementById('ID8635030410879806567'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("6", document.getElementById('ID9446677445134281588'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("6", document.getElementById('ID7382276388239879216'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("7", document.getElementById('ID10235787879826285834'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("7", document.getElementById('ID124281858772862674'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("8", document.getElementById('ID10783449832006400145'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("8", document.getElementById('ID5435416072423194812'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("9", document.getElementById('ID1432736825625799425'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("9", document.getElementById('ID5492865256206035892'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("10", document.getElementById('ID9594145117707296642'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("10", document.getElementById('ID18061909647134220382'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{X}", document.getElementById('ID17607399921245489915'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{X}", document.getElementById('ID2001092511270879840'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_e", document.getElementById('ID14985946646196073982'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_e", document.getElementById('ID18402680977534980805'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("b_e", document.getElementById('ID16942355933142072040'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("b_e", document.getElementById('ID9844454537333094354'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("f_e", document.getElementById('ID6078592124547138112'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("f_e", document.getElementById('ID6929721209699597150'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - f_e - \\frac{b_e}{2}\\end{split}\\end{equation*}", document.getElementById('ID15360936386109064987'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - f_e - \\frac{b_e}{2}\\end{split}\\end{equation*}", document.getElementById('ID309420336130565662'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     f_e &= \\small\\text{Non-bonded (free) electrons (from diagram)}\\normalsize\\\\\n                     b_e &= \\small\\text{Bonded Valence electrons (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID3207579844702602710'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     f_e &= \\small\\text{Non-bonded (free) electrons (from diagram)}\\normalsize\\\\\n                     b_e &= \\small\\text{Bonded Valence electrons (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID17485160944713445171'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{X}", document.getElementById('ID12228130355806066993'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{X}", document.getElementById('ID6073056310176266474'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_e", document.getElementById('ID7366081674356485359'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_e", document.getElementById('ID3101819959214592504'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("b", document.getElementById('ID8423729437714759681'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("b", document.getElementById('ID3341754171508962624'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("d", document.getElementById('ID9363705453095821150'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("d", document.getElementById('ID16746999308647220538'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - (b + d)\n      \\end{split}\\end{equation*}", document.getElementById('ID17965049334714543294'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - (b + d)\n      \\end{split}\\end{equation*}", document.getElementById('ID14228201915872766462'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     b &= \\small\\text{Number of bonds (from diagram)}\\normalsize\\\\\n                     d &= \\small\\text{Number of dots (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID5463099836040896117'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     b &= \\small\\text{Number of bonds (from diagram)}\\normalsize\\\\\n                     d &= \\small\\text{Number of dots (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID5686217247258940112'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\n               \\set{\\ce{\n                                       O_{\\small\\text{Lowest}\\normalsize},\n                                       O_{\\small\\text{Lower}\\normalsize},\n                                       O_{\\small\\text{Higher}\\normalsize},\n                                       O_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID10095153767120759041'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\n               \\set{\\ce{\n                                       O_{\\small\\text{Lowest}\\normalsize},\n                                       O_{\\small\\text{Lower}\\normalsize},\n                                       O_{\\small\\text{Higher}\\normalsize},\n                                       O_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID12729273901660744712'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\n               \\set{\n                                       \\mathrm{Lowest} <\n                                       \\mathrm{Lower} <\n                                       \\mathrm{Higher} <\n                                       \\mathrm{Highest}\n                                   }\n            ", document.getElementById('ID12069789870972551569'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\n               \\set{\n                                       \\mathrm{Lowest} <\n                                       \\mathrm{Lower} <\n                                       \\mathrm{Higher} <\n                                       \\mathrm{Highest}\n                                   }\n            ", document.getElementById('ID11913276144005508224'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\n               \\set{\\ce{\n                                       O_1,\n                                       O_2,\n                                       O_3,\n                                       O_4\n                                   }}\n            ", document.getElementById('ID4280790017371176102'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\n               \\set{\\ce{\n                                       O_1,\n                                       O_2,\n                                       O_3,\n                                       O_4\n                                   }}\n            ", document.getElementById('ID12656523582838391420'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{X}", document.getElementById('ID2204283155718799914'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{X}", document.getElementById('ID4025267155154888181'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\n               \\set{\\ce{\n                                       XO_{\\small\\text{Lowest}\\normalsize},\n                                       XO_{\\small\\text{Lower}\\normalsize},\n                                       XO_{\\small\\text{Higher}\\normalsize},\n                                       XO_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID17109137548718779002'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\n               \\set{\\ce{\n                                       XO_{\\small\\text{Lowest}\\normalsize},\n                                       XO_{\\small\\text{Lower}\\normalsize},\n                                       XO_{\\small\\text{Higher}\\normalsize},\n                                       XO_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID7276911447082859353'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\n               \\set{\\ce{\n                                       ClO_1^{-},\n                                       ClO_2^{-},\n                                       ClO_3^{-},\n                                       ClO_4^{-}\n                                   }}\n            ", document.getElementById('ID15892045545840665388'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\n               \\set{\\ce{\n                                       ClO_1^{-},\n                                       ClO_2^{-},\n                                       ClO_3^{-},\n                                       ClO_4^{-}\n                                   }}\n            ", document.getElementById('ID14255256008727933759'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{ClO_4^{-}}", document.getElementById('ID13552530579918714966'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{ClO_4^{-}}", document.getElementById('ID6092666240932937450'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{ClO_3^{-}}", document.getElementById('ID12402511327573820005'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{ClO_3^{-}}", document.getElementById('ID12592823872688211228'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{ClO_2^{-}}", document.getElementById('ID13610935647189809751'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{ClO_2^{-}}", document.getElementById('ID12989755369723263706'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{ClO^{-}}", document.getElementById('ID6765729985421556188'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{ClO^{-}}", document.getElementById('ID806197947319709243'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{SO_5^{2-}}", document.getElementById('ID9532293143492076858'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{SO_5^{2-}}", document.getElementById('ID14100027532898969323'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{S_2O_8^{2-}}", document.getElementById('ID13324564507627788790'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{S_2O_8^{2-}}", document.getElementById('ID7759533930784748873'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{SO_4^{2-}}", document.getElementById('ID12415682507117353250'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{SO_4^{2-}}", document.getElementById('ID171123523420101081'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{SO_3^{2-}}", document.getElementById('ID87293295304656073'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{SO_3^{2-}}", document.getElementById('ID1243966486527047646'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{SO_2^{2-}}", document.getElementById('ID10818974238421508603'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{SO_2^{2-}}", document.getElementById('ID4858773719395935178'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{S^{2-}}", document.getElementById('ID4107425767989422545'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{S^{2-}}", document.getElementById('ID15877973478394510640'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\ce{PO_4^{3-}}", document.getElementById('ID6210166165166718622'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\ce{PO_4^{3-}}", document.getElementById('ID6007181074850464666'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 </script></body></html>

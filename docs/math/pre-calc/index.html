@@ -58,7 +58,6 @@
   --toc-font: "Dancing Script", cursive;
   --content-font: "Open Sans", sans-serif;
   --monospace-font: "Inconsolata", monospace;
-  --force-single-column: 0;
 }
 
 /* UNIVERSAL BOX SIZING WITH INHERITANCE */
@@ -106,6 +105,11 @@ html, body {
   shape-rendering: geometricPrecision;
   image-rendering: optimizeQuality;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
 }
 
 header#page-header {
@@ -399,7 +403,7 @@ button#set-single-col-to-off-btn {
   display: flex;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   #site-settings-wrapper {
     visibility: hidden;
   }
@@ -737,17 +741,17 @@ main > hr {
     column-count: 2;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="4"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="3"] {
     column-count: 1;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=layout][data-col="2"] {
     column-count: 1;
   }
@@ -907,37 +911,37 @@ main > hr {
 
 @media (max-width: 1200px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="4"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="3"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   [data-cmd=grid][data-col="2"] {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 body {
@@ -990,68 +994,68 @@ function setForceSingleColumnToOn() {
     updateColumns();
 }
 
-</script></head><body><header id="page-header"><div id="site-title-wrapper" class="site-header-row" data-col="2"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-source="local" top-level="true" data-level="h1"><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li data-source="local" top-level="true" data-level="h1"><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/math/pre-calc/index.html#limits">Limits</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/math/pre-calc/index.html#lhospitalsrule">L’Hospital’s Rule</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/math/pre-calc/index.html#limitlaws">Limit Laws</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/math/pre-calc/index.html#limitformulas">Limit Formulas</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#functiongraphs">Function Graphs</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#example">Example</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/math/pre-calc/index.html#example1">Example</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#example2">Example</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/all-school-notes/math/pre-calc/index.html#growthrates">Growth Rates</a></li></ul></div></nav><div id="site-settings-wrapper"><button onclick="setForceSingleColumnToOff()" class="pill" id="set-single-col-to-off-btn"><span>Force Single Column</span><span>On</span></button><button id="set-single-col-to-on-btn" class="pill" onclick="setForceSingleColumnToOn()"><span>Force Single Column</span><span>Off</span></button></div></header><main>
-<h1 id="precalculus" top-level=""><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></h1><h2 id="limits"><a href="/all-school-notes/math/pre-calc/index.html#limits">Limits</a></h2><div data-cmd="grid" data-col="2">
+</script></head><body><header id="page-header"><div id="site-title-wrapper" data-col="2" class="site-header-row"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav id="site-nav-wrapper" class="site-header-row two-col"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-level="h1" data-source="local" top-level="true"><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li data-level="h1" data-source="local" top-level="true"><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#limits">Limits</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/all-school-notes/math/pre-calc/index.html#lhospitalsrule">L’Hospital’s Rule</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#limitlaws">Limit Laws</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/all-school-notes/math/pre-calc/index.html#limitformulas">Limit Formulas</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/math/pre-calc/index.html#functiongraphs">Function Graphs</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/math/pre-calc/index.html#example">Example</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/math/pre-calc/index.html#example1">Example</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/math/pre-calc/index.html#example2">Example</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/math/pre-calc/index.html#growthrates">Growth Rates</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" class="pill" onclick="setForceSingleColumnToOff()"><span>Force Single Column</span><span>On</span></button><button onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main>
+<h1 top-level="" id="precalculus"><a href="/all-school-notes/math/pre-calc/index.html#precalculus">Pre-Calculus</a></h1><h2 id="limits"><a href="/all-school-notes/math/pre-calc/index.html#limits">Limits</a></h2><div data-col="2" data-cmd="grid">
    <section boxed="" data-cmd="note">
-      <h3 id="lhospitalsrule"><a href="/all-school-notes/math/pre-calc/index.html#lhospitalsrule">L’Hospital’s Rule</a></h3><div id="ID8801450839930976058" data-math-node="block" data-cmd="equation"></div><p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p></section></div><h3 id="limitlaws"><a href="/all-school-notes/math/pre-calc/index.html#limitlaws">Limit Laws</a></h3><div data-cmd="grid" data-col="3">
-   <div data-cmd="equation" id="ID6116260195244369906" data-math-node="block"></div><div data-math-node="block" data-cmd="equation" id="ID1706216053956124783"></div><div id="ID18034623585488481379" data-math-node="block" data-cmd="equation"></div><div data-cmd="equation" id="ID13763139115590299508" data-math-node="block"></div><div data-cmd="equation" id="ID3585628420190267874" data-math-node="block"></div><div data-math-node="block" data-cmd="equation" id="ID16792593000217914315"></div><div id="ID3539911619649740153" data-math-node="block" data-cmd="equation"></div><div id="ID4181854524790800140" data-cmd="equation" data-math-node="block"></div></div><h3 id="limitformulas"><a href="/all-school-notes/math/pre-calc/index.html#limitformulas">Limit Formulas</a></h3><div data-col="3" data-cmd="grid">
-   <div id="ID10340353261124347914" data-cmd="equation" data-math-node="block"></div><div id="ID3146940132378546246" data-math-node="block" data-cmd="equation"></div></div><h3 id="functiongraphs"><a href="/all-school-notes/math/pre-calc/index.html#functiongraphs">Function Graphs</a></h3><div data-cmd="grid" data-col="2" boxed="">
+      <h3 id="lhospitalsrule"><a href="/all-school-notes/math/pre-calc/index.html#lhospitalsrule">L’Hospital’s Rule</a></h3><div data-cmd="equation" id="ID1915750634525626169" data-math-node="block"></div><p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p></section></div><h3 id="limitlaws"><a href="/all-school-notes/math/pre-calc/index.html#limitlaws">Limit Laws</a></h3><div data-col="3" data-cmd="grid">
+   <div data-cmd="equation" data-math-node="block" id="ID11869004409275504646"></div><div id="ID13796029982837438054" data-cmd="equation" data-math-node="block"></div><div id="ID15432110507942645917" data-math-node="block" data-cmd="equation"></div><div data-math-node="block" data-cmd="equation" id="ID17510652820477950092"></div><div id="ID11382615419080676770" data-math-node="block" data-cmd="equation"></div><div id="ID10067328347929840020" data-cmd="equation" data-math-node="block"></div><div data-cmd="equation" id="ID10559440224910350479" data-math-node="block"></div><div data-math-node="block" data-cmd="equation" id="ID2294740935182975782"></div></div><h3 id="limitformulas"><a href="/all-school-notes/math/pre-calc/index.html#limitformulas">Limit Formulas</a></h3><div data-cmd="grid" data-col="3">
+   <div id="ID14936594677827104128" data-math-node="block" data-cmd="equation"></div><div data-cmd="equation" id="ID644493628070335149" data-math-node="block"></div></div><h3 id="functiongraphs"><a href="/all-school-notes/math/pre-calc/index.html#functiongraphs">Function Graphs</a></h3><div boxed="" data-cmd="grid" data-col="2">
    <section data-cmd="note">
       <h4 id="example"><a href="/all-school-notes/math/pre-calc/index.html#example">Example</a></h4><img style="max-width: 600px;" src="/all-school-notes/static-assets/assets/images/math/9.svg"></img></section><section data-cmd="note">
-      <h4 id="example1"><a href="/all-school-notes/math/pre-calc/index.html#example1">Example</a></h4><img style="max-width: 600px;" src="/all-school-notes/static-assets/assets/images/math/10.svg"></img></section><section data-cmd="note">
-      <h4 id="example2"><a href="/all-school-notes/math/pre-calc/index.html#example2">Example</a></h4><img style="max-width: 600px;" src="/all-school-notes/static-assets/assets/images/math/11.svg"></img></section></div><h3 id="growthrates"><a href="/all-school-notes/math/pre-calc/index.html#growthrates">Growth Rates</a></h3><ol>
+      <h4 id="example1"><a href="/all-school-notes/math/pre-calc/index.html#example1">Example</a></h4><img src="/all-school-notes/static-assets/assets/images/math/10.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
+      <h4 id="example2"><a href="/all-school-notes/math/pre-calc/index.html#example2">Example</a></h4><img src="/all-school-notes/static-assets/assets/images/math/11.svg" style="max-width: 600px;"></img></section></div><h3 id="growthrates"><a href="/all-school-notes/math/pre-calc/index.html#growthrates">Growth Rates</a></h3><ol>
    <li><u>Factorial functions</u> grow faster than <u>exponential functions</u>.</li><li><u>Exponential functions</u> grow faster than <u>polynomials</u>.</li></ol></main><script>try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\lim_{x\\to{a}}\\frac{f(x)}{g(x)}&= \\lim_{x\\to{a}}\\frac{f^\\prime(x)}{g^\\prime(x)}\\\\\n                     \\text{if}\\;\\lim_{x\\to{a}}\\frac{f(x)}{g(x)}= \\frac{0}{0}\\;&\\text{or}\\;\\lim_{x\\to{a}}\\frac{f(x)}{g(x)}= \\frac{\\infty}{\\infty}\\end{split}\\end{equation*}", document.getElementById('ID8801450839930976058'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\lim_{x\\to{a}}\\frac{f(x)}{g(x)}&= \\lim_{x\\to{a}}\\frac{f^\\prime(x)}{g^\\prime(x)}\\\\\n                     \\text{if}\\;\\lim_{x\\to{a}}\\frac{f(x)}{g(x)}= \\frac{0}{0}\\;&\\text{or}\\;\\lim_{x\\to{a}}\\frac{f(x)}{g(x)}= \\frac{\\infty}{\\infty}\\end{split}\\end{equation*}", document.getElementById('ID1915750634525626169'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) + g(x) \\Big] &= \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID6116260195244369906'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) + g(x) \\Big] &= \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID11869004409275504646'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) - g(x) \\Big] &= \\lim_{x \\to a} f(x) - \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID1706216053956124783'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) - g(x) \\Big] &= \\lim_{x \\to a} f(x) - \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID13796029982837438054'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ c \\cdot f(x) \\Big] &= c \\cdot \\lim_{x \\to a} f(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID18034623585488481379'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ c \\cdot f(x) \\Big] &= c \\cdot \\lim_{x \\to a} f(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID15432110507942645917'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) \\cdot g(x) \\Big] &= \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID13763139115590299508'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) \\cdot g(x) \\Big] &= \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)\n   \\end{split}\\end{equation*}", document.getElementById('ID17510652820477950092'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\frac{f(x)}{g(x)}&= \\frac{\\lim_{x \\to a} f(x)}{\\lim_{x \\to a}g(x)}\\; \\text{if} \\lim_{x \\to a}g(x) \\neq 0\n   \\end{split}\\end{equation*}", document.getElementById('ID3585628420190267874'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\frac{f(x)}{g(x)}&= \\frac{\\lim_{x \\to a} f(x)}{\\lim_{x \\to a}g(x)}\\; \\text{if} \\lim_{x \\to a}g(x) \\neq 0\n   \\end{split}\\end{equation*}", document.getElementById('ID11382615419080676770'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) \\Big]^n = \\Big[ \\lim_{x \\to a} f(x) \\Big]^n\\;\\text{if}\\;n\\in\\mathbb{Z}^+\n   \\end{split}\\end{equation*}", document.getElementById('ID16792593000217914315'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x \\to a} \\Big[ f(x) \\Big]^n = \\Big[ \\lim_{x \\to a} f(x) \\Big]^n\\;\\text{if}\\;n\\in\\mathbb{Z}^+\n   \\end{split}\\end{equation*}", document.getElementById('ID10067328347929840020'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\underbrace{\\lim_{x \\to a} \\sqrt[n]{f(x)} = \\sqrt[n]{\\lim_{x \\to a} f(x)}\\;\\text{if}\\;n\\in\\mathbb{Z}^+}_{\\text{if $n$ is even we assume $\\lim_{x \\to a} f(x) > 0$}}\n   \\end{split}\\end{equation*}", document.getElementById('ID3539911619649740153'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\underbrace{\\lim_{x \\to a} \\sqrt[n]{f(x)} = \\sqrt[n]{\\lim_{x \\to a} f(x)}\\;\\text{if}\\;n\\in\\mathbb{Z}^+}_{\\text{if $n$ is even we assume $\\lim_{x \\to a} f(x) > 0$}}\n   \\end{split}\\end{equation*}", document.getElementById('ID10559440224910350479'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to{c}}\\, \\left(f \\circ g\\right)(x) &= f\\left(\\lim_{x\\to{c}}\\, g(x)\\right)\n   \\end{split}\\end{equation*}", document.getElementById('ID4181854524790800140'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to{c}}\\, \\left(f \\circ g\\right)(x) &= f\\left(\\lim_{x\\to{c}}\\, g(x)\\right)\n   \\end{split}\\end{equation*}", document.getElementById('ID2294740935182975782'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to\\infty} \\frac{1}{x^r}&= 0\\;,\\;\\forall r > 0\n   \\end{split}\\end{equation*}", document.getElementById('ID10340353261124347914'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to\\infty} \\frac{1}{x^r}&= 0\\;,\\;\\forall r > 0\n   \\end{split}\\end{equation*}", document.getElementById('ID14936594677827104128'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to\\infty} \\frac{x^n}{!n}&= 0\\;,\\;\\forall n \\in \\mathbb{R}\n   \\end{split}\\end{equation*}", document.getElementById('ID3146940132378546246'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\lim_{x\\to\\infty} \\frac{x^n}{!n}&= 0\\;,\\;\\forall n \\in \\mathbb{R}\n   \\end{split}\\end{equation*}", document.getElementById('ID644493628070335149'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 </script></body></html>
