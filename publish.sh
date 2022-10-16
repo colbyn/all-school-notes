@@ -9,3 +9,8 @@ cd $COMPILER_DIR
 ./scripts/build.sh
 
 cargo run --release -- build --project-dir $PROJECT_DIR --route-prefix="all-school-notes" --output-dir=$OUTPUT_DIR
+
+
+cd $PROJECT_DIR
+
+git add . && git commit -m "update site" && git push
