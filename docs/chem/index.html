@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en"><head><!-- HTML METADATA -->
+<meta charset="utf-8"/>
+<meta name=viewport content="width=device-width,initial-scale=1">  
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+
+<!-- KaTeX MHCHEM (MUST BE LOADED AFTER KaTeX)  -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
+
+<!-- GOOGLE ICONS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style><style>:root {
+  --color-bg: #fff;
+  --color-fg: #000;
+  --link-color: #0059ff;
+  --border-color: #000;
+  --headline-font: "Sail", cursive;
+  --h1-color: #303233;
+  --h2-color: #303233;
+  --h3-color: #32403f;
+  --h4-color: #32403f;
+  --h5-color: #32403f;
+  --h6-color: #32403f;
+  --section-font: "Playfair Display", serif;
+  --toc-font: "Dancing Script", cursive;
+  --content-font: "Open Sans", sans-serif;
+  --monospace-font: "Inconsolata", monospace;
+  --force-single-column: 0;
+}
+
+/* UNIVERSAL BOX SIZING WITH INHERITANCE */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* DARK/LIGHT MODE DRAWING TOGGLE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: hwb(248deg 19% 79%);
+    --color-fg: #f5f5f5;
+    --link-color: #09d9ff;
+    --border-color: #805b3c;
+    --h1-color: #dec3c3;
+    --h2-color: #dec3c3;
+    --h3-color: #dec3c3;
+    --h4-color: #dec3c3;
+    --h5-color: #dec3c3;
+    --h6-color: #dec3c3;
+  }
+  svg[data-svg-color-scheme=dark-mode] {
+    display: unset;
+  }
+  svg[data-svg-color-scheme=light-mode] {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+  svg[data-svg-color-scheme=dark-mode] {
+    display: none;
+  }
+  svg[data-svg-color-scheme=light-mode] {
+    display: unset;
+  }
+}
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--content-font);
+  shape-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  text-rendering: optimizeLegibility;
+}
+
+header#page-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  header#page-header {
+    background-color: #1d1f29;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7e7e7e;
+  }
+}
+
+.site-header-row {
+  display: grid;
+  position: relative;
+  transition: 0.8s ease-in-out;
+}
+.site-header-row a.left-link {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: 0.8s ease-in-out;
+}
+@media (prefers-color-scheme: dark) {
+  .site-header-row a.left-link {
+    background-color: #353655;
+    box-shadow: 0 0 5px 0px #000;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-right: 1px solid #000;
+  }
+}
+.site-header-row a.left-link span {
+  font-size: 3em;
+  transition: 0.8s ease-in-out;
+}
+.site-header-row a.left-link:hover span {
+  font-size: 4em;
+}
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-bottom: 1px solid #000;
+  }
+}
+@media (max-width: 45em) {
+  .site-header-row a.left-link span {
+    font-size: 2em;
+  }
+  .site-header-row a.left-link:hover span {
+    font-size: 3em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-top: 1px solid #000;
+  }
+}
+
+#site-title-wrapper {
+  z-index: 2;
+}
+#site-title-wrapper a.left-link {
+  z-index: 2;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#site-title-box {
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid #000;
+}
+#site-title-box h1 {
+  font-family: var(--toc-font);
+  margin: 0;
+}
+
+#site-nav-wrapper {
+  margin-top: -5px;
+  padding-top: 5px;
+}
+#site-nav-wrapper a.left-link {
+  z-index: 1;
+  align-items: flex-start;
+  display: none;
+}
+@media (max-width: 45em) and (prefers-color-scheme: light) {
+  #site-nav-wrapper a.left-link {
+    border-bottom: 1px solid #000;
+  }
+}
+
+#toc-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+p.toc-info-banner {
+  font-family: var(--toc-font);
+  font-weight: bolder;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  border-bottom: 1px solid #000;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0;
+  padding-top: 0;
+}
+#toc-list li {
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#toc-list li a {
+  text-decoration: none;
+  font-family: var(--toc-font);
+  font-weight: 100;
+}
+#toc-list li a [data-math-node] {
+  font-size: 0.7em;
+}
+#toc-list li[top-level=true] {
+  border-bottom: 2px solid #000;
+}
+#toc-list li[data-level=h1] {
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 2.8em;
+}
+#toc-list li[data-level=h2] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(5vw, 100px));
+  font-size: 2.5em;
+}
+#toc-list li[data-level=h3] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(10vw, 150px));
+  font-size: 2.2em;
+}
+#toc-list li[data-level=h4] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(15vw, 200px));
+  font-size: 1.9em;
+}
+#toc-list li[data-level=h5] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(20vw, 250px));
+  font-size: 1.6em;
+}
+#toc-list li[data-level=h6] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(25vw, 300px));
+  font-size: 1.3em;
+}
+
+#topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0;
+  padding-top: 0;
+}
+#topic-list li {
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#topic-list li a {
+  text-decoration: none;
+  font-family: var(--toc-font);
+  font-weight: 100;
+}
+#topic-list li a [data-math-node] {
+  font-size: 0.7em;
+}
+#topic-list li[top-level=true] {
+  border-bottom: 2px solid #000;
+}
+#topic-list li[data-level=h1] {
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 2.8em;
+}
+#topic-list li[data-level=h2] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(5vw, 100px));
+  font-size: 2.5em;
+}
+#topic-list li[data-level=h3] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(10vw, 150px));
+  font-size: 2.2em;
+}
+#topic-list li[data-level=h4] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(15vw, 200px));
+  font-size: 1.9em;
+}
+#topic-list li[data-level=h5] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(20vw, 250px));
+  font-size: 1.6em;
+}
+#topic-list li[data-level=h6] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(25vw, 300px));
+  font-size: 1.3em;
+}
+
+#site-settings-wrapper {
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 20px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+@media (max-width: 700px) {
+  #site-settings-wrapper {
+    flex-direction: column;
+  }
+}
+#site-settings-wrapper button {
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+@media (prefers-color-scheme: dark) {
+  #site-settings-wrapper button {
+    background-color: rgba(57, 57, 57, 0.3607843137);
+    border: 1px solid #000;
+    color: #fff;
+  }
+  #site-settings-wrapper button:hover {
+    box-shadow: 0 0 1px 1px #0083ff;
+    color: #0083ff;
+  }
+}
+#site-settings-wrapper button.pill {
+  padding: 0;
+}
+#site-settings-wrapper button.pill > span {
+  padding: 10px 20px;
+}
+#site-settings-wrapper button.pill > span:first-child {
+  border-right: 1px solid #000;
+}
+
+button#set-single-col-to-on-btn {
+  display: none;
+}
+
+button#set-single-col-to-off-btn {
+  display: none;
+}
+
+[force-single-col=off] button#set-single-col-to-on-btn {
+  display: flex;
+}
+
+[force-single-col=on] button#set-single-col-to-off-btn {
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  #site-settings-wrapper {
+    visibility: hidden;
+  }
+}
+p {
+  hyphens: auto;
+  text-align: justify;
+  text-indent: 7px;
+}
+
+p[center] {
+  text-align: center;
+}
+
+p[justify] {
+  text-align: justify;
+}
+
+a {
+  color: var(--link-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  hr {
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+img[data-center] {
+  display: block;
+  margin: 0 auto;
+}
+
+[data-table-wrapper] {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  overflow-x: scroll;
+}
+
+table {
+  width: fit-content;
+  border-collapse: collapse;
+  border: none;
+  align-self: center;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: fit-content;
+}
+table th, table td {
+  padding: 10px;
+}
+@media (prefers-color-scheme: light) {
+  table th, table td {
+    border: 1px solid black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  table th, table td {
+    border: 1px solid #616161;
+  }
+}
+table tr:hover {
+  background-color: rgba(44, 44, 44, 0.5294117647);
+}
+table span[data-table-list] {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 8px;
+}
+table span[data-table-list] > span {
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 100;
+}
+table span[data-table-list][data-color] > span {
+  border: 1px solid #01ff5c;
+  color: #01ff5c;
+}
+table span[data-table-list][data-color1] > span {
+  border: 1px solid #c1ff02;
+  color: #c1ff02;
+}
+table span[data-table-list][data-color2] > span {
+  border: 1px solid #27fce2;
+  color: #27fce2;
+}
+
+mark[font] {
+  background-color: unset;
+  color: #0fffae;
+}
+
+mark[font][data-color] {
+  color: #01ff5c;
+}
+
+mark[font][data-color1] {
+  color: #c1ff02;
+}
+
+mark[font][data-color2] {
+  color: #27fce2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headline-font);
+  font-size: 3em;
+  margin: 0;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: var(--h1-color);
+}
+
+h2 {
+  font-size: 2.5em;
+  color: var(--h2-color);
+}
+
+h3 {
+  font-size: 2.2em;
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: 1.9em;
+  color: var(--h4-color);
+}
+
+h5 {
+  font-size: 1.6em;
+  color: var(--h5-color);
+}
+
+h6 {
+  font-size: 1.3em;
+  color: var(--h6-color);
+}
+
+main > :is(h1, h2, h3, h4, h5, h6):first-child {
+  border-top: unset;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-bottom: 20px;
+}
+main > *:is(h1, h2, h3, h4, h5, h6) {
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+main > *:is(h1, h2, h3, h4, h5, h6) + main > *:is(h1, h2, h3, h4, h5, h6) {
+  border-top: unset;
+}
+main > h1 {
+  padding-left: min(min(10px, 5vw), 100px);
+  font-size: 2.8em;
+}
+main > h2 {
+  padding-left: min(min(30px, 10vw), 150px);
+  font-size: 2.5em;
+}
+main > h3 {
+  padding-left: min(min(60px, 15vw), 200px);
+  font-size: 2.2em;
+}
+main > h4 {
+  padding-left: min(min(90px, 20vw), 250px);
+  font-size: 1.9em;
+}
+main > h5 {
+  padding-left: min(min(120px, 25vw), 300px);
+  font-size: 1.6em;
+}
+main > h6 {
+  padding-left: min(min(150px, 30vw), 350px);
+  font-size: 1.3em;
+}
+main > *:not(:is(h1, h2, h3, h4, h5, h6)) {
+  text-align: justify;
+  padding: 0 20px;
+}
+main > dl dt {
+  text-align: left;
+}
+main > dl dd {
+  text-align: justify;
+}
+main > ul, main li {
+  padding-left: 30px;
+}
+main > hr {
+  width: 95%;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.katex-display > .katex {
+  white-space: normal;
+}
+
+/* Add space between broken lines: */
+.katex-display > .base {
+  margin: 0.25em 0;
+}
+
+/* Compensate by reducing space around display math */
+.katex-display {
+  margin: 0.5em 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-math-node] {
+    color: #ffb7e4;
+  }
+}
+
+[data-cmd=layout][show-rule=true] {
+  column-rule: 1px solid #ccc;
+}
+
+[data-cmd=layout] {
+  column-gap: 20px;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+[data-cmd=layout] h1, [data-cmd=layout] h2, [data-cmd=layout] h3, [data-cmd=layout] h4, [data-cmd=layout] h5, [data-cmd=layout] h6 {
+  margin: 0;
+  break-after: avoid;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+}
+[data-cmd=layout] p {
+  margin: 0;
+}
+[data-cmd=layout] ul {
+  margin: 0;
+  padding: 0;
+}
+[data-cmd=layout] ul li {
+  text-align: justify;
+  hyphens: auto;
+}
+[data-cmd=layout] p:first-child {
+  text-indent: 0;
+}
+[data-cmd=layout] p + p {
+  text-indent: 2em;
+}
+[data-cmd=layout] ul {
+  list-style-position: outside;
+  margin-left: 12px;
+}
+[data-cmd=layout] [data-math-node=block] {
+  column-span: all;
+}
+
+[data-cmd=layout][data-col="1"] {
+  column-count: 1;
+}
+
+[data-cmd=layout][data-col="2"] {
+  column-count: 2;
+}
+
+[data-cmd=layout][data-col="3"] {
+  column-count: 3;
+}
+
+[data-cmd=layout][data-col="4"] {
+  column-count: 4;
+}
+
+@media (max-width: 1200px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 3;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 900px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="2"] {
+    column-count: 1;
+  }
+}
+[data-cmd=grid][boxed] > [data-cmd=note] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=grid][boxed] > [data-cmd=note] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=grid][boxed] > [data-cmd=note] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+[data-cmd=grid][boxed] > [data-math-node=block] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=grid][boxed] > [data-math-node=block] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=grid][boxed] > [data-math-node=block] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+
+[data-cmd=note][boxed] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=note][boxed] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=note][boxed] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+
+[data-cmd=grid] {
+  display: grid;
+  padding: 0 20px;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 100%;
+}
+[data-cmd=grid] h1, [data-cmd=grid] h2, [data-cmd=grid] h3, [data-cmd=grid] h4, [data-cmd=grid] h5, [data-cmd=grid] h6 {
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+  text-align: center;
+}
+
+[data-cmd=note] {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  row-gap: 10px;
+  overflow: hidden;
+  align-items: normal;
+  grid-row-gap: 12px;
+}
+[data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) {
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+[data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) + [data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) {
+  border-top: unset;
+}
+[data-cmd=note] > h1 {
+  padding-left: min(min(10px, 5vw), 100px);
+  font-size: 2.8em;
+}
+[data-cmd=note] > h2 {
+  padding-left: min(min(30px, 10vw), 150px);
+  font-size: 2.5em;
+}
+[data-cmd=note] > h3 {
+  padding-left: min(min(60px, 15vw), 200px);
+  font-size: 2.2em;
+}
+[data-cmd=note] > h4 {
+  padding-left: min(min(90px, 20vw), 250px);
+  font-size: 1.9em;
+}
+[data-cmd=note] > h5 {
+  padding-left: min(min(120px, 25vw), 300px);
+  font-size: 1.6em;
+}
+[data-cmd=note] > h6 {
+  padding-left: min(min(150px, 30vw), 350px);
+  font-size: 1.3em;
+}
+[data-cmd=note] > *:not(:is(h1, h2, h3, h4, h5, h6)) {
+  text-align: justify;
+  padding: 0 20px;
+}
+[data-cmd=note] > dl dt {
+  text-align: left;
+}
+[data-cmd=note] > dl dd {
+  text-align: justify;
+}
+[data-cmd=note] > ul, [data-cmd=note] li {
+  padding-left: 30px;
+}
+[data-cmd=note] > hr {
+  width: 95%;
+}
+[data-cmd=note] h1, [data-cmd=note] h2, [data-cmd=note] h3, [data-cmd=note] h4, [data-cmd=note] h5, [data-cmd=note] h6 {
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+  padding: 0 10px;
+}
+[data-cmd=note] [data-cmd=note] {
+  margin: 10px;
+}
+
+[data-cmd=grid][data-col="1"] {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+[data-cmd=grid][data-col="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+[data-cmd=grid][data-col="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+[data-cmd=grid][data-col="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 3;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 900px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="2"] {
+    column-count: 1;
+  }
+}
+body {
+  margin: 0;
+}
+
+svg[data-drawing] {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
+</style><script>let root = document.documentElement;
+
+function updateColumns() {
+    const force_single_column = localStorage.getItem('preference.force-single-column');
+    const wrapper = document.getElementById('site-settings-wrapper');
+    const selector = "main [data-col], main section, main h1, main h2, main h3, main h4, main h5, main h6";
+    if (force_single_column != null) {
+        console.log("force_single_column", force_single_column);
+        if (force_single_column == "1") {
+            wrapper.setAttribute("force-single-col", 'on');
+            document.querySelectorAll(selector).forEach((node) => {
+                node.setAttribute("force-single-col", 'on');
+            });
+        }
+        if (force_single_column == "0") {
+            wrapper.setAttribute("force-single-col", 'off');
+            document.querySelectorAll(selector).forEach((node) => {
+                node.setAttribute("force-single-col", 'off');
+            });
+        }
+    } else {
+        wrapper.setAttribute("force-single-col", 'off');
+    }
+}
+
+window.addEventListener('load', () => {
+    updateColumns();
+});
+
+function setForceSingleColumnToOff() {
+    console.log("set force single column to off");
+    localStorage.setItem('preference.force-single-column', '0');
+    updateColumns();
+}
+
+function setForceSingleColumnToOn() {
+    console.log("set force single column to on");
+    localStorage.setItem('preference.force-single-column', '1');
+    updateColumns();
+}
+
+</script></head><body><header id="page-header"><div data-col="2" class="site-header-row" id="site-title-wrapper"><a class="left-link" href="/"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav id="site-nav-wrapper" class="site-header-row two-col"><a href="/" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p class="toc-info-banner" id="topic-list-info">Topics</p><ul id="topic-list"><li data-source="local" top-level="true" data-level="h1"><a href="/chem/index.html#chemistry">Chemistry</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/basics/index.html#basics">Basics</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/atom-nuclear-chem/index.html#theatomandnuclearchemistry">The Atom and Nuclear Chemistry</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li><li data-level="h2" top-level="true" data-source="external"><a href="/chem/periodic-properties/index.html#periodicpropertiesoftheelements">Periodic Properties of the Elements</a></li><li top-level="true" data-level="h2" data-source="external"><a href="/chem/qa-model/index.html#quantummechanicalmodelsoftheatom">Quantum Mechanical Models of the Atom</a></li></ul><p id="toc-list-info" class="toc-info-banner">Table Of Contents</p><ul id="toc-list"><li data-source="local" top-level="true" data-level="h1"><a href="/chem/index.html#chemistry">Chemistry</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/basics/index.html#basics">Basics</a></li><li top-level="false" data-level="h3" data-source="external"><a href="/chem/basics/index.html#conventionsonhomework">Conventions on homework</a></li><li top-level="false" data-level="h3" data-source="external"><a href="/chem/basics/index.html#units">Units</a></li><li data-source="external" top-level="false" data-level="h3"><a href="/chem/basics/index.html#siprefixes">SI Prefixes</a></li><li data-source="external" top-level="false" data-level="h3"><a href="/chem/basics/index.html#classificationofmatter">Classification of Matter</a></li><li data-level="h4" top-level="false" data-source="external"><a href="/chem/basics/index.html#overview">Overview</a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/basics/index.html#mixtures">Mixtures</a></li><li top-level="false" data-level="h6" data-source="external"><a href="/chem/basics/index.html#heterogeneousmixture"><mark font="">Hetero</mark>geneous mixture</a></li><li data-source="external" data-level="h6" top-level="false"><a href="/chem/basics/index.html#homogeneousmixture"><mark font="">Homo</mark>geneous mixture</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/atom-nuclear-chem/index.html#theatomandnuclearchemistry">The Atom and Nuclear Chemistry</a></li><li top-level="false" data-source="external" data-level="h3"><a href="/chem/atom-nuclear-chem/index.html#isotopesandsubatomicparticles">Isotopes and Subatomic Particles</a></li><li data-source="external" data-level="h3" top-level="false"><a href="/chem/atom-nuclear-chem/index.html#electronsandquantummechanics">Electrons and Quantum Mechanics</a></li><li data-source="external" data-level="h3" top-level="false"><a href="/chem/atom-nuclear-chem/index.html#averageatomicmass">Average Atomic Mass</a></li><li data-source="external" data-level="h2" top-level="true"><a href="/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></li><li top-level="false" data-level="h3" data-source="external"><a href="/chem/molecules-compounds/index.html#terms">Terms</a></li><li data-source="external" data-level="h3" top-level="false"><a href="/chem/molecules-compounds/index.html#prefixes">Prefixes</a></li><li top-level="false" data-source="external" data-level="h3"><a href="/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></li><li data-level="h4" top-level="false" data-source="external"><a href="/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></li><li top-level="false" data-level="h4" data-source="external"><a href="/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></li><li top-level="false" data-source="external" data-level="h4"><a href="/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/molecules-compounds/index.html#rememberingthenumberofoxygens">Remembering the number of oxygens</a></li><li top-level="false" data-level="h6" data-source="external"><a href="/chem/molecules-compounds/index.html#general">General</a></li><li top-level="false" data-level="h6" data-source="external"><a href="/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark data-color="" font="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></li><li data-level="h4" data-source="external" top-level="false"><a href="/chem/molecules-compounds/index.html#generally">Generally</a></li><li data-source="external" data-level="h4" top-level="false"><a href="/chem/molecules-compounds/index.html#determiningthecharge">Determining The Charge<sup>†</sup></a></li><li data-level="h5" data-source="external" top-level="false"><a href="/chem/molecules-compounds/index.html#warning">Warning</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></li><li data-source="external" data-level="h5" top-level="false"><a href="/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/molecules-compounds/index.html#exampleforoxalate">Example for <mark font="">Oxalate</mark></a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/molecules-compounds/index.html#exampleforhydrogencarbonate">Example for <mark font="">Hydrogen Carbonate</mark></a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></li><li data-source="external" data-level="h5" top-level="false"><a href="/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></li><li top-level="false" data-level="h6" data-source="external"><a href="/chem/molecules-compounds/index.html#examples">Examples</a></li><li top-level="false" data-source="external" data-level="h6"><a href="/chem/molecules-compounds/index.html#lewisstructureforsulfateion">Lewis structure for sulfate ion</a></li><li top-level="false" data-source="external" data-level="h3"><a href="/chem/molecules-compounds/index.html#notes">Notes</a></li><li data-level="h2" top-level="true" data-source="external"><a href="/chem/periodic-properties/index.html#periodicpropertiesoftheelements">Periodic Properties of the Elements</a></li><li top-level="false" data-source="external" data-level="h3"><a href="/chem/periodic-properties/index.html#terms1">Terms</a></li><li top-level="false" data-level="h3" data-source="external"><a href="/chem/periodic-properties/index.html#expandedoctetexceptionstotheoctetrule">Expanded Octet （Exceptions to the Octet Rule）</a></li><li top-level="true" data-level="h2" data-source="external"><a href="/chem/qa-model/index.html#quantummechanicalmodelsoftheatom">Quantum Mechanical Models of the Atom</a></li><li data-source="external" data-level="h3" top-level="false"><a href="/chem/qa-model/index.html#theelectromagneticspectrum">The Electromagnetic Spectrum</a></li><li data-level="h3" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#terms2">Terms</a></li><li data-level="h4" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#aufbauprinciple">Aufbau Principle</a></li><li data-level="h4" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#hundsrule">Hund’s rule</a></li><li data-source="external" data-level="h4" top-level="false"><a href="/chem/qa-model/index.html#paulisexclusionprinciple">Pauli's Exclusion Principle</a></li><li top-level="false" data-source="external" data-level="h3"><a href="/chem/qa-model/index.html#overview1">Overview</a></li><li top-level="false" data-source="external" data-level="h4"><a href="/chem/qa-model/index.html#formulas">Formulas</a></li><li top-level="false" data-source="external" data-level="h4"><a href="/chem/qa-model/index.html#values">Values</a></li><li top-level="false" data-level="h4" data-source="external"><a href="/chem/qa-model/index.html#constants">Constants</a></li><li top-level="false" data-source="external" data-level="h4"><a href="/chem/qa-model/index.html#otherformulas">Other Formulas</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#debroglierelation">de Broglie Relation</a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/qa-model/index.html#heisenbergsuncertaintyprinciple">Heisenberg's Uncertainty Principle</a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/qa-model/index.html#energyofanelectroninanorbitalwithquantumnumberinahydrogenatom">Energy of an Electron in an Orbital with Quantum Number <span data-cmd="inline-math" data-math-target="ID14033722133094739333" data-math-node="inline"></span> in a Hydrogen Atom</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#energyofanelectroninanorbitalwithquantumnumberforanyatom">Energy of an Electron in an Orbital with Quantum Number <span data-cmd="inline-math" data-math-target="ID13266909755823062417" data-math-node="inline"></span> for any atom</a></li><li data-level="h5" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#changeinenergythatoccursinanatomwhenitundergoesatransitionbetweenlevelsfurtherdetails">Change in Energy That Occurs in an Atom When It Undergoes a Transition between Levels <a href="#atomic-spectroscopy-detailed">（Further Details）</a></a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#ionizationenergy">Ionization Energy</a></li><li data-level="h4" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#atomicspectroscopy">Atomic Spectroscopy</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#theprincipalquantumnumbernhydrogenatom">The Principal Quantum Number （n） （Hydrogen Atom）</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#theprincipalquantumnumbernanyatom">The Principal Quantum Number （n） （Any Atom）</a></li><li data-level="h4" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#electronconfiguration">Electron Configuration</a></li><li data-level="h5" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#traditionalchart">Traditional Chart</a></li><li data-source="external" data-level="h5" top-level="false"><a href="/chem/qa-model/index.html#bettermethod">Better Method</a></li><li data-level="h5" top-level="false" data-source="external"><a href="/chem/qa-model/index.html#examples1">Examples</a></li><li data-level="h6" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#electronconfigurationfor">Electron configuration for <span data-math-target="ID17185296163289388635" data-math-node="inline" data-cmd="inline-math"></span></a></li><li data-source="external" data-level="h6" top-level="false"><a href="/chem/qa-model/index.html#electronconfigurationfor1">Electron configuration for <span data-cmd="inline-math" data-math-target="ID7151597165464613767" data-math-node="inline"></span></a></li><li data-source="external" data-level="h6" top-level="false"><a href="/chem/qa-model/index.html#electronconfigurationfor2">Electron configuration for <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID2894251656198794271"></span></a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/qa-model/index.html#howtos">How-tos</a></li><li data-source="external" data-level="h6" top-level="false"><a href="/chem/qa-model/index.html#whatarethevalenceelectrons">What are the valence electrons?</a></li><li top-level="false" data-source="external" data-level="h4"><a href="/chem/qa-model/index.html#quantumnumbers">Quantum Numbers</a></li><li data-level="h5" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#overview2">Overview</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#theprinciplequantumnumber">The Principle Quantum Number （<span data-cmd="inline-math" data-math-target="ID12038017889418854435" data-math-node="inline"></span>）</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#angularmomentumquantumnumber">Angular Momentum Quantum Number</a></li><li data-source="external" data-level="h5" top-level="false"><a href="/chem/qa-model/index.html#summary">Summary</a></li><li data-source="external" data-level="h5" top-level="false"><a href="/chem/qa-model/index.html#usefulformulas">Useful Formulas</a></li><li top-level="false" data-level="h5" data-source="external"><a href="/chem/qa-model/index.html#examples2">Examples</a></li><li data-level="h4" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#light">Light</a></li><li top-level="false" data-source="external" data-level="h5"><a href="/chem/qa-model/index.html#interferenceanddiffraction">Interference and Diffraction</a></li><li top-level="false" data-source="external" data-level="h6"><a href="/chem/qa-model/index.html#constructiveinterference">Constructive Interference</a></li><li data-level="h6" data-source="external" top-level="false"><a href="/chem/qa-model/index.html#destructiveinterference">Destructive Interference</a></li></ul></div></nav><div id="site-settings-wrapper"><button onclick="setForceSingleColumnToOff()" class="pill" id="set-single-col-to-off-btn"><span>Force Single Column</span><span>On</span></button><button onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main><h1 id="chemistry" top-level=""><a href="/chem/index.html#chemistry">Chemistry</a></h1>
+<h2 id="basics" top-level=""><a href="/chem/basics/index.html#basics">Basics</a></h2><div data-col="4" boxed="" data-cmd="grid">
+   <section data-cmd="note">
+      <p>Given some element <span data-math-node="inline" data-cmd="inline-math" id="ID7109992298581244195"></span></p><div data-cmd="grid" data-col="2">
+         <div data-math-node="block" id="ID10664956788383715366" data-cmd="equation"></div><div id="ID10291338724508723456" data-cmd="equation" data-math-node="block"></div></div><p>Where</p><ul>
+         <li><span data-cmd="inline-math" id="ID16075821681824049562" data-math-node="inline"></span></li><li><span data-math-node="inline" data-cmd="inline-math" id="ID12016792770707487559"></span></li></ul></section><section data-cmd="note">
+      <dl><dt><mark font="">Cat</mark>ions</dt><dd><mark font="">Pos</mark>itively （＋） Charged</dd><dt>Anions</dt><dd>Negatively （−） Charged</dd></dl><hr></hr><section data-cmd="note">
+         <p center="">Mnemonic</p><p center=""><mark font="">Cat</mark>ions are <mark font="">Paw</mark>sitive</p></section></section></div><h3 id="conventionsonhomework"><a href="/chem/basics/index.html#conventionsonhomework">Conventions on homework</a></h3><div boxed="" data-cmd="grid" data-col="4">
+   <section data-cmd="note">
+      <p>When a question says, determine the energy of 1 ㏖ of photons, the unit will be ᴶ/㏖.</p></section></div><h3 id="units"><a href="/chem/basics/index.html#units">Units</a></h3><div data-col="3" data-cmd="grid" boxed="">
+   <div data-cmd="equation" id="ID3096820004268197378" data-math-node="block"></div><div id="ID10770812902287785302" data-math-node="block" data-cmd="equation"></div></div><h3 id="siprefixes"><a href="/chem/basics/index.html#siprefixes">SI Prefixes</a></h3><div data-cmd="grid" data-col="2">
+   <div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Value</th><th>Prefix</th><th>Symbol</th></tr></thead><tbody>
+         <tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID18013212402658045494"></span></th><td>deca</td><td><span id="ID7856420954941302927" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID5209145614202573758"></span></th><td>hecto</td><td><span data-cmd="inline-math" id="ID1441511592482956014" data-math-node="inline"></span></td></tr><tr>
+            <th><span data-math-node="inline" id="ID6986069836338413765" data-cmd="inline-math"></span></th><td>kilo</td><td><span data-cmd="inline-math" id="ID15833780549514286096" data-math-node="inline"></span></td></tr><tr>
+            <th><span id="ID6614136226361194699" data-math-node="inline" data-cmd="inline-math"></span></th><td>mega</td><td><span id="ID15380035916993963889" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
+            <th><span data-math-node="inline" id="ID10118326901042315729" data-cmd="inline-math"></span></th><td>giga</td><td><span data-math-node="inline" id="ID4472857742178838394" data-cmd="inline-math"></span></td></tr><tr>
+            <th><span id="ID2904192514052477009" data-math-node="inline" data-cmd="inline-math"></span></th><td>tera</td><td><span id="ID9508920398219847442" data-cmd="inline-math" data-math-node="inline"></span></td></tr></tbody></table></div><div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Value</th><th>Prefix</th><th>Symbol</th></tr></thead><tbody>
+         <tr>
+            <th><span data-cmd="inline-math" id="ID17224876244257742105" data-math-node="inline"></span></th><td>deci</td><td><span data-cmd="inline-math" id="ID10269666021866468084" data-math-node="inline"></span></td></tr><tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID612478658152668950"></span></th><td>centi</td><td><span data-cmd="inline-math" data-math-node="inline" id="ID11712742035466705218"></span></td></tr><tr>
+            <th><span data-cmd="inline-math" data-math-node="inline" id="ID15163538332473886599"></span></th><td>mili</td><td><span data-math-node="inline" data-cmd="inline-math" id="ID16881986716868773453"></span></td></tr><tr>
+            <th><span id="ID11859825193609577565" data-math-node="inline" data-cmd="inline-math"></span></th><td>micro</td><td><span data-cmd="inline-math" data-math-node="inline" id="ID5468371321243767756"></span></td></tr><tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID3797408776608515339"></span></th><td>nano</td><td><span id="ID10402893983640110198" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th><span data-math-node="inline" id="ID9989942145728659554" data-cmd="inline-math"></span></th><td>pico</td><td><span data-math-node="inline" id="ID8028744852071718901" data-cmd="inline-math"></span></td></tr></tbody></table></div></div><h3 id="classificationofmatter"><a href="/chem/basics/index.html#classificationofmatter">Classification of Matter</a></h3><div data-cmd="grid" data-col="1" boxed="">
+   <section data-cmd="note">
+      <h4 id="overview"><a href="/chem/basics/index.html#overview">Overview</a></h4><img src="/static-assets/assets/images/chem/1.svg" style="max-width: 900px;"></img><h5 id="mixtures"><a href="/chem/basics/index.html#mixtures">Mixtures</a></h5><div data-col="2" data-cmd="grid">
+         <section data-cmd="note">
+            <h6 id="heterogeneousmixture"><a href="/chem/basics/index.html#heterogeneousmixture"><mark font="">Hetero</mark>geneous mixture</a></h6><p center="">Where the prefix <mark font="">Hetero-</mark> means <mark font="">different</mark></p><img style="max-width: 300px;" src="/static-assets/assets/images/chem/2.svg"></img></section><section data-cmd="note">
+            <h6 id="homogeneousmixture"><a href="/chem/basics/index.html#homogeneousmixture"><mark font="">Homo</mark>geneous mixture</a></h6><p center="">Where the prefix <mark font="">Homo-</mark> means <mark font="">same</mark></p><img style="max-width: 300px;" src="/static-assets/assets/images/chem/3.svg"></img></section></div></section></div>
+<h2 top-level="" id="theatomandnuclearchemistry"><a href="/chem/atom-nuclear-chem/index.html#theatomandnuclearchemistry">The Atom and Nuclear Chemistry</a></h2><h3 id="isotopesandsubatomicparticles"><a href="/chem/atom-nuclear-chem/index.html#isotopesandsubatomicparticles">Isotopes and Subatomic Particles</a></h3><h3 id="electronsandquantummechanics"><a href="/chem/atom-nuclear-chem/index.html#electronsandquantummechanics">Electrons and Quantum Mechanics</a></h3><h3 id="averageatomicmass"><a href="/chem/atom-nuclear-chem/index.html#averageatomicmass">Average Atomic Mass</a></h3><div data-cmd="grid" boxed="" data-col="2">
+   <section data-cmd="note">
+      <p>If the average atomic mass of boron is <span id="ID10948431943919228745" data-cmd="inline-math" data-math-node="inline"></span>, what is the percent abundance of boron-11 （mass of <span data-math-node="inline" id="ID4700062338365090069" data-cmd="inline-math"></span>） if the only other isotope is boron-10 （mass of <span id="ID792267631691585149" data-math-node="inline" data-cmd="inline-math"></span>）? Given the formula for average atomic mass:</p><div id="ID8211278684757476293" data-cmd="equation" data-math-node="block"></div><p>Therefore in summary, we are given the following known quantities</p><div data-cmd="equation" id="ID3761004479898682300" data-math-node="block"></div><p>With the following unknown quantities</p><div data-math-node="block" id="ID6615382844676551493" data-cmd="equation"></div><p>And asked to find the percent abundance of boron-11 （<span id="ID13964271251213544514" data-math-node="inline" data-cmd="inline-math"></span>）. Therefore our equation is</p><div id="ID8282598474281055904" data-math-node="block" data-cmd="math"></div><p>We have two unknowns, but luckily we can use the following fact/relation and therefore express the percent abundance of boron-10 in terms of the percent abundance of boron-11</p><div data-cmd="equation" id="ID6819371019632937" data-math-node="block"></div><p>Therefore</p><div data-cmd="equation" data-math-node="block" id="ID17539909038681001922"></div><p>But we aren't done, we have to compute significant figures.</p><div id="ID10279917727502945584" data-math-node="block" data-cmd="math"></div><p>Therefore, we round our answer to 2 sig figs, yielding <span data-cmd="inline-math" data-math-node="inline" id="ID3411521371473009164"></span></p></section></div>
+<h2 top-level="" id="moleculesandcompounds"><a href="/chem/molecules-compounds/index.html#moleculesandcompounds">Molecules and Compounds</a></h2><h3 id="terms"><a href="/chem/molecules-compounds/index.html#terms">Terms</a></h3><dl><dt>Electronegativity</dt><dd>Can be used to to determine type of bond based on electronegativity difference.</dd><dt>Ionic Bond</dt><dt>Covalent Bond</dt><dt>Polar Covalent Bond</dt><dd>Sharing of electrons.</dd><dt>Hydrogen Bond</dt><dd>Hydrogen is bonded with an electronegative element.</dd></dl><h3 id="prefixes"><a href="/chem/molecules-compounds/index.html#prefixes">Prefixes</a></h3><div data-cmd="grid" data-col="2">
+   <div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Prefix</th><th>Value</th></tr></thead><tbody>
+         <tr>
+            <th>mono-</th><td><span id="ID5076272895357547473" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
+            <th>di-</th><td><span data-math-node="inline" id="ID10817811501243303477" data-cmd="inline-math"></span></td></tr><tr>
+            <th>tri-</th><td><span id="ID16107348700567862389" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th>tetra-</th><td><span id="ID6001782637192584647" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
+            <th>penta-</th><td><span id="ID14713724014619356403" data-math-node="inline" data-cmd="inline-math"></span></td></tr></tbody></table></div><div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Prefix</th><th>Value</th></tr></thead><tbody>
+         <tr>
+            <th>hexa-</th><td><span id="ID6994467604626426106" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th>hepta-</th><td><span data-cmd="inline-math" id="ID12335629954448866476" data-math-node="inline"></span></td></tr><tr>
+            <th>octa-</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID11192632289618822588"></span></td></tr><tr>
+            <th>nona-</th><td><span data-cmd="inline-math" data-math-node="inline" id="ID7554033494154287062"></span></td></tr><tr>
+            <th>deca-</th><td><span data-cmd="inline-math" id="ID17690051732171211359" data-math-node="inline"></span></td></tr></tbody></table></div></div><h3 id="formulasummary"><a href="/chem/molecules-compounds/index.html#formulasummary">Formula Summary</a></h3><div data-col="2" boxed="" data-cmd="grid">
+   <section data-cmd="note">
+      <h4 id="formalchargeoption1"><a href="/chem/molecules-compounds/index.html#formalchargeoption1">Formal Charge （Option 1）</a></h4><p>Given some element <span id="ID1748063126704734513" data-math-node="inline" data-cmd="inline-math"></span> which has <span data-cmd="inline-math" data-math-node="inline" id="ID11731212466042035400"></span> number of valance electrons, and
+                  a lewis diagram of bonded （<span id="ID6401023459948405833" data-math-node="inline" data-cmd="inline-math"></span>） electrons and non-bonded （<span data-math-node="inline" id="ID9266270847377227905" data-cmd="inline-math"></span>） electrons,
+                  the formal charge for the given element in the lewis structure is</p><div data-cmd="equation" id="ID15723453647149397025" data-math-node="block"></div><p>For the given quantities</p><div data-math-node="block" data-cmd="equation" id="ID10376510463944899951"></div></section><section data-cmd="note">
+      <h4 id="formalchargeoption2"><a href="/chem/molecules-compounds/index.html#formalchargeoption2">Formal Charge （Option 2）</a></h4><p>Given some element <span data-cmd="inline-math" id="ID57118018193148262" data-math-node="inline"></span> which has <span data-math-node="inline" data-cmd="inline-math" id="ID2794520187560383928"></span> number of valance electrons, and
+                  a lewis diagram of some number of bonds （<span id="ID5745432047675082482" data-math-node="inline" data-cmd="inline-math"></span>） and dots （<span data-math-node="inline" data-cmd="inline-math" id="ID4433137272998399282"></span>）, the formal charge
+                  for the given element in the lewis structure is</p><div data-cmd="equation" id="ID15516942152575362800" data-math-node="block"></div><p>For the given quantities</p><div id="ID16843005291149814569" data-math-node="block" data-cmd="equation"></div><p>Note: each bond is 2 electrons, but counts as one bond.</p></section></div><h4 id="polyatomicions"><a href="/chem/molecules-compounds/index.html#polyatomicions">Polyatomic Ions</a></h4><div data-cmd="grid" boxed="" data-col="1">
+   <section data-cmd="note">
+      <h5 id="rememberingthenumberofoxygens"><a href="/chem/molecules-compounds/index.html#rememberingthenumberofoxygens">Remembering the number of oxygens</a></h5><h6 id="general"><a href="/chem/molecules-compounds/index.html#general">General</a></h6><div data-col="2" data-cmd="grid">
+         <section data-cmd="note">
+            <p>Given a set of oxygens in increasing order</p><div data-cmd="math" id="ID10840328559191004118" data-math-node="block"></div><p>Where</p><div id="ID15363276652234509204" data-math-node="block" data-cmd="math"></div></section><section data-cmd="note">
+            <p>For example</p><div data-cmd="math" id="ID11485364125178467442" data-math-node="block"></div></section></div><div data-col="2" data-cmd="grid">
+         <section data-cmd="note">
+            <p>Given some element or compound <span data-math-node="inline" id="ID5061161085499771104" data-cmd="inline-math"></span> ionically bonded with such</p><div data-math-node="block" data-cmd="math" id="ID3060604116541205340"></div></section><section data-cmd="note">
+            <p>For example</p><div data-math-node="block" data-cmd="math" id="ID47910226576112316"></div></section></div><p>The following table denotes the naming conventions therein</p><div data-table-wrapper=""><table data-wrapped-table="">
+         <tbody>
+            <tr>
+               <th rowspan="2">Prefix</th><th rowspan="2">Prefix Meaning <br></br><small>（relative to suffix）</small></th><th rowspan="2">Suffix</th><th rowspan="2">Oxygen Order</th><th colspan="2">Example</th></tr><tr>
+               <th>Formula</th><th>Name</th></tr><tr>
+               <th><span data-table-list="" data-color1=""><span>Per-</span></span></th><td><span data-table-list="" data-color1=""><span>More than</span></span></td><td><span data-table-list="" data-color=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Highest #</span></span></td><td><span id="ID13738416079284793691" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark data-color1="" font="">Per</mark>chlor<mark data-color="" font="">ate</mark></td></tr><tr>
+               <th></th><td></td><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td><span data-table-list="" data-color=""><span>Higher #</span></span></td><td><span data-cmd="inline-math" data-math-node="inline" id="ID6783498824008671285"></span></td><td>Chlor<mark data-color="" font="">ate</mark></td></tr><tr>
+               <th></th><td></td><td><span data-table-list="" data-color=""><span>-ite</span></span></td><td><span data-color="" data-table-list=""><span>Lower #</span></span></td><td><span id="ID5288903403930417827" data-math-node="inline" data-cmd="inline-math"></span></td><td>Chlor<mark font="" data-color="">ite</mark></td></tr><tr>
+               <th><span data-color1="" data-table-list=""><span>Hypo-</span></span></th><td><span data-table-list="" data-color1=""><span>less than</span></span></td><td><span data-table-list="" data-color=""><span>-ite</span></span></td><td><span data-color="" data-table-list=""><span>Lowest #</span></span></td><td><span id="ID18415796632132779157" data-math-node="inline" data-cmd="inline-math"></span></td><td><mark font="" data-color1="">Hypo</mark>chlor<mark font="" data-color="">ite</mark></td></tr></tbody></table></div><h6 id="oxygenvsnooxygencomparison"><a href="/chem/molecules-compounds/index.html#oxygenvsnooxygencomparison"><mark data-color="" font="">Oxygen</mark> vs <mark font="" data-color2="">No-Oxygen</mark> Comparison</a></h6><div data-table-wrapper=""><table data-wrapped-table="">
+         <thead>
+            <tr>
+               <th>Prefix</th><th>Suffix</th><th>Meaning</th><th>Example</th><th>Name</th></tr></thead><tbody>
+            <tr>
+               <th><span data-color1="" data-table-list=""><span>Per-</span></span></th><td><span data-color="" data-table-list=""><span>-ate</span></span></td><td></td><td><span data-table-list=""><span data-math-node="inline" id="ID8689168673383194456" data-cmd="inline-math"></span> or <span data-cmd="inline-math" id="ID16268634489811213685" data-math-node="inline"></span></span></td><td><mark font="" data-color1="">Per</mark>sulf<mark data-color="" font="">ate</mark></td></tr><tr>
+               <td></td><th><span data-table-list="" data-color=""><span>-ate</span></span></th><td></td><td><span id="ID10258867615825516124" data-cmd="inline-math" data-math-node="inline"></span></td><td>Sulf<mark font="" data-color="">ate</mark></td></tr><tr>
+               <td></td><th><span data-color="" data-table-list=""><span>-ite</span></span></th><td></td><td><span data-math-node="inline" id="ID9362171819951927535" data-cmd="inline-math"></span></td><td>Sulf<mark font="" data-color="">ite</mark></td></tr><tr>
+               <td><span data-table-list="" data-color1=""><span>Hypo-</span></span></td><th><span data-color="" data-table-list=""><span>-ite</span></span></th><td></td><td><span data-math-node="inline" data-cmd="inline-math" id="ID4293002735335979838"></span></td><td><mark font="" data-color1="">Hypo</mark>sulf<mark font="" data-color="">ite</mark></td></tr><tr>
+               <td></td><th><span data-color2="" data-table-list=""><span>-ide</span></span></th><td><span data-table-list="" data-color2=""><span>No oxygen</span><span>non-metal</span></span></td><td><span data-math-node="inline" data-cmd="inline-math" id="ID16185670119717849858"></span></td><td>Sulf<mark data-color2="" font="">ide</mark></td></tr></tbody></table></div><p>In summary</p><div data-col="4" boxed="" data-cmd="grid">
+         <section data-cmd="note">
+            <p center=""><mark data-color1="" font="">Per</mark><span>*</span><mark font="" data-color="">ate</mark></p><hr></hr><p>Greater than</p><ul>
+               <li><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark data-color="" font="">ite</mark></li><li><mark data-color1="" font="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></li></ul></section><section data-cmd="note">
+            <p center=""><span>*</span><mark data-color="" font="">ate</mark></p><hr></hr><p>Less than</p><ul>
+               <li><mark data-color1="" font="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li></ul><p>Greater than</p><ul>
+               <li><span>*</span><mark data-color="" font="">ite</mark></li><li><mark font="" data-color1="">Hypo</mark><span>*</span><mark font="" data-color="">ite</mark></li></ul></section><section data-cmd="note">
+            <p center=""><span>*</span><mark font="" data-color="">ite</mark></p><hr></hr><p>Less than</p><ul>
+               <li><mark data-color1="" font="">Per</mark><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark data-color="" font="">ate</mark></li></ul><p>Greater than</p><ul>
+               <li><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></li></ul></section><section data-cmd="note">
+            <p center=""><mark data-color1="" font="">Hypo</mark><span>*</span><mark data-color="" font="">ite</mark></p><hr></hr><p>Less than</p><ul>
+               <li><mark font="" data-color1="">Per</mark><span>*</span><mark font="" data-color="">ate</mark></li><li><span>*</span><mark data-color="" font="">ate</mark></li><li><span>*</span><mark data-color="" font="">ite</mark></li></ul></section></div><h4 id="generally"><a href="/chem/molecules-compounds/index.html#generally">Generally</a></h4><div data-table-wrapper=""><table data-wrapped-table="">
+         <tbody>
+            <tr>
+               <th><span data-color2="" data-table-list=""><span>per-ate</span></span></th><td>Used in the ion with the largest number of oxygen atoms</td></tr><tr>
+               <th><span data-color2="" data-table-list=""><span>-ate</span><span>-ite</span></span></th><td>Polyatomic ions of oxygen</td></tr><tr>
+               <th><span data-color2="" data-table-list=""><span>hypo-ite</span></span></th><td>Used in the ion with the lowest number of oxygen atoms</td></tr><tr>
+               <th><span data-table-list="" data-color2=""><span>-ide</span></span></th><td>Non-metal, no oxygens</td></tr></tbody></table></div><h4 id="determiningthecharge"><a href="/chem/molecules-compounds/index.html#determiningthecharge">Determining The Charge<sup>†</sup></a></h4><div boxed="" data-cmd="grid" data-col="1">
+         <section data-cmd="note">
+            <h5 id="warning"><a href="/chem/molecules-compounds/index.html#warning">Warning</a></h5><p center="">Phosphate （<span data-math-node="inline" data-cmd="inline-math" id="ID15534745586931769911"></span>） is the only one that violates this rule!</p></section></div><div data-cmd="grid" data-col="2" boxed="">
+         <section data-cmd="note">
+            <h5 id="examplefornitrate"><a href="/chem/molecules-compounds/index.html#examplefornitrate">Example for <mark font="">Nitrate</mark></a></h5><img style="max-width: 600px;" src="/static-assets/assets/images/chem/13.svg"></img></section><section data-cmd="note">
+            <h5 id="exampleforcyanide"><a href="/chem/molecules-compounds/index.html#exampleforcyanide">Example for <mark font="">Cyanide</mark></a></h5><img style="max-width: 600px;" src="/static-assets/assets/images/chem/14.svg"></img></section><section data-cmd="note">
+            <h5 id="exampleforoxalate"><a href="/chem/molecules-compounds/index.html#exampleforoxalate">Example for <mark font="">Oxalate</mark></a></h5><img style="max-width: 600px;" src="/static-assets/assets/images/chem/15.svg"></img></section><section data-cmd="note">
+            <h5 id="exampleforhydrogencarbonate"><a href="/chem/molecules-compounds/index.html#exampleforhydrogencarbonate">Example for <mark font="">Hydrogen Carbonate</mark></a></h5><img src="/static-assets/assets/images/chem/16.svg" style="max-width: 600px;"></img></section></div><div data-table-wrapper=""><table data-wrapped-table="">
+         <tbody>
+            <tr style="width:100%;">
+               <td>†</td><td style="width:100%;"><a href="https://www.youtube.com/watch?v=Iva9ISbxbOw">Source</a></td></tr></tbody></table></div></section></div><h5 id="ioniclewisstructures"><a href="/chem/molecules-compounds/index.html#ioniclewisstructures">Ionic Lewis Structures</a></h5><h5 id="ioniclewisstructures1"><a href="/chem/molecules-compounds/index.html#ioniclewisstructures1">Ionic Lewis Structures</a></h5><h6 id="examples"><a href="/chem/molecules-compounds/index.html#examples">Examples</a></h6><div boxed="" data-cmd="grid" data-col="1">
+   <section data-cmd="note">
+      <h6 id="lewisstructureforsulfateion"><a href="/chem/molecules-compounds/index.html#lewisstructureforsulfateion">Lewis structure for sulfate ion</a></h6><img src="/static-assets/assets/images/chem/17.svg" style="max-width: 900px;"></img></section></div><h3 id="notes"><a href="/chem/molecules-compounds/index.html#notes">Notes</a></h3><ul>
+   <li>When naming an ionic compound, the name of the cation is followed by the name of the anion.
+           Monatomic anions are named with the ending -ide.</li></ul>
+<h2 id="periodicpropertiesoftheelements" top-level=""><a href="/chem/periodic-properties/index.html#periodicpropertiesoftheelements">Periodic Properties of the Elements</a></h2><p>Note, electron affinity is not the same as electronegativity!</p><h3 id="terms1"><a href="/chem/periodic-properties/index.html#terms1">Terms</a></h3><dl>
+    <dt>Isoelectronic</dt><dd>Atoms with the same number of electrons.</dd><dt>Ionization energy</dt><dt>Predict Metallic Character Based on Periodic Trends</dt></dl><h3 id="expandedoctetexceptionstotheoctetrule"><a href="/chem/periodic-properties/index.html#expandedoctetexceptionstotheoctetrule">Expanded Octet （Exceptions to the Octet Rule）</a></h3><p center="">All non-metals from period 3 to period 8 of the Periodic Table, can have expanded octets.</p><img style="max-width: 900px;" src="/static-assets/assets/images/chem/21.svg"></img>
+<h2 id="quantummechanicalmodelsoftheatom" top-level=""><a href="/chem/qa-model/index.html#quantummechanicalmodelsoftheatom">Quantum Mechanical Models of the Atom</a></h2><h3 id="theelectromagneticspectrum"><a href="/chem/qa-model/index.html#theelectromagneticspectrum">The Electromagnetic Spectrum</a></h3><img style="max-width: 100%;" src="/static-assets/assets/images/chem/5.svg"></img><h3 id="terms2"><a href="/chem/qa-model/index.html#terms2">Terms</a></h3><dl><dt>Pauli Exclusion Principle</dt><dd>No two electrons in an atom can have the same four quantum numbers.</dd><dd>Pauli’s Principle prevents two electrons with the same spin from existing in the same subshell,
+        each subshell will be filled with one spin direction before they are filled with the opposite spin.
+        This is the second of Hund’s Rules.</dd><dt>Aufbau Principle</dt><dd>This pattern of orbital filling is known as the aufbau principle （the German word aufbau means “build up”）.</dd><dt>Hund’s rule</dt><dd>When filling degenerate orbitals, electrons fill them singly first, then with parallel spins.</dd><dd>I.e. start by filling boxes with single 'upward' arrows, and then once all of such boxes are maxed out,
+        then you add double arrows pointing in opposite directions.</dd><dd>Pauli’s Principle prevents two electrons with the same spin from existing in the same subshell,
+        each subshell will be filled with one spin direction before they are filled with the opposite spin.
+        This is the second of Hund’s Rules.</dd><dt>Coulomb’s Law</dt><dd><div id="ID5956972466351394277" data-math-node="block" data-cmd="equation"></div></dd></dl><div data-col="2" boxed="" data-cmd="grid">
+   <section data-cmd="note">
+      <h4 id="aufbauprinciple"><a href="/chem/qa-model/index.html#aufbauprinciple">Aufbau Principle</a></h4><img src="/static-assets/assets/images/chem/18.svg" style="max-width: 900px;"></img></section><section data-cmd="note">
+      <h4 id="hundsrule"><a href="/chem/qa-model/index.html#hundsrule">Hund’s rule</a></h4><img src="/static-assets/assets/images/chem/19.svg" style="max-width: 900px;"></img></section><section data-cmd="note">
+      <h4 id="paulisexclusionprinciple"><a href="/chem/qa-model/index.html#paulisexclusionprinciple">Pauli's Exclusion Principle</a></h4><p>Each election has a unique set of four quantum numbers （i.e. see quantum numbers）.
+                  They are</p><ul>
+         <li><span id="ID4265159315217655404" data-math-node="inline" data-cmd="inline-math"></span></li><li><span data-math-node="inline" id="ID4833498112170858565" data-cmd="inline-math"></span></li><li><span data-math-node="inline" data-cmd="inline-math" id="ID9050710318440334542"></span></li><li><span data-math-node="inline" data-cmd="inline-math" id="ID4361822373209360167"></span></li></ul></section></div><h3 id="overview1"><a href="/chem/qa-model/index.html#overview1">Overview</a></h3><img style="max-width: 500px;" src="/static-assets/assets/images/chem/4.svg"></img><div data-cmd="grid" data-col="1">
+   <section data-cmd="note">
+      <h4 id="formulas"><a href="/chem/qa-model/index.html#formulas">Formulas</a></h4><div data-col="3" data-cmd="grid">
+         <div data-math-node="block" id="ID9800388683978640197" data-cmd="equation"></div><div data-math-node="block" data-cmd="equation" id="ID5619231607185139566"></div><div data-math-node="block" id="ID1375985209903411424" data-cmd="equation"></div><div data-cmd="equation" id="ID10985192821989076558" data-math-node="block"></div><div id="ID6117760349915605840" data-math-node="block" data-cmd="equation"></div></div></section><section data-cmd="note">
+      <h4 id="values"><a href="/chem/qa-model/index.html#values">Values</a></h4><div data-table-wrapper=""><table data-wrapped-table="">
+         <thead>
+            <tr>
+               <th>Name</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Range</th></tr></thead><tbody>
+            <tr>
+               <th>Wavelength</th><td><span id="ID5760885664272415757" data-math-node="inline" data-cmd="inline-math"></span></td><td>Any unit for distance</td><td>Distance between two analogous points</td><td>Always Positive</td></tr><tr>
+               <th>Frequency</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID14136541971273372078"></span> or <span id="ID7690752964275405210" data-math-node="inline" data-cmd="inline-math"></span>（nu）</td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID6114527345575984143"></span><span data-math-node="inline" data-cmd="inline-math" id="ID3456927970758681855"></span></span></td><td>Number of cycles</td><td>Always Positive</td></tr><tr>
+               <th>Energy</th><td><span data-cmd="inline-math" id="ID11022852885339248312" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span><span id="ID15352664482850806294" data-math-node="inline" data-cmd="inline-math"></span>（joule）</span></span></td><td>Amount of energy （<span data-math-node="inline" data-cmd="inline-math" id="ID16699471692302357521"></span>） in a light packet</td><td></td></tr></tbody></table></div></section><section data-cmd="note">
+      <h4 id="constants"><a href="/chem/qa-model/index.html#constants">Constants</a></h4><div data-table-wrapper=""><table data-wrapped-table="">
+         <thead>
+            <tr>
+               <th>Name</th><th>Symbol</th><th>Unit</th><th>Value</th></tr></thead><tbody>
+            <tr>
+               <th>Speed of Light</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID9002687957489823176"></span></td><td><span data-cmd="inline-math" data-math-node="inline" id="ID4759603545333282425"></span></td><td><span data-math-node="inline" id="ID16605163553780157065" data-cmd="inline-math"></span></td></tr><tr>
+               <th>Planck's constant</th><td><span data-math-node="inline" data-cmd="inline-math" id="ID11413594047026346080"></span></td><td>
+                  <ul>
+                     <li>Energy multiplied by time</li><li>joule-seconds</li><li><span id="ID421765262698879780" data-math-node="inline" data-cmd="inline-math"></span></li></ul></td><td><span data-cmd="inline-math" data-math-node="inline" id="ID1156249193236723439"></span></td></tr></tbody></table></div></section><section data-cmd="note">
+      <h4 id="otherformulas"><a href="/chem/qa-model/index.html#otherformulas">Other Formulas</a></h4><div data-col="2" boxed="" data-cmd="grid">
+         <section data-cmd="note">
+            <h5 id="debroglierelation"><a href="/chem/qa-model/index.html#debroglierelation">de Broglie Relation</a></h5><div data-cmd="equation" id="ID5926987711091015705" data-math-node="block"></div></section><section data-cmd="note">
+            <h5 id="heisenbergsuncertaintyprinciple"><a href="/chem/qa-model/index.html#heisenbergsuncertaintyprinciple">Heisenberg's Uncertainty Principle</a></h5><div data-math-node="block" id="ID12939283876009932813" data-cmd="equation"></div><p>Where</p><ul>
+               <li><span id="ID7477771184707438611" data-cmd="inline-math" data-math-node="inline"></span> is the uncertainty in position.</li><li><span data-cmd="inline-math" data-math-node="inline" id="ID3187534059656727682"></span> is the uncertainty in velocity.</li><li><span data-math-node="inline" id="ID6821107452114775686" data-cmd="inline-math"></span> is the mass of the particle.</li><li><span data-math-node="inline" data-cmd="inline-math" id="ID18282531977029164630"></span> is the plank's constant.</li></ul><p>In general it states that the more you know about an electrons position,
+                                the less you know about it's velocity.</p></section><section data-cmd="note">
+            <h5 id="energyofanelectroninanorbitalwithquantumnumberinahydrogenatom"><a href="/chem/qa-model/index.html#energyofanelectroninanorbitalwithquantumnumberinahydrogenatom">Energy of an Electron in an Orbital with Quantum Number <span data-cmd="inline-math" data-math-target="ID14033722133094739333" data-math-node="inline"></span> in a Hydrogen Atom</a></h5><div data-math-node="block" id="ID2732572125254467644" data-cmd="equation"></div></section><section data-cmd="note">
+            <h5 id="energyofanelectroninanorbitalwithquantumnumberforanyatom"><a href="/chem/qa-model/index.html#energyofanelectroninanorbitalwithquantumnumberforanyatom">Energy of an Electron in an Orbital with Quantum Number <span data-cmd="inline-math" data-math-target="ID13266909755823062417" data-math-node="inline"></span> for any atom</a></h5><div data-math-node="block" data-cmd="equation" id="ID10618243885312887229"></div><p>Where <span data-math-node="inline" id="ID1868684006737836014" data-cmd="inline-math"></span> is the atomic number of the given element.</p></section><section data-cmd="note">
+            <h5 id="changeinenergythatoccursinanatomwhenitundergoesatransitionbetweenlevelsfurtherdetails"><a href="/chem/qa-model/index.html#changeinenergythatoccursinanatomwhenitundergoesatransitionbetweenlevelsfurtherdetails">Change in Energy That Occurs in an Atom When It Undergoes a Transition between Levels <a href="#atomic-spectroscopy-detailed">（Further Details）</a></a></h5><p center=""><span id="ID17329092910906809525" data-cmd="inline-math" data-math-node="inline"></span> and <span data-cmd="inline-math" id="ID11138011183694882305" data-math-node="inline"></span></p><div data-math-node="block" id="ID2021697935976401323" data-cmd="equation"></div><ul>
+               <li>If <span data-cmd="inline-math" id="ID178706556132761771" data-math-node="inline"></span> is negative, energy is being released.</li><li>If <span data-cmd="inline-math" id="ID16195117649808986085" data-math-node="inline"></span> is positive, energy is being absorbed.</li></ul></section><section data-cmd="note">
+            <h5 id="ionizationenergy"><a href="/chem/qa-model/index.html#ionizationenergy">Ionization Energy</a></h5><div data-cmd="equation" id="ID15209871394126055924" data-math-node="block"></div><p>Where</p><ul>
+               <li><span data-cmd="inline-math" data-math-node="inline" id="ID16115227317650837113"></span> is the electron number</li><li><span data-math-node="inline" data-cmd="inline-math" id="ID14228264313097458443"></span> the point on the table where you see the highest difference/delta.</li></ul></section></div></section></div><h4 id="atomicspectroscopy"><a href="/chem/qa-model/index.html#atomicspectroscopy">Atomic Spectroscopy</a></h4><div data-col="2" boxed="" data-cmd="grid">
+   <section data-cmd="note">
+      <h5 id="theprincipalquantumnumbernhydrogenatom"><a href="/chem/qa-model/index.html#theprincipalquantumnumbernhydrogenatom">The Principal Quantum Number （n） （Hydrogen Atom）</a></h5><p>For the hydrogen atom, the energy of an electron in an orbital with quantum number <span id="ID5741567044688370041" data-math-node="inline" data-cmd="inline-math"></span> is given by</p><div data-cmd="equation" id="ID3210907700576306268" data-math-node="block"></div><p>Therefore the difference in energy is given by the following</p><div data-cmd="equation" data-math-node="block" id="ID11565210033560495092"></div></section><section data-cmd="note">
+      <h5 id="theprincipalquantumnumbernanyatom"><a href="/chem/qa-model/index.html#theprincipalquantumnumbernanyatom">The Principal Quantum Number （n） （Any Atom）</a></h5><p>For the hydrogen atom, the energy of an electron in an orbital with quantum number <span id="ID16724287678013639234" data-math-node="inline" data-cmd="inline-math"></span> is given by</p><p>TODO</p><div data-math-node="block" data-cmd="equation" id="ID9618956198293543244"></div><p>Where <span id="ID10047260553224155420" data-cmd="inline-math" data-math-node="inline"></span> is the atomic number of the given element.</p></section></div><h4 id="electronconfiguration"><a href="/chem/qa-model/index.html#electronconfiguration">Electron Configuration</a></h4><div boxed="" data-cmd="grid" data-col="2">
+   <section data-cmd="note">
+      <h5 id="traditionalchart"><a href="/chem/qa-model/index.html#traditionalchart">Traditional Chart</a></h5><img src="/static-assets/assets/images/chem/8.svg" style="max-width: 600px;"></img><img src="/static-assets/assets/images/chem/20.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
+      <h5 id="bettermethod"><a href="/chem/qa-model/index.html#bettermethod">Better Method</a></h5><img style="max-width: 600px;" src="/static-assets/assets/images/chem/9.svg"></img></section></div><h5 id="examples1"><a href="/chem/qa-model/index.html#examples1">Examples</a></h5><div data-cmd="grid" data-col="2boxed">
+   <section data-cmd="note">
+      <h6 id="electronconfigurationfor"><a href="/chem/qa-model/index.html#electronconfigurationfor">Electron configuration for <span data-math-target="ID17185296163289388635" data-math-node="inline" data-cmd="inline-math"></span></a></h6><div id="ID12533460545298580444" data-math-node="block" data-cmd="equation"></div><p>Since the electron configuration for Argon is</p><div id="ID5475231291952052603" data-cmd="equation" data-math-node="block"></div></section><section data-cmd="note">
+      <h6 id="electronconfigurationfor1"><a href="/chem/qa-model/index.html#electronconfigurationfor1">Electron configuration for <span data-cmd="inline-math" data-math-target="ID7151597165464613767" data-math-node="inline"></span></a></h6><p>Beginning with the electron configuration for <span id="ID13830416303453564381" data-math-node="inline" data-cmd="inline-math"></span></p><div id="ID4315943705926120248" data-cmd="equation" data-math-node="block"></div><p>Remove the electrons from the term with the higher electron state. 
+                  <mark font="">Warning!</mark> Do not <u>just</u> remove the electrons
+                  from the rightmost term since the rightmost term may be a lower electron
+                  state. For instance given <span id="ID7889440344538951913" data-math-node="inline" data-cmd="inline-math"></span></p><ul>
+         <li><span id="ID13236789813246448541" data-math-node="inline" data-cmd="inline-math"></span> is in a <mark font="">higher</mark> electron state</li><li><span id="ID3870050933600649084" data-math-node="inline" data-cmd="inline-math"></span> is in a <mark font="">lower</mark> electron state</li></ul><div boxed="" data-cmd="grid" data-col="1">
+         <section data-cmd="note">
+            <p>Alternatively, to compute the lowest energy orbital, add the principle quantum number （<span data-math-node="inline" id="ID17772237079703210936" data-cmd="inline-math"></span>）
+                                to the The angular momentum quantum number （<span data-cmd="inline-math" id="ID4828284748810419345" data-math-node="inline"></span>） to get the orbital with the lowest energy.
+                                Therefore</p><div data-math-node="block" id="ID12577105789797485500" data-cmd="equation"></div><p>Given <span data-math-node="inline" data-cmd="inline-math" id="ID704788265843111156"></span> and <span data-math-node="inline" data-cmd="inline-math" id="ID15041853707952491518"></span></p><div data-col="2" data-cmd="grid">
+               <div data-math-node="block" data-cmd="equation" id="ID5303510667868225293"></div><div data-math-node="block" data-cmd="equation" id="ID1878358389650955167"></div></div><p>NVM this is an exception to the rule...</p><p>TODO move this somewhere else...</p></section></div><p>As shown</p><div id="ID3807272248608662608" data-math-node="block" data-cmd="equation"></div><p>Therefore the electron configuration for <span data-math-node="inline" data-cmd="inline-math" id="ID14101927095766626173"></span> is:</p><div data-cmd="equation" id="ID5889770848838576989" data-math-node="block"></div></section><section data-cmd="note">
+      <h6 id="electronconfigurationfor2"><a href="/chem/qa-model/index.html#electronconfigurationfor2">Electron configuration for <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID2894251656198794271"></span></a></h6><p>It would appear that the electron configuration for <span data-math-node="inline" data-cmd="inline-math" id="ID3341795300646321875"></span> would be</p><div data-cmd="equation" id="ID5633027830805667580" data-math-node="block"></div><p>But this is wrong! It's actually</p><div id="ID15681019887276910603" data-cmd="equation" data-math-node="block"></div></section></div><h5 id="howtos"><a href="/chem/qa-model/index.html#howtos">How-tos</a></h5><h6 id="whatarethevalenceelectrons"><a href="/chem/qa-model/index.html#whatarethevalenceelectrons">What are the valence electrons?</a></h6><div data-cmd="grid" data-col="2" boxed="">
+   <section data-cmd="note">
+      <p>Given</p><div data-math-node="block" id="ID3501327954540454425" data-cmd="equation"></div><p>The valance electrons will be the ones in the highest energy state. Therefore</p><div data-math-node="block" data-cmd="equation" id="ID14994007314511434551"></div><p>Therefore there are <span id="ID5427891607462181126" data-math-node="inline" data-cmd="inline-math"></span> valence electrons.</p></section><section data-cmd="note">
+      <p>Given</p><div data-math-node="block" data-cmd="equation" id="ID10160315880539180871"></div><p>The valance electrons will be the ones in the highest energy state. Therefore</p><div id="ID3601029795418453349" data-math-node="block" data-cmd="equation"></div><p>Therefore there are <span id="ID7955166458288700480" data-math-node="inline" data-cmd="inline-math"></span> valence electrons.</p></section></div><h4 id="quantumnumbers"><a href="/chem/qa-model/index.html#quantumnumbers">Quantum Numbers</a></h4><h5 id="overview2"><a href="/chem/qa-model/index.html#overview2">Overview</a></h5><div data-col="2" data-cmd="grid">
+   <div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Symbol</th><th>Description</th></tr></thead><tbody>
+         <tr>
+            <th><span id="ID834022769598871531" data-math-node="inline" data-cmd="inline-math"></span></th><td>The principle quantum number</td></tr><tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID6124809006246241669"></span></th><td>The angular momentum quantum number</td></tr><tr>
+            <th><span data-cmd="inline-math" data-math-node="inline" id="ID464953172887730270"></span></th><td>The magnetic quantum number</td></tr><tr>
+            <th><span id="ID6772816101935394100" data-cmd="inline-math" data-math-node="inline"></span></th><td>The spin quantum number</td></tr></tbody></table></div></div><h5 id="theprinciplequantumnumber"><a href="/chem/qa-model/index.html#theprinciplequantumnumber">The Principle Quantum Number （<span data-cmd="inline-math" data-math-target="ID12038017889418854435" data-math-node="inline"></span>）</a></h5><div data-col="2" data-cmd="grid">
+   <div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Value of <span data-math-node="inline" id="ID3388035191874822714" data-cmd="inline-math"></span></th><th>Value of <span data-math-node="inline" id="ID16140218605695345616" data-cmd="inline-math"></span></th><th>Orbital Sublevel</th></tr></thead><tbody>
+         <tr>
+            <th><span id="ID2964032449316696556" data-math-node="inline" data-cmd="inline-math"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID853758845477707749"></span></td><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" data-math-node="inline" id="ID7133121789238028541"></span></span></th></tr><tr>
+            <th><span data-cmd="inline-math" data-math-node="inline" id="ID1321306840024888652"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" id="ID10027950346531685324" data-math-node="inline"></span><span data-cmd="inline-math" id="ID2302984833322908886" data-math-node="inline"></span></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" id="ID9390239245615614354" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID7871014034113679374"></span></span></th></tr><tr>
+            <th><span data-math-node="inline" id="ID15126990795167787933" data-cmd="inline-math"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span id="ID12686098050166553217" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" id="ID4838598583290154402" data-cmd="inline-math"></span><span data-math-node="inline" data-cmd="inline-math" id="ID6463338276606234680"></span></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" id="ID18225069293402310328" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID5963695994617184903"></span><span id="ID2140363284838418944" data-cmd="inline-math" data-math-node="inline"></span></span></th></tr><tr>
+            <th><span data-cmd="inline-math" id="ID9795277239320779255" data-math-node="inline"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" data-math-node="inline" id="ID17988841144122865029"></span><span data-cmd="inline-math" data-math-node="inline" id="ID13208266090516624894"></span><span id="ID12951539620802248199" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID6784313088616364872"></span></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span id="ID529108221078310081" data-math-node="inline" data-cmd="inline-math"></span><span data-math-node="inline" id="ID11820688124968506690" data-cmd="inline-math"></span><span data-math-node="inline" data-cmd="inline-math" id="ID13487003277116223855"></span><span data-math-node="inline" id="ID16160840058348684011" data-cmd="inline-math"></span></span></th></tr></tbody></table></div></div><h5 id="angularmomentumquantumnumber"><a href="/chem/qa-model/index.html#angularmomentumquantumnumber">Angular Momentum Quantum Number</a></h5><div data-col="2" data-cmd="grid">
+   <div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Value</th><th>Result</th></tr></thead><tbody>
+         <tr>
+            <th><span data-math-node="inline" id="ID8286765597214058894" data-cmd="inline-math"></span></th><td><span id="ID8218579551918626631" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th><span id="ID6152974672365896437" data-math-node="inline" data-cmd="inline-math"></span></th><td><span id="ID13559877234699472123" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+            <th><span id="ID14791088246642741509" data-math-node="inline" data-cmd="inline-math"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID11495369097809073001"></span></td></tr><tr>
+            <th><span data-cmd="inline-math" data-math-node="inline" id="ID17828242827807668554"></span></th><td><span data-cmd="inline-math" id="ID18006657258961325338" data-math-node="inline"></span></td></tr></tbody></table></div><div data-table-wrapper=""><table data-wrapped-table="">
+      <thead>
+         <tr>
+            <th>Value of <span data-math-node="inline" data-cmd="inline-math" id="ID12543630107258428585"></span></th><th>Value of <span data-math-node="inline" id="ID7236203841454393547" data-cmd="inline-math"></span></th></tr></thead><tbody>
+         <tr>
+            <th><span data-cmd="inline-math" data-math-node="inline" id="ID11900742062528693243"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span id="ID15128742867977904864" data-math-node="inline" data-cmd="inline-math"></span></span></th></tr><tr>
+            <th><span data-cmd="inline-math" id="ID12572383781996721403" data-math-node="inline"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span id="ID13833468075872935072" data-math-node="inline" data-cmd="inline-math"></span><span data-math-node="inline" data-cmd="inline-math" id="ID5945847694838817868"></span><span data-math-node="inline" id="ID18029611619117196616" data-cmd="inline-math"></span></span></th></tr><tr>
+            <th><span data-math-node="inline" data-cmd="inline-math" id="ID12095636621789374779"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span id="ID4937874484599455287" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID11305026768369796957"></span><span id="ID16527319388876810025" data-cmd="inline-math" data-math-node="inline"></span><span id="ID13270260707832355720" data-cmd="inline-math" data-math-node="inline"></span><span data-cmd="inline-math" id="ID16512584918835578550" data-math-node="inline"></span></span></th></tr><tr>
+            <th><span data-cmd="inline-math" id="ID8113804906426827216" data-math-node="inline"></span></th><th><span style="display:flex;justify-content:space-between;column-gap:8px;"><span data-cmd="inline-math" data-math-node="inline" id="ID14739260391089118663"></span><span data-cmd="inline-math" id="ID16345383610664427582" data-math-node="inline"></span><span id="ID12788507933754140318" data-cmd="inline-math" data-math-node="inline"></span><span data-cmd="inline-math" id="ID4513135477923319515" data-math-node="inline"></span><span id="ID2415938346721035609" data-math-node="inline" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID14028572433223060936" data-math-node="inline"></span><span id="ID4183943897197541033" data-math-node="inline" data-cmd="inline-math"></span></span></th></tr></tbody></table></div></div><h5 id="summary"><a href="/chem/qa-model/index.html#summary">Summary</a></h5><div data-cmd="grid" data-col="3" boxed="">
+   <div id="ID1751339910372588668" data-cmd="equation" data-math-node="block"></div><div data-cmd="equation" data-math-node="block" id="ID11847792903036736405"></div></div><h5 id="usefulformulas"><a href="/chem/qa-model/index.html#usefulformulas">Useful Formulas</a></h5><div boxed="" data-col="2" data-cmd="grid">
+   <section data-cmd="note">
+      <p>The equation for a maximum number of electrons a given energy level can
+                  hold given some value for <span data-cmd="inline-math" data-math-node="inline" id="ID13811631342544004823"></span></p><div id="ID5468046158763350245" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+      <p>How many orbitals are possible given some value for <span data-math-node="inline" id="ID7352080337645059876" data-cmd="inline-math"></span></p><div data-math-node="block" data-cmd="equation" id="ID7715211676110418221"></div></section></div><h5 id="examples2"><a href="/chem/qa-model/index.html#examples2">Examples</a></h5><div data-cmd="grid" boxed="" data-col="2">
+   <section data-cmd="note">
+      <img style="max-width: 600px;" src="/static-assets/assets/images/chem/10.svg"></img></section><section data-cmd="note">
+      <img src="/static-assets/assets/images/chem/12.svg" style="max-width: 600px;"></img></section><section data-cmd="note">
+      <img style="max-width: 600px;" src="/static-assets/assets/images/chem/11.svg"></img></section></div><h4 id="light"><a href="/chem/qa-model/index.html#light">Light</a></h4><h5 id="interferenceanddiffraction"><a href="/chem/qa-model/index.html#interferenceanddiffraction">Interference and Diffraction</a></h5><div boxed="" data-col="2" data-cmd="grid">
+   <section data-cmd="note">
+      <h6 id="constructiveinterference"><a href="/chem/qa-model/index.html#constructiveinterference">Constructive Interference</a></h6><p>If two waves of equal amplitude are in phase when they interact—that is, they
+                  align with overlapping crests—a wave with <mark font="">twice the amplitude</mark> results. This is
+                  called <mark font="">constructive interference</mark>.</p><img style="max-width: 800px;" src="/static-assets/assets/images/chem/6.svg"></img></section><section data-cmd="note">
+      <h6 id="destructiveinterference"><a href="/chem/qa-model/index.html#destructiveinterference">Destructive Interference</a></h6><p>If two waves are <mark font="">completely out of phase</mark> when they interact—that is, they
+                  align so that the crest from one overlaps with the trough from the other—the waves
+                  cancel by <mark font="">destructive interference</mark>.</p><img src="/static-assets/assets/images/chem/7.svg" style="max-width: 800px;"></img></section></div></main><script>try{
+katex.render("\\mathrm{X}", document.getElementById('ID7109992298581244195'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\ce{^{A}_{Z}X}\n         \\end{split}\\end{equation*}", document.getElementById('ID10664956788383715366'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\ce{X-A}\n         \\end{split}\\end{equation*}", document.getElementById('ID10291338724508723456'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("A = \\text{neutrons + protons}", document.getElementById('ID16075821681824049562'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("Z = \\text{protons}", document.getElementById('ID12016792770707487559'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n      1 \\pu{mol}&= {{6.022}} \\times 10^{{23}}\\end{split}\\end{equation*}", document.getElementById('ID3096820004268197378'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n      \\small 1 \\;\\mathrm{amu} &\\approx \\;\\text{protons} + \\;\\text{neutrons}\n   \\end{split}\\end{equation*}", document.getElementById('ID10770812902287785302'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{1}", document.getElementById('ID18013212402658045494'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{da}", document.getElementById('ID7856420954941302927'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{2}", document.getElementById('ID5209145614202573758'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{h}", document.getElementById('ID1441511592482956014'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{3}", document.getElementById('ID6986069836338413765'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{k}", document.getElementById('ID15833780549514286096'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{6}", document.getElementById('ID6614136226361194699'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{M}", document.getElementById('ID15380035916993963889'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{9}", document.getElementById('ID10118326901042315729'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{G}", document.getElementById('ID4472857742178838394'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{12}", document.getElementById('ID2904192514052477009'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{T}", document.getElementById('ID9508920398219847442'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-1}", document.getElementById('ID17224876244257742105'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{d}", document.getElementById('ID10269666021866468084'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-2}", document.getElementById('ID612478658152668950'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{c}", document.getElementById('ID11712742035466705218'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-3}", document.getElementById('ID15163538332473886599'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}", document.getElementById('ID16881986716868773453'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-6}", document.getElementById('ID11859825193609577565'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{\\mu}", document.getElementById('ID5468371321243767756'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-9}", document.getElementById('ID3797408776608515339'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n}", document.getElementById('ID10402893983640110198'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10^{-12}", document.getElementById('ID9989942145728659554'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{p}", document.getElementById('ID8028744852071718901'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10.81\\;\\mathrm{amu}", document.getElementById('ID10948431943919228745'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("11.009306\\;\\mathrm{amu}", document.getElementById('ID4700062338365090069'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10.012937\\;\\mathrm{amu}", document.getElementById('ID792267631691585149'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{adv. mass}\\normalsize&= \\sum \\left(\\small\\text{percent abundance}\\normalsize\\times \\small\\text{mass}\\normalsize\\right)\\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID8211278684757476293'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{average atomic mass}\\normalsize&= 10.81\\;\\mathrm{amu}\\\\\n                     \\small\\text{boron-11 mass}\\normalsize&= 11.009306\\;\\mathrm{amu}\\\\\n                     \\small\\text{boron-10 mass}\\normalsize&= 10.012937\\;\\mathrm{amu}\n      \\end{split}\\end{equation*}", document.getElementById('ID3761004479898682300'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{boron-11 \\% abundance}\\normalsize&= X_{\\small\\text{B-11}\\normalsize}\\\\\n         \\small\\text{boron-10 \\% abundance}\\normalsize&= X_{\\small\\text{B-10}\\normalsize}\n      \\end{split}\\end{equation*}", document.getElementById('ID6615382844676551493'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("X_{\\small\\text{B-11}\\normalsize}", document.getElementById('ID13964271251213544514'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\small\n                     \\begin{gather*}\n                     \\underbrace{10.81\\;\\mathrm{amu}}_{\\mathclap{\\small\\text{avg}\\normalsize_m}}\n                          = X_{\\small\\text{B-11}\\normalsize} \\times \\underbrace{11.009306\\;\\mathrm{amu}}_{\\mathclap{\\small\\text{M}\\normalsize_1}}\n                          + X_{\\small\\text{B-10}\\normalsize} \\times \\underbrace{10.012937\\;\\mathrm{amu}}_{\\mathclap{\\small\\text{M}\\normalsize_2}}\\\\\n                     \\underbrace{\\small\\text{avg}\\normalsize_m = X_{\\small\\text{B-11}\\normalsize} \\times M_1 + X_{\\small\\text{B-10}\\normalsize} \\times M_2}_{\\small\\text{shorthand}\\normalsize}\n                     \\end{gather*}\n      ", document.getElementById('ID8282598474281055904'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         X_{\\small\\text{B-11}\\normalsize} + X_{\\small\\text{B-10}\\normalsize} = 100\\% = 1\\\\\n                     X_{\\small\\text{B-10}\\normalsize} = 1 - X_{\\small\\text{B-11}\\normalsize}\n      \\end{split}\\end{equation*}", document.getElementById('ID6819371019632937'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\n         \\small\\text{avg}\\normalsize_m &= X_{\\small\\text{B-11}\\normalsize} M_1 + X_{\\small\\text{B-10}\\normalsize} M_2\\\\\n         \\small\\text{avg}\\normalsize_m &= X_{\\small\\text{B-11}\\normalsize} M_1 + \\left(1 - X_{\\small\\text{B-11}\\normalsize}\\right) M_2\\\\\n         \\small\\text{avg}\\normalsize_m &= X_{\\small\\text{B-11}\\normalsize} M_1 + M_2 - X_{\\small\\text{B-11}\\normalsize} M_2\\\\\n         \\small\\text{avg}\\normalsize_m - M_2 &= X_{\\small\\text{B-11}\\normalsize} \\left(M_1 - M_2\\right)\\\\\n         \\frac{\\small\\text{avg}\\normalsize_m - M_2}{M_1 - M_2}&= X_{\\small\\text{B-11}\\normalsize}\\\\\n         \\therefore X_{\\small\\text{B-11}\\normalsize}\n               &= \\frac{\\small\\text{avg}\\normalsize_m - M_2}{M_1 - M_2}\\\\\n               &= \\frac{10.81\\;\\mathrm{amu} - 10.012937\\;\\mathrm{amu}}{11.009306\\;\\mathrm{amu} - 10.012937\\;\\mathrm{amu}}\\\\\n               &\\approx \\underbrace{0.7995}_{\\mathclap{\n                  \\begin{gathered}\n                  \\small\\text{decimal form}\\normalsize\\\\\n                  \\small\\text{multiply by $100$ to get percentage}\\normalsize\\end{gathered}\n               }}\\\\\n               &\\approx 79.95\\%\n      \\end{split}\\end{equation*}", document.getElementById('ID17539909038681001922'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{gather*}\n                     \\small\n                     X_{\\small\\text{B-11}\\normalsize} =\n                     \\begin{rcases}\n                        \\frac{\n                           \\overbrace{10.81\\;\\mathrm{amu} - 10.012937\\;\\mathrm{amu}}^{\\text{2 sig decimal places}}\n                        }{\n                           \\underbrace{11.009306\\;\\mathrm{amu} - 10.012937\\;\\mathrm{amu}}_{\\text{8 sig decimal places}}\n                        }\\\\\n                     \\end{rcases}\\therefore\\;\\small\\text{2 sig figs}\\normalsize\\end{gather*}\n      ", document.getElementById('ID10279917727502945584'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("80.\\%", document.getElementById('ID3411521371473009164'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("1", document.getElementById('ID5076272895357547473'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("2", document.getElementById('ID10817811501243303477'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("3", document.getElementById('ID16107348700567862389'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4", document.getElementById('ID6001782637192584647'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("5", document.getElementById('ID14713724014619356403'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("6", document.getElementById('ID6994467604626426106'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("7", document.getElementById('ID12335629954448866476'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("8", document.getElementById('ID11192632289618822588'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("9", document.getElementById('ID7554033494154287062'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("10", document.getElementById('ID17690051732171211359'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{X}", document.getElementById('ID1748063126704734513'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("v_e", document.getElementById('ID11731212466042035400'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("b_e", document.getElementById('ID6401023459948405833'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("f_e", document.getElementById('ID9266270847377227905'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - f_e - \\frac{b_e}{2}\\end{split}\\end{equation*}", document.getElementById('ID15723453647149397025'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     f_e &= \\small\\text{Non-bonded (free) electrons (from diagram)}\\normalsize\\\\\n                     b_e &= \\small\\text{Bonded Valence electrons (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID10376510463944899951'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{X}", document.getElementById('ID57118018193148262'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("v_e", document.getElementById('ID2794520187560383928'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("b", document.getElementById('ID5745432047675082482'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("d", document.getElementById('ID4433137272998399282'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{FC} &= v_e - (b + d)\n      \\end{split}\\end{equation*}", document.getElementById('ID15516942152575362800'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{FC}\\normalsize&= \\small\\text{Formal Change}\\normalsize\\\\\n                     v_e &= \\small\\text{Valence electrons (from element)}\\normalsize\\\\\n                     b &= \\small\\text{Number of bonds (from diagram)}\\normalsize\\\\\n                     d &= \\small\\text{Number of dots (from diagram)}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID16843005291149814569'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n               \\set{\\ce{\n                                       O_{\\small\\text{Lowest}\\normalsize},\n                                       O_{\\small\\text{Lower}\\normalsize},\n                                       O_{\\small\\text{Higher}\\normalsize},\n                                       O_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID10840328559191004118'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n               \\set{\n                                       \\mathrm{Lowest} <\n                                       \\mathrm{Lower} <\n                                       \\mathrm{Higher} <\n                                       \\mathrm{Highest}\n                                   }\n            ", document.getElementById('ID15363276652234509204'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n               \\set{\\ce{\n                                       O_1,\n                                       O_2,\n                                       O_3,\n                                       O_4\n                                   }}\n            ", document.getElementById('ID11485364125178467442'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{X}", document.getElementById('ID5061161085499771104'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n               \\set{\\ce{\n                                       XO_{\\small\\text{Lowest}\\normalsize},\n                                       XO_{\\small\\text{Lower}\\normalsize},\n                                       XO_{\\small\\text{Higher}\\normalsize},\n                                       XO_{\\small\\text{Highest}\\normalsize}\n                                   }}\n            ", document.getElementById('ID3060604116541205340'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n               \\set{\\ce{\n                                       ClO_1^{-},\n                                       ClO_2^{-},\n                                       ClO_3^{-},\n                                       ClO_4^{-}\n                                   }}\n            ", document.getElementById('ID47910226576112316'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{ClO_4^{-}}", document.getElementById('ID13738416079284793691'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{ClO_3^{-}}", document.getElementById('ID6783498824008671285'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{ClO_2^{-}}", document.getElementById('ID5288903403930417827'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{ClO^{-}}", document.getElementById('ID18415796632132779157'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{SO_5^{2-}}", document.getElementById('ID8689168673383194456'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{S_2O_8^{2-}}", document.getElementById('ID16268634489811213685'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{SO_4^{2-}}", document.getElementById('ID10258867615825516124'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{SO_3^{2-}}", document.getElementById('ID9362171819951927535'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{SO_2^{2-}}", document.getElementById('ID4293002735335979838'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{S^{2-}}", document.getElementById('ID16185670119717849858'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{PO_4^{3-}}", document.getElementById('ID15534745586931769911'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n   \\mathrm{E} &= \\frac{1}{4\\pi\\varepsilon_0}\\cdot\\frac{q_1\\;q_2}{r}\\end{split}\\end{equation*}", document.getElementById('ID5956972466351394277'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n}", document.getElementById('ID4265159315217655404'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{l}", document.getElementById('ID4833498112170858565'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}_l", document.getElementById('ID9050710318440334542'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}_s", document.getElementById('ID4361822373209360167'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\mathrm{f} = \\nu &= \\frac{c}{\\lambda}\\end{split}\\end{equation*}", document.getElementById('ID9800388683978640197'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\mathrm{\\lambda} = \\frac{\\small\\text{speed}\\normalsize}{\\small\\text{frequency}\\normalsize}\\end{split}\\end{equation*}", document.getElementById('ID5619231607185139566'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\mathrm{E}\n                            &= \\mathrm{h}\\times\\mathrm{f}\\\\\n                            &= \\mathrm{h}\\frac{\\mathrm{c}}{\\lambda}\\end{split}\\end{equation*}", document.getElementById('ID1375985209903411424'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\mathrm{T} &= \\frac{1}{f}\\end{split}\\end{equation*}", document.getElementById('ID10985192821989076558'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\lambda &= \\frac{c}{f}\\end{split}\\end{equation*}", document.getElementById('ID6117760349915605840'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{\\lambda}", document.getElementById('ID5760885664272415757'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("f", document.getElementById('ID14136541971273372078'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\nu", document.getElementById('ID7690752964275405210'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("㎐ = \\frac{\\text{1 cycle}}{\\text{second}}", document.getElementById('ID6114527345575984143'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{s}^{-1}", document.getElementById('ID3456927970758681855'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{E}", document.getElementById('ID11022852885339248312'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{J}", document.getElementById('ID15352664482850806294'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{E}", document.getElementById('ID16699471692302357521'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{c}", document.getElementById('ID9002687957489823176'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\\\frac{\\\\mathrm{m}}{\\\\mathrm{s}}", document.getElementById('ID4759603545333282425'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{c} = {{3.00}} \\times 10^{{8}}\\\\frac{\\\\mathrm{m}}{\\\\mathrm{s}}", document.getElementById('ID16605163553780157065'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{h}", document.getElementById('ID11413594047026346080'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{J}\\cdot\\mathrm{s}", document.getElementById('ID421765262698879780'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{h} = {{6.626}} \\times 10^{{-34}}\\;\\mathrm{J}\\cdot\\mathrm{s}", document.getElementById('ID1156249193236723439'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               \\lambda &= \\frac{\\mathrm{h}}{\\mathrm{m}\\mathrm{v}}\\\\\n               \\text{where}&\\\\\n                  m &= \\text{mass}\\\\\n                  v &= \\text{velocity} \\neq \\nu\\;\\text{(nu)}\n            \\end{split}\\end{equation*}", document.getElementById('ID5926987711091015705'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x} \\times \\mathrm{m} \\Delta{v} \\geq \\frac{\\mathrm{h}}{4\\pi}\\end{split}\\end{equation*}", document.getElementById('ID12939283876009932813'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\Delta{x}", document.getElementById('ID7477771184707438611'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\Delta{v}", document.getElementById('ID3187534059656727682'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}", document.getElementById('ID6821107452114775686'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{h}", document.getElementById('ID18282531977029164630'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID14033722133094739333"]').forEach(function(x){katex.render("\\mathrm{n}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               E_n &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J} \\left(\\frac{1}{n^2}\\right)\n            \\end{split}\\end{equation*}", document.getElementById('ID2732572125254467644'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID13266909755823062417"]').forEach(function(x){katex.render("\\mathrm{n}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               E_n &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J} \\left(\\frac{1}{n^2}\\right) \\cdot \\mathrm{Z}^2\n            \\end{split}\\end{equation*}", document.getElementById('ID10618243885312887229'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{Z}", document.getElementById('ID1868684006737836014'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n_{\\small\\text{initial}}", document.getElementById('ID17329092910906809525'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n_{\\small\\text{final}}", document.getElementById('ID11138011183694882305'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{E} &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J} \\left(\\frac{1}{n^2_f}- \\frac{1}{n^2_i}\\right)\n            \\end{split}\\end{equation*}", document.getElementById('ID2021697935976401323'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\Delta{E}", document.getElementById('ID178706556132761771'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\Delta{E}", document.getElementById('ID16195117649808986085'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               \\mathrm{IE}_{n,\\small\\text{Big Jump}\\normalsize} -1\n                  &= \\small\\text{\\# of valance electrons}\\normalsize\\\\\n                  &= \\small\\text{Element row \\#}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID15209871394126055924'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID16115227317650837113'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\small\\text{Big jump}\\normalsize", document.getElementById('ID14228264313097458443'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID5741567044688370041'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         E_n = {{-2.18}} \\times 10^{{-18}}\\mathrm{J}\\;\\frac{1}{n^2}\\end{split}\\end{equation*}", document.getElementById('ID3210907700576306268'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\Delta E &= \\Delta E_{\\small\\text{Final}\\normalsize} - \\Delta E_{\\small\\text{Initial}\\normalsize}\\\\\n                              &= \\left({{-2.18}} \\times 10^{{-18}}\\mathrm{J}\\;\\frac{1}{{n_f}^2}\\right)\n                              -  \\left({{-2.18}} \\times 10^{{-18}}\\mathrm{J}\\;\\frac{1}{{n_i}^2}\\right)\\\\\n                              &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J}\\;\\frac{1}{{n_f}^2}+  {{2.18}} \\times 10^{{-18}}\\mathrm{J}\\;\\frac{1}{{n_i}^2}\\\\\n                              &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J}\\; \\left(\\frac{1}{{n_f}^2}- \\frac{1}{{n_i}^2}\\right)\n      \\end{split}\\end{equation*}", document.getElementById('ID11565210033560495092'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID16724287678013639234'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         E_n &= {{-2.18}} \\times 10^{{-18}}\\mathrm{J} \\left(\\frac{1}{n^2}\\right) \\cdot \\mathrm{Z}^2\n      \\end{split}\\end{equation*}", document.getElementById('ID9618956198293543244'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{Z}", document.getElementById('ID10047260553224155420'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID17185296163289388635"]').forEach(function(x){katex.render("_{26}\\mathrm{Fe}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\ce{\\underbrace{1s^2 2s^2 2p^6 3s^2 3p^6}_{\\small\\text{Equal to Argon}\\normalsize} 4s^2 3d^6}\n                      &= \\ce{[Ar] 4s^2 3d^6}\n      \\end{split}\\end{equation*}", document.getElementById('ID12533460545298580444'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\ce{[Ar] = 1s^2 2s^2 2p^6 3s^2 3p^6}\n      \\end{split}\\end{equation*}", document.getElementById('ID5475231291952052603'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID7151597165464613767"]').forEach(function(x){katex.render("_{26}\\mathrm{Fe}^{+2}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("_{26}\\mathrm{Fe}", document.getElementById('ID13830416303453564381'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{1s^2\\; 2s^2\\; 2p^6\\; 3s^2\\; 3p^6}_{\\small\\text{Equal to Argon}\\normalsize}\\;\n         \\overbrace{4s^2\\; 3d^6}^{\\mathclap{\n            \\begin{gathered}\n            \\small\\text{Which should we remove 2 $\\mathrm{e}^{-}$ from?}\\normalsize\\\\\n            \\small\\text{($4s^2$ or $3d^6$)?}\\normalsize\\\\\n            \\end{gathered}\n         }}\n         &= \\ce{[Ar]\n               \\underbrace{4s^2\\; 3d^6}_{\\mathclap{\n                     \\begin{gathered}\n                     \\small\\text{Which should we remove 2 $\\mathrm{e}^{-}$ from?}\\normalsize\\\\\n                     \\small\\text{($4s^2$ or $3d^6$)?}\\normalsize\\\\\n                     \\end{gathered}\n               }}\n            }\n      \\end{split}\\end{equation*}", document.getElementById('ID4315943705926120248'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4s^2\\; 3d^6", document.getElementById('ID7889440344538951913'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4s^2", document.getElementById('ID13236789813246448541'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("3d^6", document.getElementById('ID3870050933600649084'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID17772237079703210936'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l", document.getElementById('ID4828284748810419345'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n               \\small\\text{orbital with the lowest energy}\\normalsize&= O_{\\small\\text{min}\\normalsize} = n + l\\\\\n            \\end{split}\\end{equation*}", document.getElementById('ID12577105789797485500'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{4s^2}", document.getElementById('ID704788265843111156'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\ce{3d^6}", document.getElementById('ID15041853707952491518'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n                  \\ce{4s^2}\\;\\begin{dcases}\n                     n &= 4\\\\\n                     i &= 0\\\\\n                     \\therefore\\; O_{\\small\\text{min}\\normalsize} &= 4\n                  \\end{dcases}\\end{split}\\end{equation*}", document.getElementById('ID5303510667868225293'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n                  \\ce{3d^6}\\; \\begin{dcases}\n                     n &= 3\\\\\n                     i &= 2\\\\\n                     \\therefore\\; O_{\\small\\text{min}\\normalsize} &= 5\n                  \\end{dcases}\\end{split}\\end{equation*}", document.getElementById('ID1878358389650955167'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{1s^2\\; 2s^2\\; 2p^6\\; 3s^2\\; 3p^6}\\;\n                         \\overbrace{4s^{\\left(2 - 2\\right)}}^{ \\mathclap{\n                             \\begin{gathered}\n                             \\small\\text{higher state}\\normalsize\\\\\n                             \\small\\text{remove $2\\mathrm{e^{-}}$}\\normalsize\\end{gathered}\n                         }}\\;\n                         \\underbrace{3d^6}_{ \\mathclap{\\small\\text{lower state}\\normalsize}}\\;\n                         &= [\\mathrm{Ar}]\\;\n                         \\overbrace{4s^{\\left(2 - 2\\right)}}^{ \\mathclap{\n                             \\begin{gathered}\n                             \\small\\text{higher state}\\normalsize\\\\\n                             \\small\\text{remove $2\\mathrm{e^{-}}$}\\normalsize\\end{gathered}\n                         }}\\;\n                         \\underbrace{3d^6}_{ \\mathclap{\\small\\text{lower state}\\normalsize}}\\\\\\\\\n                     \\underbrace{1s^2\\; 2s^2\\; 2p^6\\; 3s^2\\; 3p^6}\\;\n                         \\underbrace{3d^6}_{ \\mathclap{\\small\\text{unchanged}\\normalsize}}\\;\n                         &= [\\mathrm{Ar}]\\;\n                         \\underbrace{3d^6}_{ \\mathclap{\\small\\text{unchanged}\\normalsize}}\n      \\end{split}\\end{equation*}", document.getElementById('ID3807272248608662608'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("_{26}\\mathrm{Fe}^{+2}", document.getElementById('ID14101927095766626173'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\ce{1s^2 2s^2 2p^6 3s^2 3p^6 3d^6}\n                         &= \\ce{[Ar] 3d^6}\n      \\end{split}\\end{equation*}", document.getElementById('ID5889770848838576989'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID2894251656198794271"]').forEach(function(x){katex.render("_{24}\\mathrm{Cr}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("_{24}\\mathrm{Cr}", document.getElementById('ID3341795300646321875'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\overbrace{1s^2\\; 2s^2\\; 2p^6\\; 3s^2\\; 3p^6}^{\\small\\text{Equal to Argon}\\normalsize}\\;\n                         \\underbrace{4s^2\\; 3d^4}_{ \\mathclap{\\small\\text{this is wrong!}\\normalsize}}\\;\n                     &= [\\mathrm{Ar}]\\;\n                         \\underbrace{4s^2\\; 3d^4}_{ \\mathclap{\\small\\text{this is wrong!}\\normalsize}}\\;\n      \\end{split}\\end{equation*}", document.getElementById('ID5633027830805667580'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\overbrace{1s^2\\; 2s^2\\; 2p^6\\; 3s^2\\; 3p^6}^{\\small\\text{Equal to Argon}\\normalsize}\\;\n                         \\underbrace{4s^1\\; 3d^5}_{ \\mathclap{\\small\\text{notice the superscripts}\\normalsize}}\\;\n                     &= [\\mathrm{Ar}]\\;\n                         \\underbrace{4s^1\\; 3d^5}_{ \\mathclap{\\small\\text{notice the superscripts}\\normalsize}}\\;\n      \\end{split}\\end{equation*}", document.getElementById('ID15681019887276910603'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\ce{1s^2 2s^2 2p^6 3s^2 3p^4}\n      \\end{split}\\end{equation*}", document.getElementById('ID3501327954540454425'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\overbrace{1s^2\\; 2s^2\\; 2p^6}^{\\mathclap{\n                         \\small\\text{Core electrons}\\normalsize}}\\;\n                     \\underbrace{3s^2\\;3p^4}_{\\mathclap{\n                         \\begin{gathered}\n                         \\small\\text{Highest state}\\normalsize\\\\\n                         \\small\\text{Therefore these are the valence electrons}\\normalsize\\end{gathered}\n                     }}\n      \\end{split}\\end{equation*}", document.getElementById('ID14994007314511434551'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("6", document.getElementById('ID5427891607462181126'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\ce{[Ne] 3s^2 3p^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID10160315880539180871'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         [\\mathrm{Ne}]\n                     \\underbrace{3s^2 3p^2}_{\\mathclap{\n                         \\begin{gathered}\n                         \\small\\text{Highest state}\\normalsize\\\\\n                         \\small\\text{Therefore these are the valence electrons}\\normalsize\\end{gathered}\n                     }}\n      \\end{split}\\end{equation*}", document.getElementById('ID3601029795418453349'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4", document.getElementById('ID7955166458288700480'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n}", document.getElementById('ID834022769598871531'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l", document.getElementById('ID6124809006246241669'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}_1", document.getElementById('ID464953172887730270'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m}_s", document.getElementById('ID6772816101935394100'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID12038017889418854435"]').forEach(function(x){katex.render("\\mathrm{n}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n}", document.getElementById('ID3388035191874822714'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l", document.getElementById('ID16140218605695345616'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n} = 1", document.getElementById('ID2964032449316696556'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID853758845477707749'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("1\\mathrm{s}", document.getElementById('ID7133121789238028541'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n} = 2", document.getElementById('ID1321306840024888652'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID10027950346531685324'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 1", document.getElementById('ID2302984833322908886'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("2\\mathrm{s}", document.getElementById('ID9390239245615614354'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("2\\mathrm{p}", document.getElementById('ID7871014034113679374'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n} = 3", document.getElementById('ID15126990795167787933'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID12686098050166553217'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 1", document.getElementById('ID4838598583290154402'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 2", document.getElementById('ID6463338276606234680'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("3\\mathrm{s}", document.getElementById('ID18225069293402310328'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("3\\mathrm{p}", document.getElementById('ID5963695994617184903'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("3\\mathrm{d}", document.getElementById('ID2140363284838418944'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{n} = 4", document.getElementById('ID9795277239320779255'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID17988841144122865029'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 1", document.getElementById('ID13208266090516624894'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 2", document.getElementById('ID12951539620802248199'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 3", document.getElementById('ID6784313088616364872'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4\\mathrm{s}", document.getElementById('ID529108221078310081'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4\\mathrm{p}", document.getElementById('ID11820688124968506690'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4\\mathrm{d}", document.getElementById('ID13487003277116223855'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("4\\mathrm{f}", document.getElementById('ID16160840058348684011'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID8286765597214058894'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{s}", document.getElementById('ID8218579551918626631'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 1", document.getElementById('ID6152974672365896437'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{p}", document.getElementById('ID13559877234699472123'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 2", document.getElementById('ID14791088246642741509'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{d}", document.getElementById('ID11495369097809073001'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 3", document.getElementById('ID17828242827807668554'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{f}", document.getElementById('ID18006657258961325338'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l", document.getElementById('ID12543630107258428585'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l}", document.getElementById('ID7236203841454393547'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 0", document.getElementById('ID11900742062528693243'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 0", document.getElementById('ID15128742867977904864'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 1", document.getElementById('ID12572383781996721403'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -1", document.getElementById('ID13833468075872935072'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 0", document.getElementById('ID5945847694838817868'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 1", document.getElementById('ID18029611619117196616'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 2", document.getElementById('ID12095636621789374779'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -2", document.getElementById('ID4937874484599455287'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -1", document.getElementById('ID11305026768369796957'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 0", document.getElementById('ID16527319388876810025'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 1", document.getElementById('ID13270260707832355720'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 2", document.getElementById('ID16512584918835578550'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("l = 2", document.getElementById('ID8113804906426827216'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -3", document.getElementById('ID14739260391089118663'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -2", document.getElementById('ID16345383610664427582'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = -1", document.getElementById('ID12788507933754140318'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 0", document.getElementById('ID4513135477923319515'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 1", document.getElementById('ID2415938346721035609'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 2", document.getElementById('ID14028572433223060936'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathrm{m_l} = 3", document.getElementById('ID4183943897197541033'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n      l \\leq \\mathrm{n} - 1\n   \\end{split}\\end{equation*}", document.getElementById('ID1751339910372588668'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n      -l \\leq \\mathrm{m_l} \\leq l\n   \\end{split}\\end{equation*}", document.getElementById('ID11847792903036736405'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID13811631342544004823'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\text{max}_{\\mathrm{e}^{-}} &= 2n^2\n      \\end{split}\\end{equation*}", document.getElementById('ID5468046158763350245'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("n", document.getElementById('ID7352080337645059876'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\text{max}_{\\small\\text{orbitals}\\normalsize} &= n^2\n      \\end{split}\\end{equation*}", document.getElementById('ID7715211676110418221'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+</script></body></html>

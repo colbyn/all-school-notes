@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en"><head><!-- HTML METADATA -->
+<meta charset="utf-8"/>
+<meta name=viewport content="width=device-width,initial-scale=1">  
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+
+<!-- KaTeX MHCHEM (MUST BE LOADED AFTER KaTeX)  -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
+
+<!-- GOOGLE ICONS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style><style>:root {
+  --color-bg: #fff;
+  --color-fg: #000;
+  --link-color: #0059ff;
+  --border-color: #000;
+  --headline-font: "Sail", cursive;
+  --h1-color: #303233;
+  --h2-color: #303233;
+  --h3-color: #32403f;
+  --h4-color: #32403f;
+  --h5-color: #32403f;
+  --h6-color: #32403f;
+  --section-font: "Playfair Display", serif;
+  --toc-font: "Dancing Script", cursive;
+  --content-font: "Open Sans", sans-serif;
+  --monospace-font: "Inconsolata", monospace;
+  --force-single-column: 0;
+}
+
+/* UNIVERSAL BOX SIZING WITH INHERITANCE */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* DARK/LIGHT MODE DRAWING TOGGLE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: hwb(248deg 19% 79%);
+    --color-fg: #f5f5f5;
+    --link-color: #09d9ff;
+    --border-color: #805b3c;
+    --h1-color: #dec3c3;
+    --h2-color: #dec3c3;
+    --h3-color: #dec3c3;
+    --h4-color: #dec3c3;
+    --h5-color: #dec3c3;
+    --h6-color: #dec3c3;
+  }
+  svg[data-svg-color-scheme=dark-mode] {
+    display: unset;
+  }
+  svg[data-svg-color-scheme=light-mode] {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+  svg[data-svg-color-scheme=dark-mode] {
+    display: none;
+  }
+  svg[data-svg-color-scheme=light-mode] {
+    display: unset;
+  }
+}
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--content-font);
+  shape-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  text-rendering: optimizeLegibility;
+}
+
+header#page-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  header#page-header {
+    background-color: #1d1f29;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7e7e7e;
+  }
+}
+
+.site-header-row {
+  display: grid;
+  position: relative;
+  transition: 0.8s ease-in-out;
+}
+.site-header-row a.left-link {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: 0.8s ease-in-out;
+}
+@media (prefers-color-scheme: dark) {
+  .site-header-row a.left-link {
+    background-color: #353655;
+    box-shadow: 0 0 5px 0px #000;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-right: 1px solid #000;
+  }
+}
+.site-header-row a.left-link span {
+  font-size: 3em;
+  transition: 0.8s ease-in-out;
+}
+.site-header-row a.left-link:hover span {
+  font-size: 4em;
+}
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-bottom: 1px solid #000;
+  }
+}
+@media (max-width: 45em) {
+  .site-header-row a.left-link span {
+    font-size: 2em;
+  }
+  .site-header-row a.left-link:hover span {
+    font-size: 3em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .site-header-row a.left-link {
+    border-top: 1px solid #000;
+  }
+}
+
+#site-title-wrapper {
+  z-index: 2;
+}
+#site-title-wrapper a.left-link {
+  z-index: 2;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#site-title-box {
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid #000;
+}
+#site-title-box h1 {
+  font-family: var(--toc-font);
+  margin: 0;
+}
+
+#site-nav-wrapper {
+  margin-top: -5px;
+  padding-top: 5px;
+}
+#site-nav-wrapper a.left-link {
+  z-index: 1;
+  align-items: flex-start;
+  display: none;
+}
+@media (max-width: 45em) and (prefers-color-scheme: light) {
+  #site-nav-wrapper a.left-link {
+    border-bottom: 1px solid #000;
+  }
+}
+
+#toc-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+p.toc-info-banner {
+  font-family: var(--toc-font);
+  font-weight: bolder;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  border-bottom: 1px solid #000;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0;
+  padding-top: 0;
+}
+#toc-list li {
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#toc-list li a {
+  text-decoration: none;
+  font-family: var(--toc-font);
+  font-weight: 100;
+}
+#toc-list li a [data-math-node] {
+  font-size: 0.7em;
+}
+#toc-list li[top-level=true] {
+  border-bottom: 2px solid #000;
+}
+#toc-list li[data-level=h1] {
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 2.8em;
+}
+#toc-list li[data-level=h2] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(5vw, 100px));
+  font-size: 2.5em;
+}
+#toc-list li[data-level=h3] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(10vw, 150px));
+  font-size: 2.2em;
+}
+#toc-list li[data-level=h4] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(15vw, 200px));
+  font-size: 1.9em;
+}
+#toc-list li[data-level=h5] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(20vw, 250px));
+  font-size: 1.6em;
+}
+#toc-list li[data-level=h6] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(25vw, 300px));
+  font-size: 1.3em;
+}
+
+#topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0;
+  padding-top: 0;
+}
+#topic-list li {
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#topic-list li a {
+  text-decoration: none;
+  font-family: var(--toc-font);
+  font-weight: 100;
+}
+#topic-list li a [data-math-node] {
+  font-size: 0.7em;
+}
+#topic-list li[top-level=true] {
+  border-bottom: 2px solid #000;
+}
+#topic-list li[data-level=h1] {
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 2.8em;
+}
+#topic-list li[data-level=h2] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(5vw, 100px));
+  font-size: 2.5em;
+}
+#topic-list li[data-level=h3] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(10vw, 150px));
+  font-size: 2.2em;
+}
+#topic-list li[data-level=h4] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(15vw, 200px));
+  font-size: 1.9em;
+}
+#topic-list li[data-level=h5] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(20vw, 250px));
+  font-size: 1.6em;
+}
+#topic-list li[data-level=h6] {
+  margin-left: 20px;
+  padding-left: calc(10px + min(25vw, 300px));
+  font-size: 1.3em;
+}
+
+#site-settings-wrapper {
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 20px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+@media (max-width: 700px) {
+  #site-settings-wrapper {
+    flex-direction: column;
+  }
+}
+#site-settings-wrapper button {
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+@media (prefers-color-scheme: dark) {
+  #site-settings-wrapper button {
+    background-color: rgba(57, 57, 57, 0.3607843137);
+    border: 1px solid #000;
+    color: #fff;
+  }
+  #site-settings-wrapper button:hover {
+    box-shadow: 0 0 1px 1px #0083ff;
+    color: #0083ff;
+  }
+}
+#site-settings-wrapper button.pill {
+  padding: 0;
+}
+#site-settings-wrapper button.pill > span {
+  padding: 10px 20px;
+}
+#site-settings-wrapper button.pill > span:first-child {
+  border-right: 1px solid #000;
+}
+
+button#set-single-col-to-on-btn {
+  display: none;
+}
+
+button#set-single-col-to-off-btn {
+  display: none;
+}
+
+[force-single-col=off] button#set-single-col-to-on-btn {
+  display: flex;
+}
+
+[force-single-col=on] button#set-single-col-to-off-btn {
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  #site-settings-wrapper {
+    visibility: hidden;
+  }
+}
+p {
+  hyphens: auto;
+  text-align: justify;
+  text-indent: 7px;
+}
+
+p[center] {
+  text-align: center;
+}
+
+p[justify] {
+  text-align: justify;
+}
+
+a {
+  color: var(--link-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  hr {
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+img[data-center] {
+  display: block;
+  margin: 0 auto;
+}
+
+[data-table-wrapper] {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  overflow-x: scroll;
+}
+
+table {
+  width: fit-content;
+  border-collapse: collapse;
+  border: none;
+  align-self: center;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: fit-content;
+}
+table th, table td {
+  padding: 10px;
+}
+@media (prefers-color-scheme: light) {
+  table th, table td {
+    border: 1px solid black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  table th, table td {
+    border: 1px solid #616161;
+  }
+}
+table tr:hover {
+  background-color: rgba(44, 44, 44, 0.5294117647);
+}
+table span[data-table-list] {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 8px;
+}
+table span[data-table-list] > span {
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 100;
+}
+table span[data-table-list][data-color] > span {
+  border: 1px solid #01ff5c;
+  color: #01ff5c;
+}
+table span[data-table-list][data-color1] > span {
+  border: 1px solid #c1ff02;
+  color: #c1ff02;
+}
+table span[data-table-list][data-color2] > span {
+  border: 1px solid #27fce2;
+  color: #27fce2;
+}
+
+mark[font] {
+  background-color: unset;
+  color: #0fffae;
+}
+
+mark[font][data-color] {
+  color: #01ff5c;
+}
+
+mark[font][data-color1] {
+  color: #c1ff02;
+}
+
+mark[font][data-color2] {
+  color: #27fce2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headline-font);
+  font-size: 3em;
+  margin: 0;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: var(--h1-color);
+}
+
+h2 {
+  font-size: 2.5em;
+  color: var(--h2-color);
+}
+
+h3 {
+  font-size: 2.2em;
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: 1.9em;
+  color: var(--h4-color);
+}
+
+h5 {
+  font-size: 1.6em;
+  color: var(--h5-color);
+}
+
+h6 {
+  font-size: 1.3em;
+  color: var(--h6-color);
+}
+
+main > :is(h1, h2, h3, h4, h5, h6):first-child {
+  border-top: unset;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-bottom: 20px;
+}
+main > *:is(h1, h2, h3, h4, h5, h6) {
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+main > *:is(h1, h2, h3, h4, h5, h6) + main > *:is(h1, h2, h3, h4, h5, h6) {
+  border-top: unset;
+}
+main > h1 {
+  padding-left: min(min(10px, 5vw), 100px);
+  font-size: 2.8em;
+}
+main > h2 {
+  padding-left: min(min(30px, 10vw), 150px);
+  font-size: 2.5em;
+}
+main > h3 {
+  padding-left: min(min(60px, 15vw), 200px);
+  font-size: 2.2em;
+}
+main > h4 {
+  padding-left: min(min(90px, 20vw), 250px);
+  font-size: 1.9em;
+}
+main > h5 {
+  padding-left: min(min(120px, 25vw), 300px);
+  font-size: 1.6em;
+}
+main > h6 {
+  padding-left: min(min(150px, 30vw), 350px);
+  font-size: 1.3em;
+}
+main > *:not(:is(h1, h2, h3, h4, h5, h6)) {
+  text-align: justify;
+  padding: 0 20px;
+}
+main > dl dt {
+  text-align: left;
+}
+main > dl dd {
+  text-align: justify;
+}
+main > ul, main li {
+  padding-left: 30px;
+}
+main > hr {
+  width: 95%;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.katex-display > .katex {
+  white-space: normal;
+}
+
+/* Add space between broken lines: */
+.katex-display > .base {
+  margin: 0.25em 0;
+}
+
+/* Compensate by reducing space around display math */
+.katex-display {
+  margin: 0.5em 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-math-node] {
+    color: #ffb7e4;
+  }
+}
+
+[data-cmd=layout][show-rule=true] {
+  column-rule: 1px solid #ccc;
+}
+
+[data-cmd=layout] {
+  column-gap: 20px;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+[data-cmd=layout] h1, [data-cmd=layout] h2, [data-cmd=layout] h3, [data-cmd=layout] h4, [data-cmd=layout] h5, [data-cmd=layout] h6 {
+  margin: 0;
+  break-after: avoid;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+}
+[data-cmd=layout] p {
+  margin: 0;
+}
+[data-cmd=layout] ul {
+  margin: 0;
+  padding: 0;
+}
+[data-cmd=layout] ul li {
+  text-align: justify;
+  hyphens: auto;
+}
+[data-cmd=layout] p:first-child {
+  text-indent: 0;
+}
+[data-cmd=layout] p + p {
+  text-indent: 2em;
+}
+[data-cmd=layout] ul {
+  list-style-position: outside;
+  margin-left: 12px;
+}
+[data-cmd=layout] [data-math-node=block] {
+  column-span: all;
+}
+
+[data-cmd=layout][data-col="1"] {
+  column-count: 1;
+}
+
+[data-cmd=layout][data-col="2"] {
+  column-count: 2;
+}
+
+[data-cmd=layout][data-col="3"] {
+  column-count: 3;
+}
+
+[data-cmd=layout][data-col="4"] {
+  column-count: 4;
+}
+
+@media (max-width: 1200px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 3;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 900px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="4"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="3"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=layout][data-col="2"] {
+    column-count: 1;
+  }
+}
+[data-cmd=grid][boxed] > [data-cmd=note] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=grid][boxed] > [data-cmd=note] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=grid][boxed] > [data-cmd=note] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+[data-cmd=grid][boxed] > [data-math-node=block] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=grid][boxed] > [data-math-node=block] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=grid][boxed] > [data-math-node=block] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+
+[data-cmd=note][boxed] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: light) {
+  [data-cmd=note][boxed] {
+    border: 1px solid #535353;
+    box-shadow: 0 0 0px 1px #eeeeee;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-cmd=note][boxed] {
+    border: 1px solid #755e45;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3607843137);
+  }
+}
+
+[data-cmd=grid] {
+  display: grid;
+  padding: 0 20px;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 100%;
+}
+[data-cmd=grid] h1, [data-cmd=grid] h2, [data-cmd=grid] h3, [data-cmd=grid] h4, [data-cmd=grid] h5, [data-cmd=grid] h6 {
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+  text-align: center;
+}
+
+[data-cmd=note] {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  row-gap: 10px;
+  overflow: hidden;
+  align-items: normal;
+  grid-row-gap: 12px;
+}
+[data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) {
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+[data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) + [data-cmd=note] > *:is(h1, h2, h3, h4, h5, h6) {
+  border-top: unset;
+}
+[data-cmd=note] > h1 {
+  padding-left: min(min(10px, 5vw), 100px);
+  font-size: 2.8em;
+}
+[data-cmd=note] > h2 {
+  padding-left: min(min(30px, 10vw), 150px);
+  font-size: 2.5em;
+}
+[data-cmd=note] > h3 {
+  padding-left: min(min(60px, 15vw), 200px);
+  font-size: 2.2em;
+}
+[data-cmd=note] > h4 {
+  padding-left: min(min(90px, 20vw), 250px);
+  font-size: 1.9em;
+}
+[data-cmd=note] > h5 {
+  padding-left: min(min(120px, 25vw), 300px);
+  font-size: 1.6em;
+}
+[data-cmd=note] > h6 {
+  padding-left: min(min(150px, 30vw), 350px);
+  font-size: 1.3em;
+}
+[data-cmd=note] > *:not(:is(h1, h2, h3, h4, h5, h6)) {
+  text-align: justify;
+  padding: 0 20px;
+}
+[data-cmd=note] > dl dt {
+  text-align: left;
+}
+[data-cmd=note] > dl dd {
+  text-align: justify;
+}
+[data-cmd=note] > ul, [data-cmd=note] li {
+  padding-left: 30px;
+}
+[data-cmd=note] > hr {
+  width: 95%;
+}
+[data-cmd=note] h1, [data-cmd=note] h2, [data-cmd=note] h3, [data-cmd=note] h4, [data-cmd=note] h5, [data-cmd=note] h6 {
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+  padding: 0 10px;
+}
+[data-cmd=note] [data-cmd=note] {
+  margin: 10px;
+}
+
+[data-cmd=grid][data-col="1"] {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+[data-cmd=grid][data-col="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+[data-cmd=grid][data-col="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+[data-cmd=grid][data-col="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 3;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 960px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 900px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 2;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="4"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="3"] {
+    column-count: 1;
+  }
+}
+@media (max-width: 760px) {
+  [data-cmd=grid][data-col="2"] {
+    column-count: 1;
+  }
+}
+body {
+  margin: 0;
+}
+
+svg[data-drawing] {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
+</style><script>let root = document.documentElement;
+
+function updateColumns() {
+    const force_single_column = localStorage.getItem('preference.force-single-column');
+    const wrapper = document.getElementById('site-settings-wrapper');
+    const selector = "main [data-col], main section, main h1, main h2, main h3, main h4, main h5, main h6";
+    if (force_single_column != null) {
+        console.log("force_single_column", force_single_column);
+        if (force_single_column == "1") {
+            wrapper.setAttribute("force-single-col", 'on');
+            document.querySelectorAll(selector).forEach((node) => {
+                node.setAttribute("force-single-col", 'on');
+            });
+        }
+        if (force_single_column == "0") {
+            wrapper.setAttribute("force-single-col", 'off');
+            document.querySelectorAll(selector).forEach((node) => {
+                node.setAttribute("force-single-col", 'off');
+            });
+        }
+    } else {
+        wrapper.setAttribute("force-single-col", 'off');
+    }
+}
+
+window.addEventListener('load', () => {
+    updateColumns();
+});
+
+function setForceSingleColumnToOff() {
+    console.log("set force single column to off");
+    localStorage.setItem('preference.force-single-column', '0');
+    updateColumns();
+}
+
+function setForceSingleColumnToOn() {
+    console.log("set force single column to on");
+    localStorage.setItem('preference.force-single-column', '1');
+    updateColumns();
+}
+
+</script></head><body><header id="page-header"><div data-col="2" class="site-header-row" id="site-title-wrapper"><a href="/" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a class="left-link" href="/"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-level="h1" top-level="true" data-source="local"><a href="/math/trig/index.html#trigonometry">Trigonometry</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li data-level="h1" top-level="true" data-source="local"><a href="/math/trig/index.html#trigonometry">Trigonometry</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#theunitcirclespecialanglesintrig">The Unit Circle & Special Angles In Trig</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/math/trig/index.html#warning">Warning</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/math/trig/index.html#trigonometricidentities">Trigonometric Identities</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#pythagoreanidentities">Pythagorean Identities</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#sumanddifferenceidentities">Sum and Difference Identities</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#cofunctionidentities">Cofunction Identities</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#ratioidentities">Ratio Identities</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#doubleangleidentities">Double-Angle Identities</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#halfangleidentities">Half-Angle Identities</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#powerreducingidentities">Power-Reducing Identities</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#producttosumidentities">Product-to-Sum Identities</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/math/trig/index.html#sumtoproductidentities">Sum-to-Product-Identities</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/math/trig/index.html#trigonometricequations">Trigonometric Equations</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#eulersformula">Euler's Formula</a></li><li data-source="local" top-level="false" data-level="h1"><a href="/math/trig/index.html#coordinatenumbersystems">Coordinate & Number Systems</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#polarcoordinatesystem">Polar Coordinate System</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#properties">Properties</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/math/trig/index.html#trigonometricformofacomplexnumber"><small>Trigonometric form of a complex number</small></a></li><li top-level="false" data-source="local" data-level="h1"><a href="/math/trig/index.html#vectors">Vectors</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/math/trig/index.html#quickfacts">Quick Facts</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#vectoroperations">Vector Operations</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#dotproduct">Dot Product</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#crossproduct">Cross Product</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#lengthofavector">Length of a Vector</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#definitionofvectoraddition">Definition of Vector Addition</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#standardbasisvectors">Standard Basis Vectors</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#orthogonal">Orthogonal</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#theunitvector">The Unit Vector</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#ifistheanglebetweenthevectorsandthen"><small>If <span data-cmd="inline-math" data-math-target="ID3794789702185128892" data-math-node="inline"></span> is the angle between the vectors <span data-cmd="inline-math" data-math-node="inline" data-math-target="ID3509768199141374765"></span> and <span data-math-target="ID3309221075999577242" data-math-node="inline" data-cmd="inline-math"></span>, then</small></a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#ifistheanglebetweenthenonzerovectorsandthen"><small>If <span data-math-target="ID9623946925129059745" data-cmd="inline-math" data-math-node="inline"></span> is the angle between the nonzero vectors <span data-math-target="ID6767422686707070873" data-cmd="inline-math" data-math-node="inline"></span> and <span data-cmd="inline-math" data-math-target="ID5056283986403107177" data-math-node="inline"></span>, then</small></a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#twononzerovectorsandareparallelifandonlyif"><small>Two nonzero vectors <span data-math-target="ID11247246215393274365" data-math-node="inline" data-cmd="inline-math"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID8219151533595311429"></span> are parallel if and only if</small></a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#propertiesofthedotproduct">Properties of the Dot Product</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#directioncosinesdirectionanglesofavector">Direction Cosines & Direction Angles of a Vector</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#directioncosines">Direction Cosines</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#directionangles">Direction Angles</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#theorem">Theorem</a></li><li top-level="false" data-source="local" data-level="h5"><a href="/math/trig/index.html#proof">Proof</a></li><li data-level="h2" data-source="local" top-level="false"><a href="/math/trig/index.html#vectorrelations">Vector Relations</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/math/trig/index.html#parallelvectors">Parallel Vectors</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/math/trig/index.html#alternatively">Alternatively</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#orthogonalvectors">Orthogonal Vectors</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#reparameterizationofthepositionvectorintermsoflength">Reparameterization of the position vector <span data-math-node="inline" data-math-target="ID1766346639603676818" data-cmd="inline-math"></span> in terms of length <span data-math-target="ID1532263650359622843" data-cmd="inline-math" data-math-node="inline"></span></a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#thearclengthfunction">The Arc Length Function</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/math/trig/index.html#thearclengthfunction1">The Arc Length Function</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#vectorsderivedfromsomecurvedefinedby">Vectors Derived From Some Curve Defined by <span data-math-target="ID17554518829402380059" data-math-node="inline" data-cmd="inline-math"></span></a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#theunitvector1">The Unit Vector</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#theunittangentvector">The Unit <b>Tangent</b> Vector</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#theunitnormalvector">The Unit <b>Normal</b> Vector</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#thebinormalvector">The Binormal Vector</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#kappacurvatureofavector">Kappa - Curvature of a Vector</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#tangentialnormalcomponentsoftheaccelerationvectorofthecurve">Tangential & Normal Components of the Acceleration Vector of the Curve</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/math/trig/index.html#vectorcalculus">Vector Calculus</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#thepositionvector"><small>The Position Vector <span data-cmd="inline-math" data-math-target="ID16758206702112330605" data-math-node="inline"></span></small></a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#thevelocityvector"><small>The Velocity Vector <span data-math-target="ID11733930679011963523" data-math-node="inline" data-cmd="inline-math"></span></small></a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#theaccelerationvector"><small>The Acceleration Vector <span data-cmd="inline-math" data-math-target="ID14464374803754009324" data-math-node="inline"></span></small></a></li><li data-level="h1" top-level="false" data-source="local"><a href="/math/trig/index.html#matrices">Matrices</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/math/trig/index.html#reference">Reference</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#thedeterminantofamatrix">The Determinant of A Matrix</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#thecrossproduct">The Cross Product</a></li><li top-level="false" data-source="local" data-level="h1"><a href="/math/trig/index.html#geometry">Geometry</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#thecircle">The Circle</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/math/trig/index.html#definitionofaline">Definition of a Line</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/math/trig/index.html#vectorequationofaline">Vector Equation of a Line</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/math/trig/index.html#therefore">Therefore</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/math/trig/index.html#parametricequationofaline">Parametric Equation of a Line</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/math/trig/index.html#essentially">Essentially</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#symmetricequationofaline">Symmetric Equation of a Line</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/math/trig/index.html#rationale">Rationale</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/math/trig/index.html#parameterizationsofacurve">Parameterizations of a curve</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/math/trig/index.html#curvatureproperties">Curvature Properties</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/math/trig/index.html#lengthofacurve">Length of a Curve</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/math/trig/index.html#thearclengthfunction2">The Arc Length Function</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" class="pill" onclick="setForceSingleColumnToOff()"><span>Force Single Column</span><span>On</span></button><button onclick="setForceSingleColumnToOn()" id="set-single-col-to-on-btn" class="pill"><span>Force Single Column</span><span>Off</span></button></div></header><main>
+<h1 id="trigonometry" top-level=""><a href="/math/trig/index.html#trigonometry">Trigonometry</a></h1><div data-cmd="grid" boxed="">
+   <section data-cmd="note">
+      <h2 id="theunitcirclespecialanglesintrig"><a href="/math/trig/index.html#theunitcirclespecialanglesintrig">The Unit Circle & Special Angles In Trig</a></h2><img src="/static-assets/assets/images/math/7.svg" style="max-width: 1000px;"></img><div data-cmd="grid" data-col="1" boxed="">
+         <section data-cmd="note">
+            <h4 id="warning"><a href="/math/trig/index.html#warning">Warning</a></h4><p center="">Never use Pi （<span id="ID14638231216568919988" data-math-node="inline" data-cmd="inline-math"></span>）! It makes （thinking in terms of） radians confusing, 
+                                Tao （<span data-cmd="inline-math" data-math-node="inline" id="ID1841841534836629792"></span>） is what the enlightened trigonometer uses,
+                                and won't screw you over.</p></section></div><p>To easily memorize the special angles in trig, notice the repeating patterns on the above angles.</p><ul>
+         <li>For values on the x-axis, anything over <span data-cmd="inline-math" id="ID14725605245943463928" data-math-node="inline"></span>
+                         and under <span data-math-node="inline" data-cmd="inline-math" id="ID13914945154465492054"></span> will be negative</li><li>For values on the y-axis, anything over <span data-cmd="inline-math" data-math-node="inline" id="ID16616718442515868700"></span> will be negative</li><li>
+            Diagonals will be <span data-math-node="inline" id="ID12784665940896675904" data-cmd="inline-math"></span>, For ratios of <span id="ID16494597737474023328" data-cmd="inline-math" data-math-node="inline"></span> on the sides, i.e.
+               <span data-math-node="inline" id="ID4387436449825684137" data-cmd="inline-math"></span>,
+               <span data-cmd="inline-math" id="ID17122907141998645234" data-math-node="inline"></span>,
+               <span id="ID15571003646597432611" data-math-node="inline" data-cmd="inline-math"></span>,
+               <span id="ID6338778419845828611" data-math-node="inline" data-cmd="inline-math"></span>,
+               <span data-math-node="inline" id="ID12469014683671745811" data-cmd="inline-math"></span>,
+               <span id="ID6316191476833592444" data-math-node="inline" data-cmd="inline-math"></span>,
+               <span data-math-node="inline" id="ID10083296881197053141" data-cmd="inline-math"></span>, and
+               <span data-cmd="inline-math" id="ID14677340643659176050" data-math-node="inline"></span>.
+            Draw a circle and dot the point where it occurs （which is pretty easy since the above are simple ratios of a circle when expressed in terms of <span id="ID17184247876011038481" data-math-node="inline" data-cmd="inline-math"></span>）. Then with regards to the <span data-cmd="inline-math" id="ID4610692844212091936" data-math-node="inline"></span> and <span data-cmd="inline-math" data-math-node="inline" id="ID15390603391630082911"></span> axis values:
+         <ul>
+            <li>The longer size will be <span data-math-node="inline" id="ID2089334825848918094" data-cmd="inline-math"></span></li><li>The shorter side will be <span data-cmd="inline-math" data-math-node="inline" id="ID3007633122834510245"></span></li></ul>
+         See the above examples.
+         </li></ul></section></div><h2 id="trigonometricidentities"><a href="/math/trig/index.html#trigonometricidentities">Trigonometric Identities</a></h2><div data-col="2" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <h3 id="pythagoreanidentities"><a href="/math/trig/index.html#pythagoreanidentities">Pythagorean Identities</a></h3><div data-math-node="block" id="ID13196237142398731025" data-cmd="equation"></div><div data-col="2" data-cmd="grid">
+         <div id="ID12650328595380876417" data-cmd="equation" data-math-node="block"></div><div data-cmd="equation" data-math-node="block" id="ID4988138396478774167"></div></div></section><section boxed="" data-cmd="note">
+      <h3 id="sumanddifferenceidentities"><a href="/math/trig/index.html#sumanddifferenceidentities">Sum and Difference Identities</a></h3><div data-math-node="block" data-cmd="math" id="ID11315515109370180847"></div></section><section data-cmd="note" boxed="">
+      <h3 id="cofunctionidentities"><a href="/math/trig/index.html#cofunctionidentities">Cofunction Identities</a></h3><div data-col="2" data-cmd="grid">
+         <div data-cmd="equation" data-math-node="block" id="ID17024869000110230687"></div><div data-math-node="block" data-cmd="equation" id="ID2496453477089960716"></div><div data-math-node="block" data-cmd="equation" id="ID12186057106944749039"></div><div data-cmd="equation" data-math-node="block" id="ID16154675506664832056"></div><div id="ID12978275076592095028" data-math-node="block" data-cmd="equation"></div><div data-math-node="block" data-cmd="equation" id="ID13058288090769771919"></div></div></section><section boxed="" data-cmd="note">
+      <h3 id="ratioidentities"><a href="/math/trig/index.html#ratioidentities">Ratio Identities</a></h3><div data-math-node="block" id="ID221317682079050228" data-cmd="math"></div></section><section data-cmd="note" boxed="">
+      <h3 id="doubleangleidentities"><a href="/math/trig/index.html#doubleangleidentities">Double-Angle Identities</a></h3><div data-cmd="math" id="ID13739665694055146649" data-math-node="block"></div></section><section data-cmd="note" boxed="">
+      <h3 id="halfangleidentities"><a href="/math/trig/index.html#halfangleidentities">Half-Angle Identities</a></h3><div data-cmd="math" data-math-node="block" id="ID11699656022266011630"></div></section><section boxed="" data-cmd="note">
+      <h3 id="powerreducingidentities"><a href="/math/trig/index.html#powerreducingidentities">Power-Reducing Identities</a></h3><div data-math-node="block" data-cmd="math" id="ID8373497523851241284"></div><hr></hr><div data-math-node="block" data-cmd="equation" id="ID1461283733504259241"></div></section><section data-cmd="note" boxed="">
+      <h3 id="producttosumidentities"><a href="/math/trig/index.html#producttosumidentities">Product-to-Sum Identities</a></h3><div data-math-node="block" id="ID13075868986506764507" data-cmd="math"></div></section><section data-cmd="note" boxed="">
+      <h3 id="sumtoproductidentities"><a href="/math/trig/index.html#sumtoproductidentities">Sum-to-Product-Identities</a></h3><div data-cmd="math" id="ID7002699797090706632" data-math-node="block"></div></section></div><h2 id="trigonometricequations"><a href="/math/trig/index.html#trigonometricequations">Trigonometric Equations</a></h2><div data-cmd="grid" data-col="2">
+   <section data-cmd="note" boxed="">
+      <h3 id="eulersformula"><a href="/math/trig/index.html#eulersformula">Euler's Formula</a></h3><div data-cmd="equation" id="ID11900438889563081976" data-math-node="block"></div><hr></hr><div data-cmd="equation" id="ID14884271400970103614" data-math-node="block"></div><hr></hr><div data-cmd="equation" id="ID6342298563997826576" data-math-node="block"></div></section></div><h1 id="coordinatenumbersystems"><a href="/math/trig/index.html#coordinatenumbersystems">Coordinate & Number Systems</a></h1><div data-cmd="grid" data-col="3">
+   <section boxed="" data-cmd="note">
+      <div data-cmd="equation" id="ID312227117686471888" data-math-node="block"></div><hr></hr><div id="ID14442868304732662981" data-math-node="block" data-cmd="equation"></div></section><section boxed="" data-cmd="note">
+      <div id="ID10573371899648416155" data-cmd="equation" data-math-node="block"></div></section><section boxed="" data-cmd="note">
+      <div data-cmd="equation" id="ID9701683497394681105" data-math-node="block"></div></section></div><div data-cmd="grid" data-col="2">
+   <section boxed="" data-cmd="note">
+      <h2 id="polarcoordinatesystem"><a href="/math/trig/index.html#polarcoordinatesystem">Polar Coordinate System</a></h2><p>Given</p><div id="ID11301942967328613460" data-cmd="equation" data-math-node="block"></div><p>Then</p><div data-cmd="equation" id="ID18409067535307268173" data-math-node="block"></div></section><section data-cmd="note" boxed="">
+      <h2 id="properties"><a href="/math/trig/index.html#properties">Properties</a></h2><p>Given</p><div data-cmd="equation" data-math-node="block" id="ID14331928142054250360"></div><p>Then</p><div data-math-node="block" data-cmd="equation" id="ID6100720197965529956"></div><hr></hr><p>De Moivre’s Theorem</p><div data-math-node="block" id="ID9706837528719368688" data-cmd="equation"></div><p>De Moivre’s Theorem For Finding Roots</p><div data-cmd="equation" id="ID10209744846289366843" data-math-node="block"></div></section><section boxed="" data-cmd="note">
+      <h2 id="trigonometricformofacomplexnumber"><a href="/math/trig/index.html#trigonometricformofacomplexnumber"><small>Trigonometric form of a complex number</small></a></h2><div id="ID1942721306677729444" data-math-node="block" data-cmd="equation"></div></section></div><h1 id="vectors"><a href="/math/trig/index.html#vectors">Vectors</a></h1><section data-cmd="note">
+   <h2 id="quickfacts"><a href="/math/trig/index.html#quickfacts">Quick Facts</a></h2><ul>
+      <li><p>Two vectors are equal if they share the same magnitude and direction. <section data-cmd="note">
+         Initial points don't matter.
+      </section></p></li><li><section data-cmd="note">
+         <p>You can define a vector with two points.</p><img style="max-width: 300px;" data-center="" src="/static-assets/pages/math/trig/old-images/trinagle-def-of-a-vector.png"></img></section></li><li><p><b>Do not divide vectors!</b></p></li><li><span data-cmd="inline-math" id="ID7223235603614667892" data-math-node="inline"></span></li><li><span data-math-node="inline" id="ID6765297351085208426" data-cmd="inline-math"></span></li></ul></section><h2 id="vectoroperations"><a href="/math/trig/index.html#vectoroperations">Vector Operations</a></h2><div data-col="2" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <h3 id="dotproduct"><a href="/math/trig/index.html#dotproduct">Dot Product</a></h3><div id="ID9528189467018965716" data-math-node="block" data-cmd="equation"></div></section><section boxed="" data-cmd="note">
+      <h3 id="crossproduct"><a href="/math/trig/index.html#crossproduct">Cross Product</a></h3><div data-math-node="block" data-cmd="equation" id="ID13688090548138993783"></div></section><section data-cmd="note" boxed="">
+      <h3 id="lengthofavector"><a href="/math/trig/index.html#lengthofavector">Length of a Vector</a></h3><div id="ID4332110188016810249" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <h3 id="definitionofvectoraddition"><a href="/math/trig/index.html#definitionofvectoraddition">Definition of Vector Addition</a></h3><p>If <span data-cmd="inline-math" data-math-node="inline" id="ID2712181223499215680"></span> and <span data-math-node="inline" data-cmd="inline-math" id="ID15615328760727345532"></span> are positioned so the initial point of <span id="ID3831580671309246066" data-cmd="inline-math" data-math-node="inline"></span> is at the terminal point of <span id="ID2580753255897105795" data-math-node="inline" data-cmd="inline-math"></span>, then the sum <span id="ID17812411867478108704" data-math-node="inline" data-cmd="inline-math"></span> is the vector from the initial point of <span data-math-node="inline" data-cmd="inline-math" id="ID14443100167582076692"></span> to the terminal point of <span id="ID6333677243130700271" data-math-node="inline" data-cmd="inline-math"></span>.</p><img src="/static-assets/pages/math/trig/old-images/Definition-of-Vector-Addition.png" style="max-width: 300px;" data-center=""></img><hr></hr><p>Given some vectors <span data-math-node="inline" data-cmd="inline-math" id="ID1736101732880568747"></span> and <span data-math-node="inline" data-cmd="inline-math" id="ID2623616102376017617"></span>, the vector <span data-math-node="inline" data-cmd="inline-math" id="ID5706868575728774290"></span> is the vector that points from the head of <span data-cmd="inline-math" id="ID9453662720463369522" data-math-node="inline"></span> to the head of <span data-math-node="inline" data-cmd="inline-math" id="ID13769004743126085646"></span></p><img style="max-width: 200px;" data-center="" src="/static-assets/pages/math/trig/old-images/vector-u-v.png"></img></section></div><div data-cmd="grid" data-col="3">
+   <section boxed="" data-cmd="note">
+      <h3 id="standardbasisvectors"><a href="/math/trig/index.html#standardbasisvectors">Standard Basis Vectors</a></h3><div data-math-node="block" id="ID7282402231367286569" data-cmd="equation"></div><hr></hr><img style="max-width: 200px;" src="/static-assets/pages/math/trig/old-images/unit-vectors.png" data-center=""></img></section><section boxed="" data-cmd="note">
+      <h3 id="orthogonal"><a href="/math/trig/index.html#orthogonal">Orthogonal</a></h3><p>Two vectors are orthogonal if and only if</p><div id="ID16585049123421907118" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <h3 id="theunitvector"><a href="/math/trig/index.html#theunitvector">The Unit Vector</a></h3><div data-math-node="block" data-cmd="equation" id="ID16684929603998061857"></div></section><section data-cmd="note" boxed="">
+      <h3 id="ifistheanglebetweenthevectorsandthen"><a href="/math/trig/index.html#ifistheanglebetweenthevectorsandthen"><small>If <span data-cmd="inline-math" data-math-target="ID3794789702185128892" data-math-node="inline"></span> is the angle between the vectors <span data-cmd="inline-math" data-math-node="inline" data-math-target="ID3509768199141374765"></span> and <span data-math-target="ID3309221075999577242" data-math-node="inline" data-cmd="inline-math"></span>, then</small></a></h3><div id="ID4326493897350589278" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <h3 id="ifistheanglebetweenthenonzerovectorsandthen"><a href="/math/trig/index.html#ifistheanglebetweenthenonzerovectorsandthen"><small>If <span data-math-target="ID9623946925129059745" data-cmd="inline-math" data-math-node="inline"></span> is the angle between the nonzero vectors <span data-math-target="ID6767422686707070873" data-cmd="inline-math" data-math-node="inline"></span> and <span data-cmd="inline-math" data-math-target="ID5056283986403107177" data-math-node="inline"></span>, then</small></a></h3><div data-math-node="block" id="ID16797543610530828269" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <h3 id="twononzerovectorsandareparallelifandonlyif"><a href="/math/trig/index.html#twononzerovectorsandareparallelifandonlyif"><small>Two nonzero vectors <span data-math-target="ID11247246215393274365" data-math-node="inline" data-cmd="inline-math"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID8219151533595311429"></span> are parallel if and only if</small></a></h3><div id="ID6042862742197160371" data-math-node="block" data-cmd="equation"></div></section></div><h3 id="propertiesofthedotproduct"><a href="/math/trig/index.html#propertiesofthedotproduct">Properties of the Dot Product</a></h3><div data-col="3" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <div data-cmd="equation" data-math-node="block" id="ID5372247099061940970"></div></section><section boxed="" data-cmd="note">
+      <div id="ID6093778053608758247" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <div data-math-node="block" data-cmd="equation" id="ID9823885355354441345"></div></section><section data-cmd="note" boxed="">
+      <div data-cmd="equation" id="ID15516804528877618904" data-math-node="block"></div></section></div><h2 id="directioncosinesdirectionanglesofavector"><a href="/math/trig/index.html#directioncosinesdirectionanglesofavector">Direction Cosines & Direction Angles of a Vector</a></h2><section data-cmd="note">
+   <img src="/static-assets/pages/math/trig/old-images/Direction-Cosines-Direction-Angles-of-a-Vector.png" data-center="" style="max-width: 300px;"></img><p center="">Where</p><div id="ID2902693950888190278" data-math-node="block" data-cmd="equation"></div></section><div data-col="3" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <h3 id="directioncosines"><a href="/math/trig/index.html#directioncosines">Direction Cosines</a></h3><div data-math-node="block" id="ID11678935954377995633" data-cmd="equation"></div></section><section data-cmd="note" boxed="">
+      <h3 id="directionangles"><a href="/math/trig/index.html#directionangles">Direction Angles</a></h3><div data-cmd="equation" id="ID5029478537517172245" data-math-node="block"></div></section><section boxed="" data-cmd="note">
+      <h3 id="theorem"><a href="/math/trig/index.html#theorem">Theorem</a></h3><div id="ID7971889154124215959" data-math-node="block" data-cmd="equation"></div><hr></hr><h5 id="proof"><a href="/math/trig/index.html#proof">Proof</a></h5><div id="ID17704786163640907675" data-math-node="block" data-cmd="equation"></div><p>Given</p><div data-math-node="block" id="ID15950626771175408509" data-cmd="equation"></div><p>Therefore</p><div data-cmd="equation" id="ID17092385820199526044" data-math-node="block"></div></section></div><h2 id="vectorrelations"><a href="/math/trig/index.html#vectorrelations">Vector Relations</a></h2><div data-col="2" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <h3 id="parallelvectors"><a href="/math/trig/index.html#parallelvectors">Parallel Vectors</a></h3><ul>
+         <li>When two vectors are parallel; they never intersect （duh）.</li></ul><p>Given some vectors</p><div data-math-node="block" data-cmd="equation" id="ID15993786298937874607"></div><p>The vectors <span data-cmd="inline-math" data-math-node="inline" id="ID4155659858752574587"></span> and <span data-math-node="inline" id="ID17443556674850651356" data-cmd="inline-math"></span> are parallel if and only if they are scalar multiples of one another.</p><div id="ID14976716229204336024" data-math-node="block" data-cmd="equation"></div><h4 id="alternatively"><a href="/math/trig/index.html#alternatively">Alternatively</a></h4><div data-cmd="equation" id="ID17112355595806461025" data-math-node="block"></div></section><section data-cmd="note" boxed="">
+      <h3 id="orthogonalvectors"><a href="/math/trig/index.html#orthogonalvectors">Orthogonal Vectors</a></h3><ul>
+         <li>When two vectors are orthogonal; they meet at right angles.</li></ul><p>Given some vectors</p><div data-math-node="block" data-cmd="equation" id="ID12845022063151624963"></div><p>Two vectors are orthogonal if and only if</p><div data-math-node="block" data-cmd="equation" id="ID3461512790616895644"></div></section></div><h2 id="reparameterizationofthepositionvectorintermsoflength"><a href="/math/trig/index.html#reparameterizationofthepositionvectorintermsoflength">Reparameterization of the position vector <span data-math-node="inline" data-math-target="ID1766346639603676818" data-cmd="inline-math"></span> in terms of length <span data-math-target="ID1532263650359622843" data-cmd="inline-math" data-math-node="inline"></span></a></h2><ul>
+   <li>We can parametrize a curve <b>with respect to arc length</b>; because arc length arises naturally from the shape of the curve and <b>does not depend on any coordinate system</b>.</li></ul><div data-cmd="grid" data-col="2">
+   <section data-cmd="note" boxed="">
+      <h3 id="thearclengthfunction"><a href="/math/trig/index.html#thearclengthfunction">The Arc Length Function</a></h3><p>Given</p><div id="ID11956839858168614699" data-math-node="block" data-cmd="equation"></div><p>We can redefine <span data-math-node="inline" data-cmd="inline-math" id="ID12204607221969842392"></span> in terms of arc length between two endpoints</p><div data-math-node="block" data-cmd="math" id="ID15388735226104309079"></div><p>That is, <span data-cmd="inline-math" data-math-node="inline" id="ID3913510566049893508"></span> is the length of the curve （<span data-math-node="inline" data-cmd="inline-math" id="ID14052031614408025706"></span>） between <span data-math-node="inline" data-cmd="inline-math" id="ID1003341831791727649"></span> and <span data-math-node="inline" id="ID16101193640460814283" data-cmd="inline-math"></span>.</p><hr></hr><p>Furthermore from the adjacent definition; we can simply the above to</p><div id="ID4664397292875992649" data-math-node="block" data-cmd="equation"></div></section><section boxed="" data-cmd="note">
+      <h3 id="thearclengthfunction1"><a href="/math/trig/index.html#thearclengthfunction1">The Arc Length Function</a></h3><div data-cmd="equation" id="ID7020347005269825863" data-math-node="block"></div><p>That is</p><div id="ID3871606609439733877" data-cmd="math" data-math-node="block"></div></section></div><h2 id="vectorsderivedfromsomecurvedefinedby"><a href="/math/trig/index.html#vectorsderivedfromsomecurvedefinedby">Vectors Derived From Some Curve Defined by <span data-math-target="ID17554518829402380059" data-math-node="inline" data-cmd="inline-math"></span></a></h2><div data-col="2" data-cmd="grid">
+   <section boxed="" data-cmd="note">
+      <img data-center="" src="/static-assets/pages/math/trig/old-images/curvature.png" style="max-width: 300px;"></img></section><section boxed="" data-cmd="note">
+      <h3 id="theunitvector1"><a href="/math/trig/index.html#theunitvector1">The Unit Vector</a></h3><div data-cmd="equation" id="ID1522832924959292431" data-math-node="block"></div></section></div><div data-col="2" data-cmd="grid">
+   <section data-cmd="note" boxed="">
+      <h3 id="theunittangentvector"><a href="/math/trig/index.html#theunittangentvector">The Unit <b>Tangent</b> Vector</a></h3><div data-cmd="equation" data-math-node="block" id="ID1758432705778675885"></div></section><section data-cmd="note" boxed="">
+      <h3 id="theunitnormalvector"><a href="/math/trig/index.html#theunitnormalvector">The Unit <b>Normal</b> Vector</a></h3><div data-cmd="equation" id="ID3136391472792883423" data-math-node="block"></div></section><section boxed="" data-cmd="note">
+      <h3 id="thebinormalvector"><a href="/math/trig/index.html#thebinormalvector">The Binormal Vector</a></h3><div data-math-node="block" id="ID5855952824353189579" data-cmd="equation"></div><ul>
+         <li>Therefore, the binormal vector is orthogonal to both the tangent vector and the normal vector.</li><li>The plane determined by the normal and binormal vectors N and B at a point P on a curve C is called the normal plane of C at P.</li><li>The plane determined by the vectors T and N is called the osculating plane of C at P. The name comes from the Latin osculum, meaning “kiss.” It is the plane that comes closest to containing the part of the curve near P. （For a plane curve, the osculating plane is simply the plane that contains the curve.）</li></ul></section><section data-cmd="note" boxed="">
+      <h3 id="kappacurvatureofavector"><a href="/math/trig/index.html#kappacurvatureofavector">Kappa - Curvature of a Vector</a></h3><div data-cmd="equation" id="ID4557372146674378139" data-math-node="block"></div></section><section data-cmd="note" boxed="">
+      <h3 id="tangentialnormalcomponentsoftheaccelerationvectorofthecurve"><a href="/math/trig/index.html#tangentialnormalcomponentsoftheaccelerationvectorofthecurve">Tangential & Normal Components of the Acceleration Vector of the Curve</a></h3><p>When we study the motion of a particle, it is often useful to resolve the acceleration into two components, one in the direction of the tangent and the other in the direction of the normal.</p><div data-cmd="equation" id="ID17286005965290504204" data-math-node="block"></div><p>Specifically</p><div id="ID12008986892870807101" data-math-node="block" data-cmd="equation"></div></section></div><h2 id="vectorcalculus"><a href="/math/trig/index.html#vectorcalculus">Vector Calculus</a></h2><div data-col="3" data-cmd="grid">
+   <section boxed="" data-cmd="note">
+      <h3 id="thepositionvector"><a href="/math/trig/index.html#thepositionvector"><small>The Position Vector <span data-cmd="inline-math" data-math-target="ID16758206702112330605" data-math-node="inline"></span></small></a></h3><p center=""><small>（Original Function）</small></p></section><section boxed="" data-cmd="note">
+      <h3 id="thevelocityvector"><a href="/math/trig/index.html#thevelocityvector"><small>The Velocity Vector <span data-math-target="ID11733930679011963523" data-math-node="inline" data-cmd="inline-math"></span></small></a></h3><p center=""><small>（First Derivative）</small></p><ul>
+         <li>The velocity vector is also the tangent vector and points in the direction of the tangent line.</li><li>The <b>speed</b> of the particle <u>at time t</u> is the <b>magnitude</b> of the velocity vector, that is,
+                         <div data-math-node="block" id="ID9164853441575839582" data-cmd="equation"></div></li></ul></section><section data-cmd="note" boxed="">
+      <h3 id="theaccelerationvector"><a href="/math/trig/index.html#theaccelerationvector"><small>The Acceleration Vector <span data-cmd="inline-math" data-math-target="ID14464374803754009324" data-math-node="inline"></span></small></a></h3><p center=""><small>（Second Derivative）</small></p></section></div><h1 id="matrices"><a href="/math/trig/index.html#matrices">Matrices</a></h1><h2 id="reference"><a href="/math/trig/index.html#reference">Reference</a></h2><div data-cmd="grid" data-col="2">
+   <section boxed="" data-cmd="note">
+      <h3 id="thedeterminantofamatrix"><a href="/math/trig/index.html#thedeterminantofamatrix">The Determinant of A Matrix</a></h3><div id="ID4138343706302431871" data-math-node="block" data-cmd="equation"></div><img style="max-width: 400px;" data-center="" src="/static-assets/pages/math/trig/old-images/3x3-determinant.png"></img><section boxed="" data-cmd="note">
+         <p>Only works for square matrices.</p></section></section><section boxed="" data-cmd="note">
+      <h3 id="thecrossproduct"><a href="/math/trig/index.html#thecrossproduct">The Cross Product</a></h3><div id="ID10076141320050386404" data-math-node="block" data-cmd="equation"></div></section></div><h1 id="geometry"><a href="/math/trig/index.html#geometry">Geometry</a></h1><div boxed="" data-col="3" data-cmd="grid">
+   <section data-cmd="note">
+      <h3 id="thecircle"><a href="/math/trig/index.html#thecircle">The Circle</a></h3><div id="ID10386824763911155164" data-math-node="block" data-cmd="equation"></div></section></div><h2 id="definitionofaline"><a href="/math/trig/index.html#definitionofaline">Definition of a Line</a></h2><img style="max-width: 500px;" data-center="" src="/static-assets/pages/math/trig/old-images/vector-equation-of-a-line.png"></img><div data-cmd="grid" data-col="3">
+   <section data-cmd="note" boxed="">
+      <h3 id="vectorequationofaline"><a href="/math/trig/index.html#vectorequationofaline">Vector Equation of a Line</a></h3><p>Given</p><div data-math-node="block" id="ID3557531265205510767" data-cmd="equation"></div><div data-cmd="equation" id="ID11815985532281929430" data-math-node="block"></div><p>We can define a vector between <span id="ID7964075436272224521" data-cmd="inline-math" data-math-node="inline"></span> and <span id="ID17939598208084515102" data-math-node="inline" data-cmd="inline-math"></span></p><div data-cmd="equation" id="ID11274112521061352401" data-math-node="block"></div><h4 id="therefore"><a href="/math/trig/index.html#therefore">Therefore</a></h4><p>The equation of a line in 3D space or <span id="ID6868822927532703766" data-math-node="inline" data-cmd="inline-math"></span> can be defined VIA the following options</p><div data-math-node="block" data-cmd="equation" id="ID8454724943977646285"></div><p>That is</p><div id="ID17935591241216909469" data-math-node="block" data-cmd="equation"></div></section><div data-cmd="grid">
+      <section data-cmd="note" boxed="">
+         <h3 id="parametricequationofaline"><a href="/math/trig/index.html#parametricequationofaline">Parametric Equation of a Line</a></h3><div data-math-node="block" data-cmd="equation" id="ID9158495050869440213"></div></section><section boxed="" data-cmd="note">
+         <h3 id="essentially"><a href="/math/trig/index.html#essentially">Essentially</a></h3><div data-math-node="block" data-cmd="equation" id="ID200449679063938275"></div><p>That is, <span id="ID7336873022144477081" data-math-node="inline" data-cmd="inline-math"></span> is the scaling factor. In a way, it's like it's a function of <span data-math-node="inline" id="ID2613067800356304326" data-cmd="inline-math"></span>, but also similar to the slope （<span id="ID15563315069643977021" data-cmd="inline-math" data-math-node="inline"></span>） in <span data-cmd="inline-math" id="ID1432690229361955522" data-math-node="inline"></span>, except <span data-math-node="inline" id="ID9731505864392553456" data-cmd="inline-math"></span>（i.e. <span data-math-node="inline" data-cmd="inline-math" id="ID15338891223426904831"></span>） is parameterized.</p><hr></hr><p>Sometimes this will be （confusingly） denoted as</p><div data-math-node="block" data-cmd="equation" id="ID1962373306071800996"></div></section></div><section boxed="" data-cmd="note">
+      <h3 id="symmetricequationofaline"><a href="/math/trig/index.html#symmetricequationofaline">Symmetric Equation of a Line</a></h3><div id="ID16507840506652100595" data-math-node="block" data-cmd="equation"></div><p>Therefore</p><div data-cmd="equation" data-math-node="block" id="ID16498997521935162944"></div><hr></hr><h4 id="rationale"><a href="/math/trig/index.html#rationale">Rationale</a></h4><p>We rewrite <span data-cmd="inline-math" data-math-node="inline" id="ID17323623809460807849"></span> in terms of <span id="ID13631929016680395820" data-math-node="inline" data-cmd="inline-math"></span>.</p><p>That is</p><div data-math-node="block" data-cmd="equation" id="ID15212241293481857167"></div></section></div><h2 id="parameterizationsofacurve"><a href="/math/trig/index.html#parameterizationsofacurve">Parameterizations of a curve</a></h2><dl><dt>Parametrized curve</dt><dd>A curve in the plane is said to be parameterized if the set of coordinates on the curve, （x,y）, are represented as functions of a variable t.</dd><dd>A parametrized Curve is a path in the xy-plane traced out by the point <span data-math-node="inline" data-cmd="inline-math" id="ID17535435337538675207"></span> as the parameter <span data-cmd="inline-math" data-math-node="inline" id="ID1412224670147015153"></span> ranges over an interval <span data-cmd="inline-math" id="ID1624383328928247285" data-math-node="inline"></span>.</dd><dd>A parametrized Curve is a path in the xyz-plane traced out by the point <span id="ID253903508836327384" data-math-node="inline" data-cmd="inline-math"></span> as the parameter <span data-math-node="inline" data-cmd="inline-math" id="ID16288951919938190639"></span> ranges over an interval <span data-math-node="inline" id="ID294911328294319087" data-cmd="inline-math"></span>.</dd></dl><h2 id="curvatureproperties"><a href="/math/trig/index.html#curvatureproperties">Curvature Properties</a></h2><div data-col="3" data-cmd="grid">
+   <section boxed="" data-cmd="note">
+      <h3 id="lengthofacurve"><a href="/math/trig/index.html#lengthofacurve">Length of a Curve</a></h3><div data-cmd="math" id="ID5198297118208745152" data-math-node="block"></div></section><section data-cmd="note" boxed="">
+      <h3 id="thearclengthfunction2"><a href="/math/trig/index.html#thearclengthfunction2">The Arc Length Function</a></h3><p>Suppose</p><ul>
+         <li>Given some curve <span id="ID3871523495464454709" data-math-node="inline" data-cmd="inline-math"></span> defined by some vector <span id="ID7431392827474247768" data-cmd="inline-math" data-math-node="inline"></span> in <span id="ID8851675433847747827" data-math-node="inline" data-cmd="inline-math"></span></li><li>where <span data-math-node="inline" id="ID14020556395506209443" data-cmd="inline-math"></span> is continuous and <span data-cmd="inline-math" id="ID7726583930572663787" data-math-node="inline"></span> is traversed exactly once as <span data-cmd="inline-math" data-math-node="inline" id="ID3420224939875776387"></span> increases from <span data-cmd="inline-math" id="ID10441586012121931588" data-math-node="inline"></span> to <span data-math-node="inline" data-cmd="inline-math" id="ID8702028156008034714"></span></li></ul><p>We can define it's arc length function VIA</p><div data-math-node="block" data-cmd="math" id="ID13213302319457256750"></div></section></div>*</main><script>try{
+katex.render("\\pi", document.getElementById('ID14638231216568919988'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\tau", document.getElementById('ID1841841534836629792'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{1}{4}\\tau", document.getElementById('ID14725605245943463928'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{3}{4}\\tau", document.getElementById('ID13914945154465492054'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{1}{2}\\tau", document.getElementById('ID16616718442515868700'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\pm \\frac{\\sqrt{2}}{2}", document.getElementById('ID12784665940896675904'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{1}{12}\\tau", document.getElementById('ID16494597737474023328'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{1}{12}\\tau", document.getElementById('ID4387436449825684137'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{2}{12}\\tau", document.getElementById('ID17122907141998645234'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{4}{12}\\tau", document.getElementById('ID15571003646597432611'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{5}{12}\\tau", document.getElementById('ID6338778419845828611'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{7}{12}\\tau", document.getElementById('ID12469014683671745811'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{8}{12}\\tau", document.getElementById('ID6316191476833592444'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{10}{12}\\tau", document.getElementById('ID10083296881197053141'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\frac{11}{12}\\tau", document.getElementById('ID14677340643659176050'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\tau", document.getElementById('ID17184247876011038481'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("x", document.getElementById('ID4610692844212091936'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("y", document.getElementById('ID15390603391630082911'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\pm \\frac{\\sqrt{3}}{2}", document.getElementById('ID2089334825848918094'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\pm \\frac{1}{2}", document.getElementById('ID3007633122834510245'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\cos^2(\\theta) + \\sin^2(\\theta) = 1\n      \\end{split}\\end{equation*}", document.getElementById('ID13196237142398731025'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\sec^2(\\theta) - \\tan^2(\\theta) &= 1 \\\\\n                        \\sec^2(\\theta) &= 1 + \\tan^2(\\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID12650328595380876417'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\csc^2(\\theta) - \\cot^2(\\theta) &= 1 \\\\\n                        \\csc^2(\\theta) &= 1 + \\cot^2(\\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID4988138396478774167'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n\\begin{split}\n   \\cos(\\alpha - \\beta) &= \\cos(\\alpha) \\cdot \\cos(\\beta) + \\sin(\\alpha) \\cdot \\sin(\\beta) \\\\\n   \\cos(\\alpha + \\beta) &= \\cos(\\alpha) \\cdot \\cos(\\beta) - \\sin(\\alpha) \\cdot \\sin(\\beta) \\\\\n   &\\\\\n   \\sin(\\alpha - \\beta) &= \\sin(\\alpha) \\cdot \\cos(\\beta) - \\cos(\\alpha) \\cdot \\sin(\\beta) \\\\\n   \\sin(\\alpha + \\beta) &= \\sin(\\alpha) \\cdot \\cos(\\beta) + \\cos(\\alpha) \\cdot \\sin(\\beta) \\\\\n            &\\\\\n            \\tan(\\alpha + \\beta) &= \\frac{\\tan(\\alpha) + \\tan(\\beta)}{1 - \\tan(\\alpha) \\cdot \\tan(\\beta)}\\\\\n            \\tan(\\alpha - \\beta) &= \\frac{\\tan(\\alpha) - \\tan(\\beta)}{1 + \\tan(\\alpha) \\cdot \\tan(\\beta)}\\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID11315515109370180847'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\sin(\\theta) = \\cos(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID17024869000110230687'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\cos(\\theta) = \\sin(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID2496453477089960716'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\tan(\\theta) = \\cot(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID12186057106944749039'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\cot(\\theta) = \\tan(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID16154675506664832056'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\csc(\\theta) = \\sec(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID12978275076592095028'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\sec(\\theta) = \\csc(\\frac{1}{4}\\tau - \\theta)\n         \\end{split}\\end{equation*}", document.getElementById('ID13058288090769771919'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\tan(90^\\circ - x) & = \\frac{\\sin(90^\\circ - x)}{\\cos(90^\\circ - x)}= \\frac{\\cos(x)}{\\sin(x)}= \\cot(x) \\\\\n            \\\\\n            \\cot(90^\\circ - x) & = \\frac{\\cos(90^\\circ - x)}{\\sin(90^\\circ - x)}= \\frac{\\sin(x)}{\\cos(x)}= \\tan(x) \\\\\n         \\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID221317682079050228'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\sin(2\\alpha) &= 2\\sin(\\alpha)\\cos(\\alpha) \\\\\n            \\cos(2\\alpha) &= \\cos^2(\\alpha) - \\sin^2(\\alpha) \\\\\n                        &= 1 - 2\\sin^2(\\alpha) \\\\\n                        &= 2\\cos^2(\\alpha) - 1 \\\\\n            &\\\\\n            \\tan(2\\alpha) &= \\frac{2\\tan(\\alpha)}{1 - \\tan^2(\\alpha)}\\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID13739665694055146649'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\sin \\frac{\\alpha}{2}&= \\pm \\sqrt{\\frac{1 - \\cos(\\alpha)}{2}} \\\\\n            \\cos \\frac{\\alpha}{2}&= \\pm \\sqrt{\\frac{1 + \\cos(\\alpha)}{2}} \\\\\n            \\tan \\frac{\\alpha}{2}&= \\pm \\sqrt{\\frac{1 - \\cos(\\alpha)}{1 + \\cos(\\alpha)}} \\\\\n                  &= \\frac{sin(\\alpha)}{1 + \\cos(\\alpha)}\\\\\n                  &= \\frac{1 - \\cos(\\alpha)}{sin(\\alpha)}\\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID11699656022266011630'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\sin^2(\\alpha) &= \\frac{1 - \\cos(2\\alpha)}{2}\\\\\n            &\\\\\n            \\cos^2(\\alpha) &= \\frac{1 + \\cos(2\\alpha)}{2}\\\\\n            &\\\\\n            \\tan^2(\\alpha) &= \\frac{1 - \\cos(2\\alpha)}{1 + \\cos(2\\alpha)}\\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID8373497523851241284'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\sin\\alpha\\cdot\\cos\\alpha &= \\frac{1}{2}\\sin(2\\alpha)\n      \\end{split}\\end{equation*}", document.getElementById('ID1461283733504259241'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\sin(\\alpha) \\cdot \\cos(\\beta) &= \\frac{1}{2}\\Big[ \\sin(\\alpha + \\beta) + \\sin(\\alpha - \\beta) \\Big] \\\\\n            \\cos(\\alpha) \\cdot \\sin(\\beta) &= \\frac{1}{2}\\Big[ \\sin(\\alpha + \\beta) - \\sin(\\alpha - \\beta) \\Big] \\\\\n            \\cos(\\alpha) \\cdot \\cos(\\beta) &= \\frac{1}{2}\\Big[ \\cos(\\alpha + \\beta) + \\cos(\\alpha - \\beta) \\Big] \\\\\n            \\sin(\\alpha) \\cdot \\sin(\\beta) &= \\frac{1}{2}\\Big[ \\cos(\\alpha - \\beta) - \\cos(\\alpha + \\beta) \\Big]\n         \\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID13075868986506764507'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\begin{equation*}\n         \\begin{split}\n            \\sin(x) + \\sin(y) &= 2 \\cdot \\sin\\left( \\frac{x + y}{2}\\right) \\cdot \\cos\\left( \\frac{x - y}{2}\\right) \\\\\n            \\cos(x) + \\cos(y) &= 2 \\cdot \\cos\\left( \\frac{x + y}{2}\\right) \\cdot \\cos\\left( \\frac{x - y}{2}\\right) \\\\\n            \\sin(x) - \\sin(y) &= 2 \\cdot \\cos\\left( \\frac{x + y}{2}\\right) \\cdot \\sin\\left( \\frac{x - y}{2}\\right) \\\\\n            \\cos(x) - \\cos(y) &= -2 \\sin \\cos\\left( \\frac{x + y}{2}\\right) \\cdot \\sin\\left( \\frac{x - y}{2}\\right)\n         \\end{split}\n         \\end{equation*}\n      ", document.getElementById('ID7002699797090706632'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         e^{i x} &= \\cos(x) + \\mathrm{i}\\sin(x)\n      \\end{split}\\end{equation*}", document.getElementById('ID11900438889563081976'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{e}\n                     &= \\sum_{n = 0}^\\infty \\frac{1}{n!}\\\\\n                     &= \\lim_{n\\to\\infty} \\left(1 + \\frac{1}{n}\\right)^n \\\\\n                     &= \\lim_{t \\to 0} \\left(1 + t\\right)^{\\frac{1}{t}}\n      \\end{split}\\end{equation*}", document.getElementById('ID14884271400970103614'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{e}^x\n                     &= 1 + \\frac{x}{1!}+ \\frac{x^2}{2!}+ \\frac{x^3}{3!}+ \\cdots \\\\\n                     &= \\sum_{n = 0}^\\infty \\frac{x^n}{n!}\\\\\n                     &= \\lim_{n\\to\\infty} \\left(1 + \\frac{x}{n}\\right)^n\n      \\end{split}\\end{equation*}", document.getElementById('ID6342298563997826576'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         x &= r \\cdot \\cos\\,\\theta \\\\\n                     y &= r \\cdot \\sin\\,\\theta \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID312227117686471888'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         z &= x + \\mathrm{i}y \\\\\n                       &= r \\left(\\cos\\, \\theta + \\mathrm{i}\\sin\\, \\theta\\right)\\\\\n                       & = r\\;\\mathrm{cis}\\; \\theta \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID14442868304732662981'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         e^{i x} &= \\cos\\, x + \\mathrm{i}\\sin\\, x \\\\\n                     e ^{i x} &= r \\left(\\cos\\, \\theta + \\mathrm{i}\\sin\\, \\theta\\right) \\\\\n                     \\left(\\cos\\, x + \\mathrm{i}\\sin\\, x\\right)^n &= \\cos(n x) + \\mathrm{i}\\sin(n x) \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID10573371899648416155'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         r &= |z| = |x + \\mathrm{i}y| = \\sqrt{x^2 + y^2} \\\\\n                     r^2 &= x^2 + y^2 \\\\\n                     \\tan \\theta &= \\frac{y}{x}\\\\\n                     \\theta &= \\arctan\\left(\\frac{y}{x}\\right)\n      \\end{split}\\end{equation*}", document.getElementById('ID9701683497394681105'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\tan \\theta &= \\frac{y}{x}\\\\\n                     r^2 &= x^2 + y^2 \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID11301942967328613460'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         x &= r \\cdot \\cos\\,\\theta \\\\\n                     y &= r \\cdot \\sin\\,\\theta \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID18409067535307268173'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         z_1 &= r_1\\;\\mathrm{cis}\\;\\theta_1 \\\\\n                     z_2 &= r_1\\;\\mathrm{cis}\\;\\theta_1\n      \\end{split}\\end{equation*}", document.getElementById('ID14331928142054250360'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         z_1 \\cdot z_2 &= r_1 \\cdot r_2 \\;\\mathrm{cis}\\;\\left(\\theta_1 + \\theta_2\\right) \\\\\n                     \\frac{z_1}{z_2}&= \\frac{r_1}{r_2}\\;\\mathrm{cis}\\;\\left(\\theta_1 - \\theta_2\\right) \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID6100720197965529956'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         z^n &= r^n \\;\\mathrm{cis}\\;\\;n\\theta\n      \\end{split}\\end{equation*}", document.getElementById('ID9706837528719368688'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{w_k = r^{\\frac{1}{n}}\\;\\mathrm{cis}\\;\\frac{\\theta + \\tau\\cdot{k}}{n}}\n                     _{\\begin{split}\\forall\\; k &= 0,1,2\\cdots,n-1\\\\ n &\\geq 1\\end{split}}\n      \\end{split}\\end{equation*}", document.getElementById('ID10209744846289366843'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         z &= x + \\mathrm{i}y \\\\\n                       &= r \\left(\\cos\\, \\theta + \\mathrm{i}\\sin\\, \\theta\\right)\\\\\n                       & = r\\;\\mathrm{cis}\\;\\theta \\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID1942721306677729444'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v} \\cdot \\vec{v} = ||\\vec{v}||^2 \\implies \\text{constant}", document.getElementById('ID7223235603614667892'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v} \\cdot \\left(\\vec{v}\\right)^\\prime = 0", document.getElementById('ID6765297351085208426'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\cdot\\vec{b}\n                     &=  \\begin{bmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{bmatrix}\n                         \\cdot\n                         \\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3 \\end{bmatrix}\n                     =  a_1b_1 + a_2b_2 + a_3b_3\\\\\\\\\n                     \\vec{a}\\cdot\\vec{b}\n                     &=  \\begin{bmatrix} a_1 \\\\ a_2 \\end{bmatrix}\n                         \\cdot\n                         \\begin{bmatrix} b_1 \\\\ b_2 \\end{bmatrix}\n                     =  a_1b_1 + a_2b_2\n      \\end{split}\\end{equation*}", document.getElementById('ID9528189467018965716'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\times\\vec{b}\n                     &=\n                     \\begin{bmatrix} a_1 & a_2 & a_3 \\end{bmatrix}\\times\\begin{bmatrix} b_1 & b_2 & b_3 \\end{bmatrix}\\\\\n                     &=\n                     \\mathrm{det}\n                     \\begin{pmatrix}\n                     \\mathrm{\\hat{i}} & \\mathrm{\\hat{j}} & \\mathrm{\\hat{k}}\\\\\n                     a_1 & a_2 & a_3\\\\\n                     b_1 & b_2 & b_3\n                     \\end{pmatrix}\\\\\n                     &=\n                     \\mathrm{\\hat{i}}\n                     \\begin{vmatrix}\n                     e & f\\\\\n                     h & i\n                     \\end{vmatrix}\n                     -\n                     \\mathrm{\\hat{j}}\n                     \\begin{vmatrix}\n                     d & f\\\\\n                     g & i\n                     \\end{vmatrix}\n                     +\n                     \\mathrm{\\hat{k}}\n                     \\begin{vmatrix}\n                     d & e\\\\\n                     g & h\n                     \\end{vmatrix}\\\\\n                     &= \\mathrm{\\hat{i}}\\left(e i - f h\\right)\n                      - \\mathrm{\\hat{j}}\\left(d i - f g\\right)\n                      + \\mathrm{\\hat{k}}\\left(d h - e g\\right)\\\\\n                     &=\n                     \\begin{bmatrix}\n                         e i - f h &\n                         d i - f g &\n                         d h - e g\n                     \\end{bmatrix}\\\\\n                     &= \\vec{c}\n      \\end{split}\\end{equation*}", document.getElementById('ID13688090548138993783'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         |a| &= \\sqrt{(a_1)^2 + (a_2)^2} \\\\\n                     |a| &= \\sqrt{(a_1)^2 + (a_2)^2 + (a_3)^2}\n      \\end{split}\\end{equation*}", document.getElementById('ID4332110188016810249'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u}", document.getElementById('ID2712181223499215680'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID15615328760727345532'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID3831580671309246066'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u}", document.getElementById('ID2580753255897105795'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u} + \\vec{v}", document.getElementById('ID17812411867478108704'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u}", document.getElementById('ID14443100167582076692'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID6333677243130700271'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u}", document.getElementById('ID1736101732880568747'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID2623616102376017617'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u} - \\vec{v}", document.getElementById('ID5706868575728774290'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID9453662720463369522'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{u}", document.getElementById('ID13769004743126085646'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\mathrm{\\hat{i}} &= \\begin{bmatrix} 1 & 0 & 0 \\end{bmatrix}\\\\\n                     \\mathrm{\\hat{j}} &= \\begin{bmatrix} 0 & 1 & 0 \\end{bmatrix}\\\\\n                     \\mathrm{\\hat{k}} &= \\begin{bmatrix} 0 & 0 & 1 \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID7282402231367286569'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\cdot\\vec{b} = 0\n      \\end{split}\\end{equation*}", document.getElementById('ID16585049123421907118'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\hat{u} &= \\frac{\\vec{a}}{|\\vec{a}|}\\end{split}\\end{equation*}", document.getElementById('ID16684929603998061857'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID3794789702185128892"]').forEach(function(x){katex.render("\\theta", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID3509768199141374765"]').forEach(function(x){katex.render("\\vec{a}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID3309221075999577242"]').forEach(function(x){katex.render("\\vec{b}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} \\cdot \\vec{a} = |\\vec{a}| \\cdot |\\vec{a}| \\cos\\theta\n      \\end{split}\\end{equation*}", document.getElementById('ID4326493897350589278'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID9623946925129059745"]').forEach(function(x){katex.render("\\theta", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID6767422686707070873"]').forEach(function(x){katex.render("\\vec{a}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID5056283986403107177"]').forEach(function(x){katex.render("\\vec{b}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}| |\\vec{b}|}\\end{split}\\end{equation*}", document.getElementById('ID16797543610530828269'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID11247246215393274365"]').forEach(function(x){katex.render("\\vec{a}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID8219151533595311429"]').forEach(function(x){katex.render("\\vec{b}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\times\\vec{b} = 0\n      \\end{split}\\end{equation*}", document.getElementById('ID6042862742197160371'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2\n      \\end{split}\\end{equation*}", document.getElementById('ID5372247099061940970'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} \\cdot \\left(\\vec{b} + \\vec{c}\\right) = \\vec{a}\\vec{b} + \\vec{a}\\vec{c}\n      \\end{split}\\end{equation*}", document.getElementById('ID6093778053608758247'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} \\cdot \\vec{b} = \\vec{b} \\cdot \\vec{a}\n      \\end{split}\\end{equation*}", document.getElementById('ID9823885355354441345'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\left(c \\cdot \\vec{a}\\right) \\cdot \\vec{b} = c\\left(\\vec{a} \\cdot \\vec{b}\\right)\n      \\end{split}\\end{equation*}", document.getElementById('ID15516804528877618904'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n      \\vec{v} = \\begin{bmatrix} v_x & v_y & v_z \\end{bmatrix}\n      ||\\vec{v}|| = \\sqrt{(v_x)^2 + (v_y)^2 + (v_z)^2}\n   \\end{split}\\end{equation*}", document.getElementById('ID2902693950888190278'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\cos\\alpha &= \\frac{v_x}{||\\vec{v}||}\\\\\n                     \\cos\\beta &= \\frac{v_y}{||\\vec{v}||}\\\\\n                     \\cos\\gamma &= \\frac{v_z}{||\\vec{v}||}\\end{split}\\end{equation*}", document.getElementById('ID11678935954377995633'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\alpha &= \\arccos \\left(\\frac{v_x}{||\\vec{v}||}\\right)\\\\\n                     \\beta &= \\arccos \\left(\\frac{v_y}{||\\vec{v}||}\\right)\\\\\n                     \\gamma &= \\arccos \\left(\\frac{v_z}{||\\vec{v}||}\\right)\n      \\end{split}\\end{equation*}", document.getElementById('ID5029478537517172245'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1\n      \\end{split}\\end{equation*}", document.getElementById('ID7971889154124215959'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v} &= \\hat{i}\\cos\\alpha + \\hat{k}\\cos\\beta + \\hat{k}\\cos\\gamma\\\\\n                     ||\\vec{v}|| &= || \\hat{i}\\cos\\alpha + \\hat{k}\\cos\\beta + \\hat{k}\\cos\\gamma|| = 1\n      \\end{split}\\end{equation*}", document.getElementById('ID17704786163640907675'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\sqrt{\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma} &= 1\\\\\n                     \\sqrt{\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma}^2 &= 1^2\\\\\n                     \\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma &= 1\n      \\end{split}\\end{equation*}", document.getElementById('ID15950626771175408509'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1\\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID17092385820199526044'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} &= \\begin{bmatrix} a_x & a_y & a_z \\end{bmatrix}\\\\\n                     \\vec{b} &= \\begin{bmatrix} b_x & b_y & b_z \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID15993786298937874607'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{a}", document.getElementById('ID4155659858752574587'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{b}", document.getElementById('ID17443556674850651356'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} &= k\\;\\vec{b} \\;\\;\\;\\;\\forall k \\neq 0\n      \\end{split}\\end{equation*}", document.getElementById('ID14976716229204336024'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\frac{a_x}{b_x}= \\frac{a_y}{b_y}= \\frac{a_z}{b_z}\\end{split}\\end{equation*}", document.getElementById('ID17112355595806461025'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a} &= \\begin{bmatrix} a_x & a_y & a_z \\end{bmatrix}\\\\\n                     \\vec{b} &= \\begin{bmatrix} b_x & b_y & b_z \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID12845022063151624963'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\times\\vec{b} = 0\n      \\end{split}\\end{equation*}", document.getElementById('ID3461512790616895644'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID1766346639603676818"]').forEach(function(x){katex.render("\\vec{v}(t)", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID1532263650359622843"]').forEach(function(x){katex.render("S(t)", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v}\n            &= \\begin{bmatrix} x & y & z \\end{bmatrix}\n            = \\begin{bmatrix} f(t) & g(t) & h(t) \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID11956839858168614699'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{v}", document.getElementById('ID12204607221969842392'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\newcommand{\\Long}{\n                         \\int_a^t \\sqrt{\n                             \\left(f^\\prime(u)\\right)^2\n                             \\left(g^\\prime(u)\\right)^2\n                             \\left(h^\\prime(u)\\right)^2\n                         }\n                     }\n                     \\newcommand{\\AltLong}{\n                         \\int_a^t \\sqrt{\n                             \\left(\\frac{\\mathrm{d}x}{\\mathrm{d}u}\\right)^2\n                             \\left(\\frac{\\mathrm{d}y}{\\mathrm{d}u}\\right)^2\n                             \\left(\\frac{\\mathrm{d}z}{\\mathrm{d}u}\\right)^2\n                         }\n                     }\n                     \\newcommand{\\short}{\n                         \\int_a^t ||\\left(v^\\prime(u)\\right)||\n                     }\n                     \\begin{equation}\n                     \\begin{split}\n                         S(t)\n                             &= \\Long\\\\\n                             &= \\AltLong\\\\\n                             &= \\short\n                     \\end{split}\n                     \\end{equation}\n      ", document.getElementById('ID15388735226104309079'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("S(t)", document.getElementById('ID3913510566049893508'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("C", document.getElementById('ID14052031614408025706'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("r(a)", document.getElementById('ID1003341831791727649'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("r(b)", document.getElementById('ID16101193640460814283'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         S(t) = \\int_a^t \\frac{\\mathrm{d}S}{\\mathrm{d}t}\\end{split}\\end{equation*}", document.getElementById('ID4664397292875992649'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\frac{\\mathrm{d}S}{\\mathrm{d}t}\\equiv || v^\\prime(t) ||\n      \\end{split}\\end{equation*}", document.getElementById('ID7020347005269825863'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\newcommand{\\Long}{\n                         \\sqrt{\n                             \\left(f^\\prime(u)\\right)^2\n                             \\left(g^\\prime(u)\\right)^2\n                             \\left(h^\\prime(u)\\right)^2\n                         }\n                     }\n                     \\newcommand{\\AltLong}{\n                         \\sqrt{\n                             \\left(\\frac{\\mathrm{d}x}{\\mathrm{d}u}\\right)^2\n                             \\left(\\frac{\\mathrm{d}y}{\\mathrm{d}u}\\right)^2\n                             \\left(\\frac{\\mathrm{d}z}{\\mathrm{d}u}\\right)^2\n                         }\n                     }\n                     \\newcommand{\\short}{\n                         ||\\left(v^\\prime(u)\\right)||\n                     }\n                     \\begin{equation}\n                     \\begin{split}\n                         \\frac{\\mathrm{d}S}{\\mathrm{d}t}&= \\Long\\\\\n                             &= \\AltLong\\\\\n                             &= \\short\n                     \\end{split}\n                     \\end{equation}\n      ", document.getElementById('ID3871606609439733877'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID17554518829402380059"]').forEach(function(x){katex.render("\\vec{v}", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\hat{U} \\equiv \\frac{\\vec{v}}{||\\vec{v}||}\\end{split}\\end{equation*}", document.getElementById('ID1522832924959292431'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{T}\n         \\equiv \\frac{v^\\prime(t)}{||v^\\prime(t)||}\\equiv \\frac{\\mathrm{d}v}{\\mathrm{d}S}\\end{split}\\end{equation*}", document.getElementById('ID1758432705778675885'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{N} \\equiv \\frac{T^\\prime}{||T^\\prime||}\\end{split}\\end{equation*}", document.getElementById('ID3136391472792883423'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{B} \\equiv \\vec{T}\\times\\vec{N}\n      \\end{split}\\end{equation*}", document.getElementById('ID5855952824353189579'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\kappa\n            \\equiv \\left|\\frac{\\mathrm{d}T}{\\mathrm{d}S}\\right|\n            \\equiv \\frac{\\left| T^\\prime \\right|}{\\left| r^\\prime \\right|}\\equiv \\frac{\\left| r^\\prime \\times r^{\\prime\\prime} \\right|}{\\left| r^\\prime \\right|^3}\\end{split}\\end{equation*}", document.getElementById('ID4557372146674378139'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         a_{\\vec{T}}\n                         &= \\frac{\\mathrm{d}}{\\mathrm{d}t}\\left|\\vec{v}\\right|\n                         = \\frac{r^\\prime \\cdot r^{\\prime\\prime}}{|r^\\prime|}\\\\\n                     a_{\\vec{N}}\n                         &= \\kappa \\left|\\vec{v}\\right|^2\n                         = \\frac{\\left|r^\\prime \\times r^{\\prime\\prime}\\right|}{|r^\\prime|}\\\\\n         \n                     \\vec{a} &= a_{\\vec{T}} \\vec{T} + a_{\\vec{N}} \\vec{N}\n      \\end{split}\\end{equation*}", document.getElementById('ID17286005965290504204'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\begin{rcases}\n            a_{\\vec{T}}\\\\\n            a_{\\vec{N}}\n         \\end{rcases}\\text{Tangential \\& Normal Components of $\\vec{a}$}\n      \\end{split}\\end{equation*}", document.getElementById('ID12008986892870807101'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID16758206702112330605"]').forEach(function(x){katex.render("\\vec{r}(t)", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID11733930679011963523"]').forEach(function(x){katex.render("\\vec{v}(t)", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\underbrace{|\\vec{v}(t)| = |(\\vec{r})^\\prime(t)| = \\frac{\\mathrm{d}s}{\\mathrm{d}t}}\n                                _{\\text{rate of change of distance with respect to time}}\n         \\end{split}\\end{equation*}", document.getElementById('ID9164853441575839582'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+document.querySelectorAll('[data-math-target="ID14464374803754009324"]').forEach(function(x){katex.render("\\vec{a}(t)", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         |A| &=\n                     \\begin{vmatrix}\n                     a & b\\\\\n                     c & d\n                     \\end{vmatrix} =\n                     ad - bc\\\\\\\\\n                     |A| &=\n                     \\begin{vmatrix}\n                     a & b & c\\\\\n                     d & e & f\\\\\n                     g & h & i\n                     \\end{vmatrix}\\\\ &=\n                     a \n                     \\begin{vmatrix}\n                     e & f\\\\\n                     h & i\n                     \\end{vmatrix}\n                     -\n                     b\n                     \\begin{vmatrix}\n                     d & f\\\\\n                     g & i\n                     \\end{vmatrix}\n                     +\n                     c\n                     \\begin{vmatrix}\n                     d & e\\\\\n                     g & h\n                     \\end{vmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID4138343706302431871'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{a}\\times\\vec{b}\n                     &=\n                     \\begin{bmatrix} a_1 & a_2 & a_3 \\end{bmatrix}\\times\\begin{bmatrix} b_1 & b_2 & b_3 \\end{bmatrix}\\\\\n                     &=\n                     \\mathrm{det}\n                     \\begin{pmatrix}\n                     \\mathrm{\\hat{i}} & \\mathrm{\\hat{j}} & \\mathrm{\\hat{k}}\\\\\n                     a_1 & a_2 & a_3\\\\\n                     b_1 & b_2 & b_3\n                     \\end{pmatrix}\\\\\n                     &=\n                     \\mathrm{\\hat{i}}\n                     \\begin{vmatrix}\n                     e & f\\\\\n                     h & i\n                     \\end{vmatrix}\n                     -\n                     \\mathrm{\\hat{j}}\n                     \\begin{vmatrix}\n                     d & f\\\\\n                     g & i\n                     \\end{vmatrix}\n                     +\n                     \\mathrm{\\hat{k}}\n                     \\begin{vmatrix}\n                     d & e\\\\\n                     g & h\n                     \\end{vmatrix}\\\\\n                     &= \\mathrm{\\hat{i}}\\left(e i - f h\\right)\n                      - \\mathrm{\\hat{j}}\\left(d i - f g\\right)\n                      + \\mathrm{\\hat{k}}\\left(d h - e g\\right)\\\\\n                     &=\n                     \\begin{bmatrix}\n                         e i - f h &\n                         d i - f g &\n                         d h - e g\n                     \\end{bmatrix}\\\\\n                     &= \\vec{c}\n      \\end{split}\\end{equation*}", document.getElementById('ID10076141320050386404'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\\text{Area}\\;\\normalsize &= \\pi r^2\\\\\n                     \\small\\text{Circumference}\\;\\normalsize &= 2 \\pi r\n      \\end{split}\\end{equation*}", document.getElementById('ID10386824763911155164'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         P_1&= \\begin{bmatrix} x_1& y_1& z_1\\end{bmatrix}\\\\\n                     P_2&= \\begin{bmatrix} x_2& y_2& z_2\\end{bmatrix}\\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID3557531265205510767'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         P_1&= \\begin{bmatrix} x_1& y_1& z_1\\end{bmatrix}\\\\\n                     P_2&= \\begin{bmatrix} x_2& y_2& z_2\\end{bmatrix}\\\\\n      \\end{split}\\end{equation*}", document.getElementById('ID11815985532281929430'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("P_1", document.getElementById('ID7964075436272224521'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("P_2", document.getElementById('ID17939598208084515102'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\overrightarrow{\\Delta\\mathsf{v}}&= \n                     \\begin{bmatrix} x_2\\\\ y_2\\\\ z_2\\end{bmatrix} -\n                     \\begin{bmatrix} x_1\\\\ y_1\\\\ z_1\\end{bmatrix} =\n                     \\begin{bmatrix} x_2-x_1\\\\ y_2-y_1\\\\ z_2-z_1\\end{bmatrix} =\n                     \\begin{bmatrix} \\Delta_x\\\\ \\Delta_y\\\\ \\Delta_z\\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID11274112521061352401'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathbb{R}^3", document.getElementById('ID6868822927532703766'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         L &= P_1+ t\\cdot\\overrightarrow{\\Delta\\mathsf{v}}\\\\\n                     \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} &= \n                     \\begin{bmatrix} x_1\\\\ y_1\\\\ z_1\\end{bmatrix} +\n                     t\\begin{bmatrix} \\Delta_x\\\\ \\Delta_y\\\\ \\Delta_z\\end{bmatrix} =\n                     \\begin{bmatrix} x_1\\\\ y_1\\\\ z_1\\end{bmatrix} +\n                     \\begin{bmatrix} t\\;\\Delta_x\\\\ t\\;\\Delta_y\\\\ t\\;\\Delta_z\\end{bmatrix} \\\\\n                     &= \n                     \\begin{bmatrix} x_1+ t\\;\\Delta_x\\\\ y_1+ t\\;\\Delta_y\\\\ z_1+ t\\;\\Delta_z\\end{bmatrix}\\\\\n                     &= \n                     \\begin{bmatrix} x_1+ t(x_2-x_1) \\\\ x_2+ t(x_2-x_1) \\\\ x_3 + t(x_2-x_1) \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID8454724943977646285'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         L &= P_1+ t\\cdot\\overrightarrow{\\Delta\\mathsf{v}}\\\\\n                     \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} &=\n                     \\begin{bmatrix} x_1+ t\\;\\Delta_x\\\\ y_1+ t\\;\\Delta_y\\\\ z_1+ t\\;\\Delta_z\\end{bmatrix}\n                         = \\begin{bmatrix} x_1+ t(x_2-x_1) \\\\ y_1+ t(y_2-y_1) \\\\ z_1+ t(z_2-z_1) \\end{bmatrix}\n      \\end{split}\\end{equation*}", document.getElementById('ID17935591241216909469'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\underbrace{\n               \\begin{split}\n                  x &= x_1+ t(x_2-x_1) = x_1+ t\\;\\Delta_x\\\\\n                  y &= x_1+ t(y_2-y_1) = y_1+ t\\;\\Delta_y\\\\\n                  z &= x_1+ t(z_2-z_1) = z_1+ t\\;\\Delta_z\\end{split}}_{\n                  r \\;=\\; r_0 \\;+\\; a \\;=\\; r_0 \\;+\\; t\\,v\n               }\n         \\end{split}\\end{equation*}", document.getElementById('ID9158495050869440213'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            L &= P_1+ t\\cdot\\overrightarrow{\\Delta\\mathsf{v}}\\;\\;\\forall t\\in\\mathbb{R}\n         \\end{split}\\end{equation*}", document.getElementById('ID200449679063938275'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID7336873022144477081'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID2613067800356304326'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("m", document.getElementById('ID15563315069643977021'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("y = mx + b", document.getElementById('ID1432690229361955522'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("m", document.getElementById('ID9731505864392553456'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID15338891223426904831'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n            \\vec{r} &= \\vec{r_0} + \\vec{a} = \\vec{r_0} + t\\vec{v}\\\\\n         \\end{split}\\end{equation*}", document.getElementById('ID1962373306071800996'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         t &= \\frac{x - x_1}{x_2-x_1}= \\frac{x - x_1}{\\Delta_x}\\\\\n                     t &= \\frac{y - y_1}{y_2-y_1}= \\frac{y - y_1}{\\Delta_y}\\\\\n                     t &= \\frac{z - z_1}{z_2-z_1}= \\frac{z - z_1}{\\Delta_z}\\end{split}\\end{equation*}", document.getElementById('ID16507840506652100595'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         \\frac{x - x_1}{\\Delta_x}&= \\frac{y - y_1}{\\Delta_y}= \\frac{z - z_1}{\\Delta_z}\\\\\\\\\n                           \\frac{x - x_1}{x_2-x_1}&= \\frac{y - y_1}{y_2-y_1}=  \\frac{z - z_1}{z_2-z_1}\\end{split}\\end{equation*}", document.getElementById('ID16498997521935162944'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("r = r_0 + a = r_0 + t v", document.getElementById('ID17323623809460807849'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID13631929016680395820'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\begin{equation*}\\begin{split}\n         x &= x_1+ t(x_2-x_1) = x_1+ t\\;\\Delta_x\\\\\n                     t\\;\\Delta_x&= x - x_1= t(x_2-x_1)\\\\\n                     t &= \\frac{x - x_1}{x_2-x_1}= \\frac{x - x_1}{\\Delta_x}\\\\\\\\\n                     y &= y_1+ t(y_2-y_1) = y_1+ t\\;\\Delta_y\\\\\n                     t\\;\\Delta_y&= y - y_1= t(y_2-y_1)\\\\\n                     t &= \\frac{y - y_1}{y_2-y_1}= \\frac{y - y_1}{\\Delta_y}\\\\\\\\\n                     z &= z_1+ t(z_2-z_1) = z_1+ t\\;\\Delta_z\\\\\n                     t\\;\\Delta_z&= z - z_1= t(z_2-z_1) \\\\\n                     t &= \\frac{z - z_1}{z_2-z_1}= \\frac{z - z_1}{\\Delta_z}\\end{split}\\end{equation*}", document.getElementById('ID15212241293481857167'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\left(x(t), y(t)\\right)", document.getElementById('ID17535435337538675207'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID1412224670147015153'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("I", document.getElementById('ID1624383328928247285'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\left(x(t), y(t), z(t)\\right)", document.getElementById('ID253903508836327384'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID16288951919938190639'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("I", document.getElementById('ID294911328294319087'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\newcommand{\\Long}{\n                         \\int_a^b \\sqrt{\n                             \\left(f^\\prime(t)\\right)^2\n                             \\left(g^\\prime(t)\\right)^2\n                             \\left(h^\\prime(t)\\right)^2\n                         }\n                     }\n                     \\newcommand{\\AltLong}{\n                         \\int_a^b \\sqrt{\n                             \\left(\\frac{\\mathrm{d}x}{\\mathrm{d}t}\\right)^2\n                             \\left(\\frac{\\mathrm{d}y}{\\mathrm{d}t}\\right)^2\n                             \\left(\\frac{\\mathrm{d}z}{\\mathrm{d}t}\\right)^2\n                         }\n                     }\n                     \\newcommand{\\short}{\n                         \\int_a^b ||\\left(r^\\prime(t)\\right)||\n                     }\n                     \\begin{equation}\n                     \\begin{split}\n                         L &= \\Long\\\\\n                           &= \\AltLong\\\\\n                           &= \\short\\\\\n                           &\\implies \\text{some constant}\n                     \\end{split}\n                     \\end{equation}\n      ", document.getElementById('ID5198297118208745152'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("C", document.getElementById('ID3871523495464454709'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\vec{r}", document.getElementById('ID7431392827474247768'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\\mathbb{R}^3", document.getElementById('ID8851675433847747827'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("r^\\prime", document.getElementById('ID14020556395506209443'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("C", document.getElementById('ID7726583930572663787'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("t", document.getElementById('ID3420224939875776387'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("a", document.getElementById('ID10441586012121931588'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("b", document.getElementById('ID8702028156008034714'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+
+try{
+katex.render("\n         \\newcommand{\\Long}{\n               \\int_a^t \\sqrt{\n                  \\left(f^\\prime(u)\\right)^2\n                  \\left(g^\\prime(u)\\right)^2\n                  \\left(h^\\prime(u)\\right)^2\n               }\n         }\n         \\newcommand{\\AltLong}{\n               \\int_a^t \\sqrt{\n                  \\left(\\frac{\\mathrm{d}x}{\\mathrm{d}u}\\right)^2\n                  \\left(\\frac{\\mathrm{d}y}{\\mathrm{d}u}\\right)^2\n                  \\left(\\frac{\\mathrm{d}z}{\\mathrm{d}u}\\right)^2\n               }\n         }\n         \\newcommand{\\short}{\n               \\int_a^t ||\\left(r^\\prime(u)\\right)||\n         }\n         \\begin{equation*}\n         \\begin{split}\n         S(t)\n         &= \\Long\\\\\n         &= \\AltLong\\\\\n         &= \\short\n         \\end{split}\n         \\end{equation*}\n   ", document.getElementById('ID13213302319457256750'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+
+}catch(msg){console.log("Error", msg)}
+</script></body></html>
