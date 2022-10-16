@@ -1,0 +1,8 @@
+[project]
+title = "Colbyn’s School Notes"
+
+[project.locations]
+output = "output"
+pages = "pages"
+template = "template/page.html"
+
