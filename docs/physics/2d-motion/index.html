@@ -480,8 +480,15 @@ table th, table td {
     border: 1px solid #616161;
   }
 }
-table tr:hover {
-  background-color: rgba(44, 44, 44, 0.5294117647);
+@media (prefers-color-scheme: light) {
+  table tr:hover {
+    background-color: #ebebeb;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  table tr:hover {
+    background-color: rgba(44, 44, 44, 0.5294117647);
+  }
 }
 table span[data-table-list] {
   display: flex;
@@ -622,7 +629,7 @@ main > dl dt {
 main > dl dd {
   text-align: justify;
 }
-main > ul, main li {
+main > ul, main ol {
   padding-left: 30px;
 }
 main > hr {
@@ -865,7 +872,7 @@ main > hr {
 [data-cmd=note] > dl dd {
   text-align: justify;
 }
-[data-cmd=note] > ul, [data-cmd=note] li {
+[data-cmd=note] > ul, [data-cmd=note] ol {
   padding-left: 30px;
 }
 [data-cmd=note] > hr {
@@ -983,73 +990,73 @@ function setForceSingleColumnToOn() {
     updateColumns();
 }
 
-</script></head><body><header id="page-header"><div id="site-title-wrapper" class="site-header-row" data-col="2"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p id="topic-list-info" class="toc-info-banner">Topics</p><ul id="topic-list"><li data-source="local" data-level="h1" top-level="true"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li data-source="local" data-level="h1" top-level="true"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#conventions">Conventions</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#summary">Summary</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#formulas">Formulas</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/2d-motion/index.html#displacementprojectileposition">Displacement & Projectile Position</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#generalized">Generalized</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#intermsofandaxisvalues">In terms of <span data-math-target="ID5404165753988921810" data-cmd="inline-math" data-math-node="inline"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID11866973378581151609"></span> axis values</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis">With respect to the <span data-math-target="ID15322714544400027393" data-math-node="inline" data-cmd="inline-math"></span> axis</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis1">With respect to the <span data-math-target="ID9757408124997655410" data-math-node="inline" data-cmd="inline-math"></span> axis</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#solvingprojectilemotionproblems">Solving Projectile Motion Problems</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotion">Projectile Motion</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis">In terms of the <span data-cmd="inline-math" data-math-target="ID5057453968642875412" data-math-node="inline"></span> axis</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis1">In terms of the <span data-math-node="inline" data-math-target="ID12459344092124229867" data-cmd="inline-math"></span> axis</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#insummary">In Summary</a></li><li data-level="h3" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotionfromaninitialheightwithgiveninitialvelocityandangle">Projectile Motion from an initial height, with given initial velocity and angle</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis2">In terms of the <span data-math-target="ID6452670349436212264" data-cmd="inline-math" data-math-node="inline"></span> axis</a></li><li data-level="h5" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime">Deriving displacement as a function of time</a></li><li data-source="local" top-level="false" data-level="h6"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity">Deriving velocity</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis3">In terms of the <span data-cmd="inline-math" data-math-target="ID12917291791214953532" data-math-node="inline"></span> axis</a></li><li top-level="false" data-source="local" data-level="h5"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime1">Deriving displacement as a function of time</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity1">Deriving velocity</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#insummary1">In summary</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#tofindtherange">To find the range</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthemaximumverticaldisplacementiepeakheight">To find the maximum vertical displacement （i.e. peak height）</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthevelocityatagivenmomentoftime">To find the velocity at a given moment of time</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/2d-motion/index.html#range">Range</a></li><li data-level="h1" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#reasoningaboutprojectilemotion">Reasoning About Projectile Motion</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#notes">Notes</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#question">Question</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#answer">Answer</a></li><li data-source="local" top-level="false" data-level="h3"><a href="/all-school-notes/physics/2d-motion/index.html#explanation">Explanation</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#problems">Problems</a></li><li data-level="h1" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#relativemotion">Relative Motion</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocity">Galilean transformation of velocity</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocityalternatenotation">Galilean transformation of velocity （alternate notation）</a></li><li data-source="local" data-level="h1" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#rotationalmotionkinematics">Rotational Motion & Kinematics</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#basics">Basics</a></li><li data-level="h2" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#auxiliaryformulareference">Auxiliary Formula Reference</a></li><li data-source="local" data-level="h1" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#uniformcircularmotion">Uniform Circular Motion</a></li></ul></div></nav><div id="site-settings-wrapper"><button id="set-single-col-to-off-btn" class="pill" onclick="setForceSingleColumnToOff()"><span>Force Single Column</span><span>On</span></button><button class="pill" id="set-single-col-to-on-btn" onclick="setForceSingleColumnToOn()"><span>Force Single Column</span><span>Off</span></button></div></header><main>
-<h1 top-level="" id="twodimensionalprojectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></h1><div data-cmd="grid" data-col="1" boxed="">
+</script></head><body><header id="page-header"><div data-col="2" class="site-header-row" id="site-title-wrapper"><a class="left-link" href="/all-school-notes/index.html"><span class="material-symbols-outlined">house</span></a><div id="site-title-box"><h1 data-title="">Colbyn’s School Notes</h1></div></div><nav class="site-header-row two-col" id="site-nav-wrapper"><a href="/all-school-notes/index.html" class="left-link"><span class="material-symbols-outlined">arrow_circle_left</span></a><div id="toc-list-wrapper"><p class="toc-info-banner" id="topic-list-info">Topics</p><ul id="topic-list"><li top-level="true" data-level="h1" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></li></ul><p class="toc-info-banner" id="toc-list-info">Table Of Contents</p><ul id="toc-list"><li top-level="true" data-level="h1" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#conventions">Conventions</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#summary">Summary</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#formulas">Formulas</a></li><li data-source="local" data-level="h3" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#displacementprojectileposition">Displacement & Projectile Position</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#generalized">Generalized</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#intermsofandaxisvalues">In terms of <span data-cmd="inline-math" data-math-target="ID11025264092943564033" data-math-node="inline"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID5897021443217180677"></span> axis values</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis">With respect to the <span data-cmd="inline-math" data-math-target="ID11431640310034727708" data-math-node="inline"></span> axis</a></li><li top-level="false" data-level="h4" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis1">With respect to the <span data-cmd="inline-math" data-math-node="inline" data-math-target="ID14388561498490080622"></span> axis</a></li><li top-level="false" data-level="h2" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#solvingprojectilemotionproblems">Solving Projectile Motion Problems</a></li><li data-level="h3" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotion">Projectile Motion</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis">In terms of the <span data-math-target="ID16030019810614029252" data-cmd="inline-math" data-math-node="inline"></span> axis</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis1">In terms of the <span data-math-target="ID5432935797959188639" data-math-node="inline" data-cmd="inline-math"></span> axis</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#insummary">In Summary</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotionfromaninitialheightwithgiveninitialvelocityandangle">Projectile Motion from an initial height, with given initial velocity and angle</a></li><li data-level="h4" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis2">In terms of the <span data-math-target="ID1987401142467673422" data-math-node="inline" data-cmd="inline-math"></span> axis</a></li><li data-source="local" data-level="h5" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime">Deriving displacement as a function of time</a></li><li top-level="false" data-level="h6" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity">Deriving velocity</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis3">In terms of the <span data-math-target="ID13201205669774297533" data-math-node="inline" data-cmd="inline-math"></span> axis</a></li><li data-level="h5" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime1">Deriving displacement as a function of time</a></li><li data-source="local" top-level="false" data-level="h5"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity1">Deriving velocity</a></li><li top-level="false" data-source="local" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#insummary1">In summary</a></li><li data-source="local" top-level="false" data-level="h4"><a href="/all-school-notes/physics/2d-motion/index.html#tofindtherange">To find the range</a></li><li data-source="local" data-level="h4" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthemaximumverticaldisplacementiepeakheight">To find the maximum vertical displacement （i.e. peak height）</a></li><li data-level="h4" top-level="false" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthevelocityatagivenmomentoftime">To find the velocity at a given moment of time</a></li><li top-level="false" data-level="h3" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#range">Range</a></li><li top-level="false" data-source="local" data-level="h1"><a href="/all-school-notes/physics/2d-motion/index.html#reasoningaboutprojectilemotion">Reasoning About Projectile Motion</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#notes">Notes</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#question">Question</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#answer">Answer</a></li><li top-level="false" data-source="local" data-level="h3"><a href="/all-school-notes/physics/2d-motion/index.html#explanation">Explanation</a></li><li data-source="local" top-level="false" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#problems">Problems</a></li><li top-level="false" data-level="h1" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#relativemotion">Relative Motion</a></li><li top-level="false" data-source="local" data-level="h2"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocity">Galilean transformation of velocity</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocityalternatenotation">Galilean transformation of velocity （alternate notation）</a></li><li top-level="false" data-level="h1" data-source="local"><a href="/all-school-notes/physics/2d-motion/index.html#rotationalmotionkinematics">Rotational Motion & Kinematics</a></li><li data-source="local" data-level="h2" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#basics">Basics</a></li><li data-level="h2" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#auxiliaryformulareference">Auxiliary Formula Reference</a></li><li data-level="h1" data-source="local" top-level="false"><a href="/all-school-notes/physics/2d-motion/index.html#uniformcircularmotion">Uniform Circular Motion</a></li></ul></div></nav><div id="site-settings-wrapper"><button class="pill" onclick="setForceSingleColumnToOff()" id="set-single-col-to-off-btn"><span>Force Single Column</span><span>On</span></button><button id="set-single-col-to-on-btn" class="pill" onclick="setForceSingleColumnToOn()"><span>Force Single Column</span><span>Off</span></button></div></header><main>
+<h1 top-level="" id="twodimensionalprojectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#twodimensionalprojectilemotion">Two-dimensional Projectile Motion</a></h1><div boxed="" data-col="1" data-cmd="grid">
    <section data-cmd="note">
       <h2 id="conventions"><a href="/all-school-notes/physics/2d-motion/index.html#conventions">Conventions</a></h2></section></div><div boxed="" data-cmd="grid" data-col="1">
    <section data-cmd="note">
       <h2 id="summary"><a href="/all-school-notes/physics/2d-motion/index.html#summary">Summary</a></h2><div data-cmd="grid" data-col="2">
          <img src="/all-school-notes/static-assets/assets/images/physics/17.svg" style="max-width: 900px;"></img><section data-cmd="note">
-            <img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/18.svg"></img><p justify="">It's easy to see in the above visualization that <span id="ID10594797388799576466" data-math-node="inline" data-cmd="inline-math"></span>
-                                and <span data-cmd="inline-math" id="ID6202355030206636174" data-math-node="inline"></span> increase linearly, while <span id="ID14142877621385788408" data-cmd="inline-math" data-math-node="inline"></span> is non-linear.</p></section><img src="/all-school-notes/static-assets/assets/images/physics/20.svg" style="max-width: 900px;"></img><img src="/all-school-notes/static-assets/assets/images/physics/21.svg" style="max-width: 900px;"></img></div></section></div><h2 id="formulas"><a href="/all-school-notes/physics/2d-motion/index.html#formulas">Formulas</a></h2><div boxed="" data-cmd="grid" data-col="1">
+            <img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/18.svg"></img><p justify="">It's easy to see in the above visualization that <span id="ID3087085190401404004" data-cmd="inline-math" data-math-node="inline"></span>
+                                and <span data-math-node="inline" id="ID14621323444331199863" data-cmd="inline-math"></span> increase linearly, while <span id="ID9909996740879431274" data-cmd="inline-math" data-math-node="inline"></span> is non-linear.</p></section><img style="max-width: 900px;" src="/all-school-notes/static-assets/assets/images/physics/20.svg"></img><img src="/all-school-notes/static-assets/assets/images/physics/21.svg" style="max-width: 900px;"></img></div></section></div><h2 id="formulas"><a href="/all-school-notes/physics/2d-motion/index.html#formulas">Formulas</a></h2><div data-cmd="grid" data-col="1" boxed="">
    <section data-cmd="note">
       <h3 id="displacementprojectileposition"><a href="/all-school-notes/physics/2d-motion/index.html#displacementprojectileposition">Displacement & Projectile Position</a></h3><div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <h4 id="generalized"><a href="/all-school-notes/physics/2d-motion/index.html#generalized">Generalized</a></h4><p>In general （without respect to any <span data-math-node="inline" data-cmd="inline-math" id="ID9539309208564538173"></span> or <span data-math-node="inline" data-cmd="inline-math" id="ID6144854936207318291"></span> axis values）</p><div id="ID11750992582161001962" data-math-node="block" data-cmd="equation"></div><p>Where the distance traveled or displaced is</p><div id="ID17689995699014316097" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
-            <h4 id="intermsofandaxisvalues"><a href="/all-school-notes/physics/2d-motion/index.html#intermsofandaxisvalues">In terms of <span data-math-target="ID5404165753988921810" data-cmd="inline-math" data-math-node="inline"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID11866973378581151609"></span> axis values</a></h4><div data-math-node="block" data-cmd="equation" id="ID1589887677678099754"></div></section><section data-cmd="note">
-            <h4 id="withrespecttotheaxis"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis">With respect to the <span data-math-target="ID15322714544400027393" data-math-node="inline" data-cmd="inline-math"></span> axis</a></h4><p>The displacement of a given projectile in terms of the <span id="ID11225323485171918985" data-math-node="inline" data-cmd="inline-math"></span> axis is</p><div data-math-node="block" id="ID8345890217371851279" data-cmd="equation"></div><p>Since <span data-math-node="inline" id="ID16097067093396647452" data-cmd="inline-math"></span></p><div data-math-node="block" id="ID15646034897627546609" data-cmd="equation"></div><p>Which can be read as （in terms of the <span data-math-node="inline" data-cmd="inline-math" id="ID10474921953205307122"></span> axis）</p><div data-math-node="block" id="ID4082182384388092030" data-cmd="equation"></div></section><section data-cmd="note">
-            <h4 id="withrespecttotheaxis1"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis1">With respect to the <span data-math-target="ID9757408124997655410" data-math-node="inline" data-cmd="inline-math"></span> axis</a></h4><p>The displacement of a given projectile in terms of the <span data-cmd="inline-math" data-math-node="inline" id="ID17476516294520547396"></span> axis is</p><div data-math-node="block" data-cmd="equation" id="ID16378021189947396195"></div><p>Note that <span id="ID4996783916165118646" data-cmd="inline-math" data-math-node="inline"></span>（because there is no force acting on the projectile in
+            <h4 id="generalized"><a href="/all-school-notes/physics/2d-motion/index.html#generalized">Generalized</a></h4><p>In general （without respect to any <span data-cmd="inline-math" data-math-node="inline" id="ID6208574096275311874"></span> or <span id="ID16194769009501181830" data-math-node="inline" data-cmd="inline-math"></span> axis values）</p><div data-math-node="block" id="ID7133182577690796794" data-cmd="equation"></div><p>Where the distance traveled or displaced is</p><div id="ID7005580185498595846" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+            <h4 id="intermsofandaxisvalues"><a href="/all-school-notes/physics/2d-motion/index.html#intermsofandaxisvalues">In terms of <span data-cmd="inline-math" data-math-target="ID11025264092943564033" data-math-node="inline"></span> and <span data-math-node="inline" data-cmd="inline-math" data-math-target="ID5897021443217180677"></span> axis values</a></h4><div id="ID16028435780881918326" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+            <h4 id="withrespecttotheaxis"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis">With respect to the <span data-cmd="inline-math" data-math-target="ID11431640310034727708" data-math-node="inline"></span> axis</a></h4><p>The displacement of a given projectile in terms of the <span id="ID17504255748302280313" data-math-node="inline" data-cmd="inline-math"></span> axis is</p><div id="ID16225489616184365515" data-cmd="equation" data-math-node="block"></div><p>Since <span data-math-node="inline" id="ID941980901444575895" data-cmd="inline-math"></span></p><div id="ID11346575491867440951" data-math-node="block" data-cmd="equation"></div><p>Which can be read as （in terms of the <span data-math-node="inline" data-cmd="inline-math" id="ID9198954141261593997"></span> axis）</p><div data-cmd="equation" id="ID4173941554516569577" data-math-node="block"></div></section><section data-cmd="note">
+            <h4 id="withrespecttotheaxis1"><a href="/all-school-notes/physics/2d-motion/index.html#withrespecttotheaxis1">With respect to the <span data-cmd="inline-math" data-math-node="inline" data-math-target="ID14388561498490080622"></span> axis</a></h4><p>The displacement of a given projectile in terms of the <span data-math-node="inline" id="ID6244450060230622035" data-cmd="inline-math"></span> axis is</p><div data-cmd="equation" id="ID6963456473557371175" data-math-node="block"></div><p>Note that <span data-math-node="inline" data-cmd="inline-math" id="ID10859032904373832832"></span>（because there is no force acting on the projectile in
                                 the horizontal direction）, and therefore the initial and final velocities are the same.
                                 I.e. it's constant throughout. Therefore in summary</p><ul>
-               <li><span id="ID12722097574844167786" data-math-node="inline" data-cmd="inline-math"></span></li><li><span data-math-node="inline" data-cmd="inline-math" id="ID18356798886110153680"></span> and therefore we will simple refer to the velocity
-                                       vector as as <span id="ID11395399009861848265" data-math-node="inline" data-cmd="inline-math"></span>.</li></ul><p>Therefore we can simplify equation （1） considerably</p><div id="ID7111565438882284754" data-math-node="block" data-cmd="equation"></div></section></div></section></div><h2 id="solvingprojectilemotionproblems"><a href="/all-school-notes/physics/2d-motion/index.html#solvingprojectilemotionproblems">Solving Projectile Motion Problems</a></h2><div boxed="" data-cmd="grid" data-col="1">
+               <li><span id="ID9994786300810185486" data-math-node="inline" data-cmd="inline-math"></span></li><li><span data-cmd="inline-math" data-math-node="inline" id="ID12406870735853228590"></span> and therefore we will simple refer to the velocity
+                                       vector as as <span data-cmd="inline-math" data-math-node="inline" id="ID7968082909538193871"></span>.</li></ul><p>Therefore we can simplify equation （1） considerably</p><div id="ID5024956921402766265" data-math-node="block" data-cmd="equation"></div></section></div></section></div><h2 id="solvingprojectilemotionproblems"><a href="/all-school-notes/physics/2d-motion/index.html#solvingprojectilemotionproblems">Solving Projectile Motion Problems</a></h2><div data-col="1" data-cmd="grid" boxed="">
    <section data-cmd="note">
-      <h3 id="projectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotion">Projectile Motion</a></h3><img src="/all-school-notes/static-assets/assets/images/physics/23.svg" style="max-width: 600px;"></img><div data-cmd="grid" data-col="2">
+      <h3 id="projectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotion">Projectile Motion</a></h3><img src="/all-school-notes/static-assets/assets/images/physics/23.svg" style="max-width: 600px;"></img><div data-col="2" data-cmd="grid">
          <section data-cmd="note">
-            <h4 id="intermsoftheaxis"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis">In terms of the <span data-cmd="inline-math" data-math-target="ID5057453968642875412" data-math-node="inline"></span> axis</a></h4><p>TODO</p><div data-math-node="block" id="ID12122206201363770258" data-cmd="equation"></div><p>TODO</p></section><section data-cmd="note">
-            <h4 id="intermsoftheaxis1"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis1">In terms of the <span data-math-node="inline" data-math-target="ID12459344092124229867" data-cmd="inline-math"></span> axis</a></h4><p>TODO</p><div data-math-node="block" data-cmd="equation" id="ID10948853682795047700"></div><p>TODO</p></section></div><h4 id="insummary"><a href="/all-school-notes/physics/2d-motion/index.html#insummary">In Summary</a></h4><p>Initial Quantities</p><div data-col="2" data-cmd="grid">
-         <div data-cmd="equation" data-math-node="block" id="ID7941758994550813121"></div><div id="ID5704387170143387653" data-cmd="equation" data-math-node="block"></div></div><p>Derived expressions</p><div data-cmd="grid" data-col="2">
-         <div id="ID12540685223675329372" data-math-node="block" data-cmd="equation"></div><div data-math-node="block" id="ID14303062925438577003" data-cmd="equation"></div></div><p>Solutions</p><div data-cmd="equation" id="ID4252347724819328128" data-math-node="block"></div></section><section data-cmd="note">
-      <h3 id="projectilemotionfromaninitialheightwithgiveninitialvelocityandangle"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotionfromaninitialheightwithgiveninitialvelocityandangle">Projectile Motion from an initial height, with given initial velocity and angle</a></h3><img src="/all-school-notes/static-assets/assets/images/physics/22.svg" style="max-width: 800px;"></img><p>Given</p><ul>
-         <li>A projectile angle <span data-math-node="inline" id="ID17330551315905214505" data-cmd="inline-math"></span></li><li>The initial height <span id="ID10200068049362848721" data-math-node="inline" data-cmd="inline-math"></span></li><li>The initial velocity <span data-cmd="inline-math" data-math-node="inline" id="ID416675726855140826"></span></li></ul><p>We can therefore derive the the initial velocities for <span id="ID16377194215341271564" data-cmd="inline-math" data-math-node="inline"></span> and <span id="ID286527130653586713" data-cmd="inline-math" data-math-node="inline"></span> in terms of
-                  the given angle and initial velocity.</p><div id="ID8218461359188320879" data-cmd="equation" data-math-node="block"></div><p>Given the general formulas for displacement and velocity</p><div id="ID4777869018643849147" data-cmd="equation" data-math-node="block"></div><p>Which this information, we will derive specific equations in terms of the <span data-math-node="inline" data-cmd="inline-math" id="ID12413040174253562742"></span>
-                  and <span id="ID249887714615654598" data-cmd="inline-math" data-math-node="inline"></span> axes governing the projectile.</p><div data-col="2" data-cmd="grid">
+            <h4 id="intermsoftheaxis"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis">In terms of the <span data-math-target="ID16030019810614029252" data-cmd="inline-math" data-math-node="inline"></span> axis</a></h4><p>TODO</p><div id="ID4888969360050035416" data-cmd="equation" data-math-node="block"></div><p>TODO</p></section><section data-cmd="note">
+            <h4 id="intermsoftheaxis1"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis1">In terms of the <span data-math-target="ID5432935797959188639" data-math-node="inline" data-cmd="inline-math"></span> axis</a></h4><p>TODO</p><div data-cmd="equation" id="ID12339791271024084206" data-math-node="block"></div><p>TODO</p></section></div><h4 id="insummary"><a href="/all-school-notes/physics/2d-motion/index.html#insummary">In Summary</a></h4><p>Initial Quantities</p><div data-col="2" data-cmd="grid">
+         <div data-cmd="equation" id="ID4878506851440832865" data-math-node="block"></div><div data-cmd="equation" id="ID7207340297239522231" data-math-node="block"></div></div><p>Derived expressions</p><div data-col="2" data-cmd="grid">
+         <div data-math-node="block" data-cmd="equation" id="ID4528652783826021967"></div><div data-math-node="block" id="ID3603347959031991443" data-cmd="equation"></div></div><p>Solutions</p><div data-math-node="block" id="ID7627814701765879028" data-cmd="equation"></div></section><section data-cmd="note">
+      <h3 id="projectilemotionfromaninitialheightwithgiveninitialvelocityandangle"><a href="/all-school-notes/physics/2d-motion/index.html#projectilemotionfromaninitialheightwithgiveninitialvelocityandangle">Projectile Motion from an initial height, with given initial velocity and angle</a></h3><img style="max-width: 800px;" src="/all-school-notes/static-assets/assets/images/physics/22.svg"></img><p>Given</p><ul>
+         <li>A projectile angle <span id="ID16337433744257079640" data-math-node="inline" data-cmd="inline-math"></span></li><li>The initial height <span data-cmd="inline-math" id="ID10840084242882204424" data-math-node="inline"></span></li><li>The initial velocity <span id="ID15984709573728994951" data-cmd="inline-math" data-math-node="inline"></span></li></ul><p>We can therefore derive the the initial velocities for <span id="ID5591197748569099700" data-math-node="inline" data-cmd="inline-math"></span> and <span id="ID572375596757206330" data-math-node="inline" data-cmd="inline-math"></span> in terms of
+                  the given angle and initial velocity.</p><div data-cmd="equation" data-math-node="block" id="ID14369309755410944087"></div><p>Given the general formulas for displacement and velocity</p><div id="ID14411269629339488065" data-cmd="equation" data-math-node="block"></div><p>Which this information, we will derive specific equations in terms of the <span data-cmd="inline-math" id="ID8109993251973741980" data-math-node="inline"></span>
+                  and <span id="ID10197151430221778460" data-math-node="inline" data-cmd="inline-math"></span> axes governing the projectile.</p><div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <h4 id="intermsoftheaxis2"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis2">In terms of the <span data-math-target="ID6452670349436212264" data-cmd="inline-math" data-math-node="inline"></span> axis</a></h4><h5 id="derivingdisplacementasafunctionoftime"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime">Deriving displacement as a function of time</a></h5><p>Using the general formula from above in terms of <span data-cmd="inline-math" data-math-node="inline" id="ID18035935144343473481"></span> as a function
-                                of time.</p><div data-cmd="equation" id="ID17260896423700132253" data-math-node="block"></div><p>Which we can simplify using the following facts</p><ul>
-               <li>From the given depiction of the problem, we know that <span data-cmd="inline-math" data-math-node="inline" id="ID15077155953970800576"></span>.</li><li>There is no acceleration along the <span id="ID5516521030067908487" data-cmd="inline-math" data-math-node="inline"></span> axis, so <span id="ID4150936516342576978" data-math-node="inline" data-cmd="inline-math"></span>.</li><li><span data-math-node="inline" id="ID13661942388283702740" data-cmd="inline-math"></span> as shown above.</li></ul><p>Therefore</p><div data-cmd="equation" data-math-node="block" id="ID7441562670349545244"></div><h6 id="derivingvelocity"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity">Deriving velocity</a></h6><div data-cmd="equation" data-math-node="block" id="ID99448811713973304"></div></section><section data-cmd="note">
-            <h4 id="intermsoftheaxis3"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis3">In terms of the <span data-cmd="inline-math" data-math-target="ID12917291791214953532" data-math-node="inline"></span> axis</a></h4><h5 id="derivingdisplacementasafunctionoftime1"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime1">Deriving displacement as a function of time</a></h5><p>Using the general formula from above in terms of <span data-math-node="inline" data-cmd="inline-math" id="ID15502373891016478417"></span> as a function
-                                of time.</p><div data-math-node="block" id="ID16758711376174543113" data-cmd="equation"></div><p>Which we can simplify using the following facts</p><ul>
-               <li>Initial height is given to us which we will represent as <span id="ID4077585415569658181" data-math-node="inline" data-cmd="inline-math"></span>,
-                                       for the sake of generality.</li><li>Acceleration along the <span data-math-node="inline" data-cmd="inline-math" id="ID3530620688026589491"></span> axis is the constant for gravity,
-                                       so <span data-math-node="inline" data-cmd="inline-math" id="ID7036127667290489848"></span>.</li><li><span data-math-node="inline" data-cmd="inline-math" id="ID15899362444017734776"></span> as shown above.</li></ul><p>Therefore</p><div id="ID14796662451101665495" data-math-node="block" data-cmd="equation"></div><h5 id="derivingvelocity1"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity1">Deriving velocity</a></h5><div data-math-node="block" data-cmd="equation" id="ID5617166709252600341"></div></section></div><hr></hr><h4 id="insummary1"><a href="/all-school-notes/physics/2d-motion/index.html#insummary1">In summary</a></h4><div data-cmd="grid" data-col="2">
-         <div id="ID6185257514017295185" data-math-node="block" data-cmd="equation"></div><div data-math-node="block" data-cmd="equation" id="ID8177250369729336074"></div></div><hr></hr><div data-col="2" data-cmd="grid">
+            <h4 id="intermsoftheaxis2"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis2">In terms of the <span data-math-target="ID1987401142467673422" data-math-node="inline" data-cmd="inline-math"></span> axis</a></h4><h5 id="derivingdisplacementasafunctionoftime"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime">Deriving displacement as a function of time</a></h5><p>Using the general formula from above in terms of <span data-cmd="inline-math" id="ID8798801097313474367" data-math-node="inline"></span> as a function
+                                of time.</p><div data-cmd="equation" data-math-node="block" id="ID7119286682525523103"></div><p>Which we can simplify using the following facts</p><ul>
+               <li>From the given depiction of the problem, we know that <span data-math-node="inline" data-cmd="inline-math" id="ID14034274015153639858"></span>.</li><li>There is no acceleration along the <span id="ID5743062875939114035" data-math-node="inline" data-cmd="inline-math"></span> axis, so <span id="ID12400139951644911328" data-math-node="inline" data-cmd="inline-math"></span>.</li><li><span data-cmd="inline-math" id="ID10851293774832475974" data-math-node="inline"></span> as shown above.</li></ul><p>Therefore</p><div id="ID12085705271254362553" data-math-node="block" data-cmd="equation"></div><h6 id="derivingvelocity"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity">Deriving velocity</a></h6><div id="ID10577198848368894334" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+            <h4 id="intermsoftheaxis3"><a href="/all-school-notes/physics/2d-motion/index.html#intermsoftheaxis3">In terms of the <span data-math-target="ID13201205669774297533" data-math-node="inline" data-cmd="inline-math"></span> axis</a></h4><h5 id="derivingdisplacementasafunctionoftime1"><a href="/all-school-notes/physics/2d-motion/index.html#derivingdisplacementasafunctionoftime1">Deriving displacement as a function of time</a></h5><p>Using the general formula from above in terms of <span data-math-node="inline" id="ID13705617705978442452" data-cmd="inline-math"></span> as a function
+                                of time.</p><div data-cmd="equation" id="ID10553318108989586698" data-math-node="block"></div><p>Which we can simplify using the following facts</p><ul>
+               <li>Initial height is given to us which we will represent as <span data-cmd="inline-math" id="ID214895034902115215" data-math-node="inline"></span>,
+                                       for the sake of generality.</li><li>Acceleration along the <span id="ID16083599906071388013" data-cmd="inline-math" data-math-node="inline"></span> axis is the constant for gravity,
+                                       so <span id="ID17328657278397064768" data-math-node="inline" data-cmd="inline-math"></span>.</li><li><span data-math-node="inline" data-cmd="inline-math" id="ID2140507357530638689"></span> as shown above.</li></ul><p>Therefore</p><div id="ID2996224345563047316" data-math-node="block" data-cmd="equation"></div><h5 id="derivingvelocity1"><a href="/all-school-notes/physics/2d-motion/index.html#derivingvelocity1">Deriving velocity</a></h5><div data-cmd="equation" data-math-node="block" id="ID17665586165916127214"></div></section></div><hr></hr><h4 id="insummary1"><a href="/all-school-notes/physics/2d-motion/index.html#insummary1">In summary</a></h4><div data-cmd="grid" data-col="2">
+         <div data-cmd="equation" data-math-node="block" id="ID5835595247115533359"></div><div data-cmd="equation" id="ID1138433044119209066" data-math-node="block"></div></div><hr></hr><div data-cmd="grid" data-col="2">
          <section data-cmd="note">
-            <h4 id="tofindtherange"><a href="/all-school-notes/physics/2d-motion/index.html#tofindtherange">To find the range</a></h4><p>We know that at the moment of impact <span data-math-node="inline" id="ID5335651220521725719" data-cmd="inline-math"></span>, therefore we can use equation <span data-math-node="inline" id="ID588132054189848243" data-cmd="inline-math"></span></p><div id="ID10443821872967393619" data-math-node="block" data-cmd="equation"></div><p>Rearranging a bit and setting <span data-math-node="inline" id="ID13831879484048482431" data-cmd="inline-math"></span>, we can see that solving for <span id="ID7085315630665630752" data-math-node="inline" data-cmd="inline-math"></span> will yield the time at which <span id="ID8443338303180893405" data-cmd="inline-math" data-math-node="inline"></span>.</p><div id="ID1091090608432715137" data-cmd="equation" data-math-node="block"></div><p>Therefore</p><div data-math-node="block" data-cmd="equation" id="ID7594035614645958157"></div><p>Plugging the solution for <span id="ID16826303344242913783" data-cmd="inline-math" data-math-node="inline"></span>（and ignoring the negative or non-real solutions for <span data-math-node="inline" data-cmd="inline-math" id="ID14757549772417920715"></span>）
-                                into <span data-cmd="inline-math" id="ID14757638169625351625" data-math-node="inline"></span> will yield the horizontal displacement （range） at the time <span id="ID2301970402674663081" data-math-node="inline" data-cmd="inline-math"></span>.
-                                Therefore:</p><div id="ID2728852043263534766" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
-            <h4 id="tofindthemaximumverticaldisplacementiepeakheight"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthemaximumverticaldisplacementiepeakheight">To find the maximum vertical displacement （i.e. peak height）</a></h4><p>We begin with equation <span id="ID12960166942547000988" data-math-node="inline" data-cmd="inline-math"></span></p><div data-math-node="block" data-cmd="equation" id="ID15616082472604069367"></div><p>We know that at the moment our projectile crests its trajectory,
+            <h4 id="tofindtherange"><a href="/all-school-notes/physics/2d-motion/index.html#tofindtherange">To find the range</a></h4><p>We know that at the moment of impact <span id="ID17464881223338771157" data-math-node="inline" data-cmd="inline-math"></span>, therefore we can use equation <span data-cmd="inline-math" data-math-node="inline" id="ID2836309309954929251"></span></p><div data-math-node="block" id="ID5615380037293705662" data-cmd="equation"></div><p>Rearranging a bit and setting <span id="ID6302180196786262929" data-math-node="inline" data-cmd="inline-math"></span>, we can see that solving for <span id="ID14516872133485401677" data-math-node="inline" data-cmd="inline-math"></span> will yield the time at which <span data-cmd="inline-math" id="ID6601236792850030884" data-math-node="inline"></span>.</p><div data-cmd="equation" id="ID9436728032742647743" data-math-node="block"></div><p>Therefore</p><div data-math-node="block" data-cmd="equation" id="ID8013188446060513439"></div><p>Plugging the solution for <span data-cmd="inline-math" id="ID6866420765677020212" data-math-node="inline"></span>（and ignoring the negative or non-real solutions for <span id="ID15681323372661298829" data-cmd="inline-math" data-math-node="inline"></span>）
+                                into <span id="ID11861060114285440858" data-math-node="inline" data-cmd="inline-math"></span> will yield the horizontal displacement （range） at the time <span id="ID1258841687036930650" data-math-node="inline" data-cmd="inline-math"></span>.
+                                Therefore:</p><div data-cmd="equation" id="ID5262924988023686805" data-math-node="block"></div></section><section data-cmd="note">
+            <h4 id="tofindthemaximumverticaldisplacementiepeakheight"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthemaximumverticaldisplacementiepeakheight">To find the maximum vertical displacement （i.e. peak height）</a></h4><p>We begin with equation <span data-cmd="inline-math" data-math-node="inline" id="ID9560995968276171650"></span></p><div data-math-node="block" id="ID3745505521990259448" data-cmd="equation"></div><p>We know that at the moment our projectile crests its trajectory,
                                 the vertical component of our projectile will be zero. 
-                                Therefore <span id="ID16256144074592050563" data-math-node="inline" data-cmd="inline-math"></span>. To find the time, we simply solve for <span id="ID1206781451843824288" data-cmd="inline-math" data-math-node="inline"></span>.</p><div data-math-node="block" data-cmd="equation" id="ID17253155390312818641"></div><p>Therefore, knowing the time at which our projectile crests its trajectory,
-                                we simply plugin our solution for <span data-math-node="inline" id="ID220092743615612911" data-cmd="inline-math"></span> into the function given in
-                                equation <span data-math-node="inline" data-cmd="inline-math" id="ID17453228714589736856"></span>. I.e:</p><div id="ID16311001926228757792" data-cmd="equation" data-math-node="block"></div></section><section data-cmd="note">
-            <h4 id="tofindthevelocityatagivenmomentoftime"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthevelocityatagivenmomentoftime">To find the velocity at a given moment of time</a></h4><p>Given some time which we will denote as <span data-math-node="inline" data-cmd="inline-math" id="ID9624737578359723265"></span>,
+                                Therefore <span data-cmd="inline-math" id="ID203533833734819346" data-math-node="inline"></span>. To find the time, we simply solve for <span data-cmd="inline-math" id="ID1217912077562466082" data-math-node="inline"></span>.</p><div id="ID8497150256665818550" data-math-node="block" data-cmd="equation"></div><p>Therefore, knowing the time at which our projectile crests its trajectory,
+                                we simply plugin our solution for <span data-cmd="inline-math" id="ID13831602922025318961" data-math-node="inline"></span> into the function given in
+                                equation <span id="ID14482948307259918530" data-math-node="inline" data-cmd="inline-math"></span>. I.e:</p><div data-math-node="block" data-cmd="equation" id="ID15150085761927510180"></div></section><section data-cmd="note">
+            <h4 id="tofindthevelocityatagivenmomentoftime"><a href="/all-school-notes/physics/2d-motion/index.html#tofindthevelocityatagivenmomentoftime">To find the velocity at a given moment of time</a></h4><p>Given some time which we will denote as <span id="ID17396333001716868238" data-cmd="inline-math" data-math-node="inline"></span>,
                                 to find the velocity we simply plug in our given values
-                                for <span data-math-node="inline" data-cmd="inline-math" id="ID12085464935430388717"></span> and <span data-math-node="inline" data-cmd="inline-math" id="ID11852584477462777581"></span> into equations <span id="ID1675411686054369363" data-math-node="inline" data-cmd="inline-math"></span>
-                                and <span data-math-node="inline" data-cmd="inline-math" id="ID15750539133870754277"></span>. I.e.</p><div data-math-node="block" id="ID8309778162462075000" data-cmd="equation"></div><p>With the given value for <span data-math-node="inline" id="ID11026567594188477846" data-cmd="inline-math"></span>, yielding the vector at time <span data-cmd="inline-math" id="ID12233550057809980447" data-math-node="inline"></span>,
-                                which we will denote as <span data-cmd="inline-math" data-math-node="inline" id="ID11936026065885908900"></span></p><div data-math-node="block" data-cmd="equation" id="ID4149614585633664774"></div><p>To define the vector in terms of engineering notation,
-                                （i.e. <span data-math-node="inline" id="ID18268032259721828748" data-cmd="inline-math"></span>）</p><div data-cmd="equation" data-math-node="block" id="ID12595864013806434095"></div><p>To define the vector in terms of magnitude （which we will denote as <span data-math-node="inline" data-cmd="inline-math" id="ID7187804687786480331"></span>）
-                                and direction （which we will denote as <span id="ID5839764350740071103" data-cmd="inline-math" data-math-node="inline"></span>）</p><div id="ID162850490029279716" data-cmd="equation" data-math-node="block"></div></section></div></section></div><div data-cmd="grid" data-col="2" boxed="">
+                                for <span id="ID10568498072532580149" data-math-node="inline" data-cmd="inline-math"></span> and <span data-math-node="inline" data-cmd="inline-math" id="ID3260007791282513693"></span> into equations <span data-math-node="inline" data-cmd="inline-math" id="ID10059574285734090052"></span>
+                                and <span id="ID16419447803691021566" data-cmd="inline-math" data-math-node="inline"></span>. I.e.</p><div id="ID1411253483538442429" data-math-node="block" data-cmd="equation"></div><p>With the given value for <span id="ID17445581152832484270" data-math-node="inline" data-cmd="inline-math"></span>, yielding the vector at time <span id="ID12780205365562648468" data-cmd="inline-math" data-math-node="inline"></span>,
+                                which we will denote as <span data-cmd="inline-math" id="ID7473381489561744085" data-math-node="inline"></span></p><div data-math-node="block" id="ID9499504336962439056" data-cmd="equation"></div><p>To define the vector in terms of engineering notation,
+                                （i.e. <span data-cmd="inline-math" id="ID14165213111752036259" data-math-node="inline"></span>）</p><div id="ID1581163789411343617" data-math-node="block" data-cmd="equation"></div><p>To define the vector in terms of magnitude （which we will denote as <span data-math-node="inline" data-cmd="inline-math" id="ID388143755086735860"></span>）
+                                and direction （which we will denote as <span data-cmd="inline-math" id="ID12513991075964797677" data-math-node="inline"></span>）</p><div data-math-node="block" data-cmd="equation" id="ID2999543222522267464"></div></section></div></section></div><div data-col="2" data-cmd="grid" boxed="">
    <section data-cmd="note">
-      <h3 id="range"><a href="/all-school-notes/physics/2d-motion/index.html#range">Range</a></h3><p>The distance a projectile travels is called its range.</p><div data-cmd="equation" id="ID3659540748919841159" data-math-node="block"></div><p>Only applies in situations where the projectile lands at the same elevation from which it was fired.</p><img src="/all-school-notes/static-assets/assets/images/physics/13.svg" style="max-width: 100%;"></img></section></div><h1 id="reasoningaboutprojectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#reasoningaboutprojectilemotion">Reasoning About Projectile Motion</a></h1><div data-cmd="grid" boxed="" data-col="2">
+      <h3 id="range"><a href="/all-school-notes/physics/2d-motion/index.html#range">Range</a></h3><p>The distance a projectile travels is called its range.</p><div id="ID18363096319966925834" data-cmd="equation" data-math-node="block"></div><p>Only applies in situations where the projectile lands at the same elevation from which it was fired.</p><img src="/all-school-notes/static-assets/assets/images/physics/13.svg" style="max-width: 100%;"></img></section></div><h1 id="reasoningaboutprojectilemotion"><a href="/all-school-notes/physics/2d-motion/index.html#reasoningaboutprojectilemotion">Reasoning About Projectile Motion</a></h1><div data-col="2" data-cmd="grid" boxed="">
    <section data-cmd="note">
-      <img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/12.svg"></img><img src="/all-school-notes/static-assets/assets/images/physics/15.svg" style="max-width: 500px;"></img></section><section data-cmd="note">
+      <img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/12.svg"></img><img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/15.svg"></img></section><section data-cmd="note">
       <h2 id="notes"><a href="/all-school-notes/physics/2d-motion/index.html#notes">Notes</a></h2><ul>
          <li>An object is in free fall when the only force acting on it is the force of gravity.</li></ul></section><section data-cmd="note">
-      <img style="max-width: 500px;" src="/all-school-notes/static-assets/assets/images/physics/24.svg"></img><h2 id="question"><a href="/all-school-notes/physics/2d-motion/index.html#question">Question</a></h2><p>Based on the figure, for which trajectory was the object in the air for the greatest amount of time?</p><h2 id="answer"><a href="/all-school-notes/physics/2d-motion/index.html#answer">Answer</a></h2><p><mark font="">Trajectory A</mark></p><h3 id="explanation"><a href="/all-school-notes/physics/2d-motion/index.html#explanation">Explanation</a></h3><p>All that matters is the vertical height of the trajectory, which is based on the component of the
-                  initial velocity in the vertical direction （<span data-math-node="inline" data-cmd="inline-math" id="ID16223207797499441267"></span>）.
+      <img src="/all-school-notes/static-assets/assets/images/physics/24.svg" style="max-width: 500px;"></img><h2 id="question"><a href="/all-school-notes/physics/2d-motion/index.html#question">Question</a></h2><p>Based on the figure, for which trajectory was the object in the air for the greatest amount of time?</p><h2 id="answer"><a href="/all-school-notes/physics/2d-motion/index.html#answer">Answer</a></h2><p><mark font="">Trajectory A</mark></p><h3 id="explanation"><a href="/all-school-notes/physics/2d-motion/index.html#explanation">Explanation</a></h3><p>All that matters is the vertical height of the trajectory, which is based on the component of the
+                  initial velocity in the vertical direction （<span data-math-node="inline" data-cmd="inline-math" id="ID2006723656065458905"></span>）.
                   The <mark font="">higher the trajectory</mark>, the more time the object will be in the air,
-                  <u>regardless of the object's range or horizontal velocity</u>.</p></section></div><h2 id="problems"><a href="/all-school-notes/physics/2d-motion/index.html#problems">Problems</a></h2><div data-col="2" boxed="" data-cmd="grid">
+                  <u>regardless of the object's range or horizontal velocity</u>.</p></section></div><h2 id="problems"><a href="/all-school-notes/physics/2d-motion/index.html#problems">Problems</a></h2><div data-cmd="grid" data-col="2" boxed="">
    <section data-cmd="note">
       <img src="/all-school-notes/static-assets/assets/images/physics/14.svg" style="max-width: 600px;"></img><p>The function in this graph represents an object that is speeding up,
                   or accelerating at a constant rate.</p></section><section data-cmd="note">
@@ -1063,879 +1070,879 @@ function setForceSingleColumnToOn() {
                       an infinitesimally small time interval is always directed along the object’s path
                       and the velocity vector always has the same direction as the displacement vector.</dd></dl></section></div><h1 id="relativemotion"><a href="/all-school-notes/physics/2d-motion/index.html#relativemotion">Relative Motion</a></h1><div data-cmd="grid" data-col="2" boxed="">
    <section data-cmd="note">
-      <h2 id="galileantransformationofvelocity"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocity">Galilean transformation of velocity</a></h2><p>The velocity <span data-cmd="inline-math" id="ID8953004870631050072" data-math-node="inline"></span> of some object P <mark font="">as seen from a stationary frame</mark>
-                  must be the sum of <span id="ID12865655677864789971" data-math-node="inline" data-cmd="inline-math"></span> and <span data-cmd="inline-math" id="ID2894624734677252298" data-math-node="inline"></span></p><div data-math-node="block" data-cmd="equation" id="ID15944466722528416698"></div><p>Where</p><div data-table-wrapper=""><table data-wrapped-table="">
+      <h2 id="galileantransformationofvelocity"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocity">Galilean transformation of velocity</a></h2><p>The velocity <span data-math-node="inline" id="ID8148799120781360818" data-cmd="inline-math"></span> of some object P <mark font="">as seen from a stationary frame</mark>
+                  must be the sum of <span data-cmd="inline-math" id="ID16560044727317005531" data-math-node="inline"></span> and <span id="ID7786889654178666625" data-math-node="inline" data-cmd="inline-math"></span></p><div data-cmd="equation" data-math-node="block" id="ID17547068637508287072"></div><p>Where</p><div data-table-wrapper=""><table data-wrapped-table="">
          <thead>
             <tr>
                <th>Symbol</th><th>Description</th></tr></thead><tbody>
             <tr>
-               <th><span id="ID10006369017569275418" data-math-node="inline" data-cmd="inline-math"></span></th><td>Velocity as measured in a stationary frame</td></tr><tr>
-               <th><span id="ID6757325393630233538" data-math-node="inline" data-cmd="inline-math"></span></th><td>Velocity of an object measured in the moving frame relative to the moving frame</td></tr><tr>
-               <th><span id="ID13929303208934348049" data-cmd="inline-math" data-math-node="inline"></span></th><td>velocity of the moving frame - with respect to the stationary frame</td></tr></tbody></table></div></section><section data-cmd="note">
+               <th><span data-math-node="inline" data-cmd="inline-math" id="ID8103383453610156600"></span></th><td>Velocity as measured in a stationary frame</td></tr><tr>
+               <th><span id="ID5245794188873661004" data-math-node="inline" data-cmd="inline-math"></span></th><td>Velocity of an object measured in the moving frame relative to the moving frame</td></tr><tr>
+               <th><span data-cmd="inline-math" data-math-node="inline" id="ID12636993299120990683"></span></th><td>velocity of the moving frame - with respect to the stationary frame</td></tr></tbody></table></div></section><section data-cmd="note">
       <h2 id="galileantransformationofvelocityalternatenotation"><a href="/all-school-notes/physics/2d-motion/index.html#galileantransformationofvelocityalternatenotation">Galilean transformation of velocity （alternate notation）</a></h2><p>Given two reference frames \text｛
          A
-      ｝ and <span data-cmd="inline-math" data-math-node="inline" id="ID2838980706168440166"></span> and some object <span data-cmd="inline-math" data-math-node="inline" id="ID814110433183320712"></span>.
-                  The velocity of the object can be defined in terms of <span id="ID11346297289751970693" data-math-node="inline" data-cmd="inline-math"></span> or <span id="ID2153621272892092997" data-math-node="inline" data-cmd="inline-math"></span> as shown</p><div data-table-wrapper=""><table data-wrapped-table="">
+      ｝ and <span id="ID15850996445204466951" data-math-node="inline" data-cmd="inline-math"></span> and some object <span data-math-node="inline" data-cmd="inline-math" id="ID13768474785169419742"></span>.
+                  The velocity of the object can be defined in terms of <span data-cmd="inline-math" data-math-node="inline" id="ID9019216371016029564"></span> or <span data-cmd="inline-math" data-math-node="inline" id="ID11357892561414826892"></span> as shown</p><div data-table-wrapper=""><table data-wrapped-table="">
          <thead>
             <tr>
                <th>Symbol</th><th>Description</th></tr></thead><tbody>
             <tr>
-               <th><span data-math-node="inline" id="ID5812286100991319549" data-cmd="inline-math"></span></th><td>The velocity of <span id="ID12936536930213172377" data-math-node="inline" data-cmd="inline-math"></span> relative to <span data-cmd="inline-math" data-math-node="inline" id="ID978205460777497933"></span></td></tr><tr>
-               <th><span data-cmd="inline-math" id="ID16772233957081584196" data-math-node="inline"></span></th><td>The velocity of <span data-math-node="inline" id="ID5836250269994618068" data-cmd="inline-math"></span> relative to <span id="ID9604299733480754131" data-cmd="inline-math" data-math-node="inline"></span></td></tr><tr>
-               <th><span id="ID1554441683772365576" data-math-node="inline" data-cmd="inline-math"></span></th><td>The velocity of <span id="ID5405892649343389658" data-math-node="inline" data-cmd="inline-math"></span> relative to <span id="ID4759413468862525086" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
-               <th><span data-math-node="inline" id="ID42680658722885102" data-cmd="inline-math"></span></th><td>The velocity of <span data-math-node="inline" id="ID16130957908037369136" data-cmd="inline-math"></span> relative to <span data-math-node="inline" data-cmd="inline-math" id="ID5095318805050274071"></span>.
-                                   It locates the origin of <span data-cmd="inline-math" id="ID10202795278022514600" data-math-node="inline"></span> relative to the origin of <span id="ID7355246755948847559" data-cmd="inline-math" data-math-node="inline"></span>.</td></tr></tbody></table></div><p>Therefore</p><div data-math-node="block" id="ID3109416966761595951" data-cmd="equation"></div></section></div><h1 id="rotationalmotionkinematics"><a href="/all-school-notes/physics/2d-motion/index.html#rotationalmotionkinematics">Rotational Motion & Kinematics</a></h1><h2 id="basics"><a href="/all-school-notes/physics/2d-motion/index.html#basics">Basics</a></h2><div data-col="3" data-cmd="grid">
-   <div id="ID17787300002461178707" data-math-node="block" data-cmd="equation"></div><div id="ID9529090550159301665" data-math-node="block" data-cmd="equation"></div><div id="ID14709343940838811046" data-cmd="equation" data-math-node="block"></div></div><div data-cmd="grid" data-col="2">
-   <div data-math-node="block" data-cmd="equation" id="ID5725097942569121444"></div><div id="ID7761881342701739815" data-math-node="block" data-cmd="equation"></div></div><h2 id="auxiliaryformulareference"><a href="/all-school-notes/physics/2d-motion/index.html#auxiliaryformulareference">Auxiliary Formula Reference</a></h2><div boxed="" data-cmd="grid" data-col="2">
+               <th><span data-math-node="inline" id="ID15169963320006484291" data-cmd="inline-math"></span></th><td>The velocity of <span id="ID9271460459277892702" data-math-node="inline" data-cmd="inline-math"></span> relative to <span data-math-node="inline" id="ID5379907886402577929" data-cmd="inline-math"></span></td></tr><tr>
+               <th><span data-math-node="inline" id="ID15344790669472979743" data-cmd="inline-math"></span></th><td>The velocity of <span data-math-node="inline" id="ID6202414156179654759" data-cmd="inline-math"></span> relative to <span id="ID10236692142174352059" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+               <th><span data-cmd="inline-math" id="ID1478077086853883379" data-math-node="inline"></span></th><td>The velocity of <span id="ID7679842332070754512" data-math-node="inline" data-cmd="inline-math"></span> relative to <span id="ID12812428769466892552" data-math-node="inline" data-cmd="inline-math"></span></td></tr><tr>
+               <th><span id="ID5815026059227080641" data-math-node="inline" data-cmd="inline-math"></span></th><td>The velocity of <span data-cmd="inline-math" data-math-node="inline" id="ID6964990372434363852"></span> relative to <span data-math-node="inline" data-cmd="inline-math" id="ID665857197081331085"></span>.
+                                   It locates the origin of <span data-cmd="inline-math" id="ID11364785685221868944" data-math-node="inline"></span> relative to the origin of <span id="ID12091891160108342295" data-math-node="inline" data-cmd="inline-math"></span>.</td></tr></tbody></table></div><p>Therefore</p><div data-cmd="equation" data-math-node="block" id="ID12464777029024648308"></div></section></div><h1 id="rotationalmotionkinematics"><a href="/all-school-notes/physics/2d-motion/index.html#rotationalmotionkinematics">Rotational Motion & Kinematics</a></h1><h2 id="basics"><a href="/all-school-notes/physics/2d-motion/index.html#basics">Basics</a></h2><div data-cmd="grid" data-col="3">
+   <div data-cmd="equation" id="ID11694790951699124173" data-math-node="block"></div><div data-math-node="block" id="ID4668679981933198520" data-cmd="equation"></div><div id="ID5802976196080254234" data-math-node="block" data-cmd="equation"></div></div><div data-col="2" data-cmd="grid">
+   <div data-cmd="equation" id="ID14236900471777102106" data-math-node="block"></div><div id="ID17157697765949765626" data-math-node="block" data-cmd="equation"></div></div><h2 id="auxiliaryformulareference"><a href="/all-school-notes/physics/2d-motion/index.html#auxiliaryformulareference">Auxiliary Formula Reference</a></h2><div data-cmd="grid" data-col="2" boxed="">
    <section data-cmd="note">
-      <div data-math-node="block" data-cmd="equation" id="ID6874607210036900619"></div></section></div><div data-col="2" boxed="" data-cmd="grid">
+      <div id="ID11895571317274136164" data-math-node="block" data-cmd="equation"></div></section></div><div data-col="2" data-cmd="grid" boxed="">
    <section data-cmd="note">
-      <div data-cmd="equation" id="ID7051747930765591579" data-math-node="block"></div></section><section data-cmd="note">
+      <div id="ID5062073975504268131" data-cmd="equation" data-math-node="block"></div></section><section data-cmd="note">
       <div data-table-wrapper=""><table data-wrapped-table="">
          <thead>
             <tr>
                <th>Formula</th><th>Missing</th><th>Quantities Present</th></tr></thead><tbody>
             <tr>
-               <th><span id="ID14745382562776601030" data-math-node="inline" data-cmd="inline-math"></span></th><td><span id="ID13422556988010349673" data-math-node="inline" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID12103514723665811932"></span><span data-math-node="inline" data-cmd="inline-math" id="ID15780573265817651324"></span><span data-math-node="inline" id="ID14440233389019445338" data-cmd="inline-math"></span><span id="ID9620999185824632531" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr><tr>
-               <th><span data-math-node="inline" data-cmd="inline-math" id="ID15060658400476689567"></span></th><td><span data-math-node="inline" id="ID9621535819309907216" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" id="ID13069042748732401539" data-cmd="inline-math"></span><span data-math-node="inline" id="ID11071732991255876878" data-cmd="inline-math"></span><span data-cmd="inline-math" data-math-node="inline" id="ID3084555323965311199"></span><span data-cmd="inline-math" id="ID13556685409850779101" data-math-node="inline"></span></span></td></tr><tr>
-               <th><span data-math-node="inline" id="ID12122327558148737396" data-cmd="inline-math"></span></th><td><span data-math-node="inline" id="ID18441693354796715959" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID5250271889902257571"></span><span data-cmd="inline-math" id="ID2632604879936092398" data-math-node="inline"></span><span id="ID11901759878876992128" data-math-node="inline" data-cmd="inline-math"></span><span id="ID17379790664634731981" data-cmd="inline-math" data-math-node="inline"></span></span></td></tr><tr>
-               <th><span data-cmd="inline-math" id="ID8388432377944846916" data-math-node="inline"></span></th><td><span data-cmd="inline-math" id="ID11367509033068762107" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" id="ID16051177506622994150" data-cmd="inline-math"></span><span data-math-node="inline" data-cmd="inline-math" id="ID2470352022744549690"></span><span data-cmd="inline-math" data-math-node="inline" id="ID10886049006580517939"></span><span data-math-node="inline" data-cmd="inline-math" id="ID10842261900827392705"></span></span></td></tr><tr>
-               <th><span data-math-node="inline" data-cmd="inline-math" id="ID6838130139930284573"></span></th><td><span data-math-node="inline" id="ID4860137807493234605" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span id="ID3008119468699549784" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" id="ID9813602682667479916" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID4419068794984353237" data-math-node="inline"></span><span data-cmd="inline-math" id="ID8966755591148006889" data-math-node="inline"></span></span></td></tr></tbody></table></div></section><section data-cmd="note">
+               <th><span data-cmd="inline-math" id="ID15053809249841870435" data-math-node="inline"></span></th><td><span id="ID15827696895365862466" data-cmd="inline-math" data-math-node="inline"></span></td><td><span style="display:flex;justify-content:space-between;"><span id="ID14138246079648214288" data-math-node="inline" data-cmd="inline-math"></span><span id="ID2725990164724112408" data-math-node="inline" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID17013380798456715349" data-math-node="inline"></span><span id="ID3419877886436292743" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr><tr>
+               <th><span data-cmd="inline-math" data-math-node="inline" id="ID9499087620529113701"></span></th><td><span data-cmd="inline-math" data-math-node="inline" id="ID18335243586187123800"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" data-math-node="inline" id="ID14546926418743829893"></span><span data-math-node="inline" data-cmd="inline-math" id="ID3436012146585586852"></span><span data-cmd="inline-math" id="ID14355276473422395763" data-math-node="inline"></span><span data-cmd="inline-math" id="ID3089106186910697344" data-math-node="inline"></span></span></td></tr><tr>
+               <th><span data-cmd="inline-math" id="ID11686732511564025917" data-math-node="inline"></span></th><td><span id="ID9319502013611659101" data-math-node="inline" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-cmd="inline-math" data-math-node="inline" id="ID14537703353417714801"></span><span data-math-node="inline" data-cmd="inline-math" id="ID328572795792436123"></span><span id="ID7126316758565837708" data-math-node="inline" data-cmd="inline-math"></span><span data-math-node="inline" id="ID14575899020394960672" data-cmd="inline-math"></span></span></td></tr><tr>
+               <th><span data-math-node="inline" data-cmd="inline-math" id="ID2764446112523944043"></span></th><td><span data-math-node="inline" data-cmd="inline-math" id="ID5269661391506863001"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" data-cmd="inline-math" id="ID13338786095799310444"></span><span id="ID5355208771260420504" data-cmd="inline-math" data-math-node="inline"></span><span data-math-node="inline" data-cmd="inline-math" id="ID18239442242586284475"></span><span data-math-node="inline" data-cmd="inline-math" id="ID4702858431749673065"></span></span></td></tr><tr>
+               <th><span data-math-node="inline" data-cmd="inline-math" id="ID1618851795150204845"></span></th><td><span data-math-node="inline" id="ID5956802544216643401" data-cmd="inline-math"></span></td><td><span style="display:flex;justify-content:space-between;"><span data-math-node="inline" id="ID12542786715035025095" data-cmd="inline-math"></span><span data-cmd="inline-math" id="ID14727323554799725260" data-math-node="inline"></span><span data-cmd="inline-math" id="ID454199896227189017" data-math-node="inline"></span><span id="ID10942127073529967985" data-math-node="inline" data-cmd="inline-math"></span></span></td></tr></tbody></table></div></section><section data-cmd="note">
       <div data-cmd="grid" data-col="1">
-         <div data-math-node="block" data-cmd="equation" id="ID10549885389387771053"></div><img style="max-width: 200px;" src="/all-school-notes/static-assets/assets/images/physics/arc-length-formula.svg"></img></div><div data-math-node="block" data-cmd="equation" id="ID13677363792527751511"></div></section><section data-cmd="note">
-      <div id="ID9290427708087483486" data-math-node="block" data-cmd="equation"></div><p>A particle moves with uniform circular motion if and only
+         <div data-cmd="equation" data-math-node="block" id="ID4809916416905159618"></div><img style="max-width: 200px;" src="/all-school-notes/static-assets/assets/images/physics/arc-length-formula.svg"></img></div><div id="ID6803125453091087750" data-math-node="block" data-cmd="equation"></div></section><section data-cmd="note">
+      <div data-cmd="equation" data-math-node="block" id="ID1410900584168134184"></div><p>A particle moves with uniform circular motion if and only
                   if its angular velocity V is constant and unchanging.</p></section></div><h1 id="uniformcircularmotion"><a href="/all-school-notes/physics/2d-motion/index.html#uniformcircularmotion">Uniform Circular Motion</a></h1><p>Uniform means content speed</p></main><script>try{
-katex.render("t", document.getElementById('ID10594797388799576466'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID3087085190401404004'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID6202355030206636174'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID14621323444331199863'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID14142877621385788408'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID9909996740879431274'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID9539309208564538173'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID6208574096275311874'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID6144854936207318291'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID16194769009501181830'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\text{Displacement}\n                                       &= \\Delta_{\\text{general}}\\\\\n                                       &= \\bar{v}\\cdot\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID11750992582161001962'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\text{Displacement}\n                                       &= \\Delta_{\\text{general}}\\\\\n                                       &= \\bar{v}\\cdot\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID7133182577690796794'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\text{Displacement}\n                                       &= \\Delta_{\\text{general}}\\\\\n                                       &= V_1\\cdot\\Delta{t} + \\frac{1}{2}a\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID17689995699014316097'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\text{Displacement}\n                                       &= \\Delta_{\\text{general}}\\\\\n                                       &= V_1\\cdot\\Delta{t} + \\frac{1}{2}a\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID7005580185498595846'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID5404165753988921810"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID11025264092943564033"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID11866973378581151609"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID5897021443217180677"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x} &= x_2 - x_1\\\\\n                                   \\Delta{y} &= y_2 - y_1\n            \\end{split}\\end{equation*}", document.getElementById('ID1589887677678099754'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x} &= x_2 - x_1\\\\\n                                   \\Delta{y} &= y_2 - y_1\n            \\end{split}\\end{equation*}", document.getElementById('ID16028435780881918326'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID15322714544400027393"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID11431640310034727708"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID11225323485171918985'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID17504255748302280313'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y} = V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID8345890217371851279'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y} = V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID16225489616184365515'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{y} = y_2 - y_1", document.getElementById('ID16097067093396647452'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{y} = y_2 - y_1", document.getElementById('ID941980901444575895'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y} &= V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\\\\\n                                   y_2 - y_1 &= V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\\\\\n                                   y_2  &= y_1 + V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID15646034897627546609'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y} &= V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\\\\\n                                   y_2 - y_1 &= V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\\\\\n                                   y_2  &= y_1 + V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID11346575491867440951'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID10474921953205307122'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID9198954141261593997'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\small{\\text{the final position}}\\;\n                                       &= \\small{\\text{the initial position}}\\;\n                                       + V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID4082182384388092030'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\small{\\text{the final position}}\\;\n                                       &= \\small{\\text{the initial position}}\\;\n                                       + V_{y1}\\cdot\\Delta{t} + \\frac{1}{2}a_y\\Delta{t^2}\n            \\end{split}\\end{equation*}", document.getElementById('ID4173941554516569577'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID9757408124997655410"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID14388561498490080622"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID17476516294520547396'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID6244450060230622035'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x} = V_{x}\\cdot\\Delta{t} + \\frac{1}{2}a_x\\Delta{t^2} (1)\n            \\end{split}\\end{equation*}", document.getElementById('ID16378021189947396195'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x} = V_{x}\\cdot\\Delta{t} + \\frac{1}{2}a_x\\Delta{t^2} (1)\n            \\end{split}\\end{equation*}", document.getElementById('ID6963456473557371175'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a_x = 0", document.getElementById('ID4996783916165118646'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a_x = 0", document.getElementById('ID10859032904373832832'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a_x = 0", document.getElementById('ID12722097574844167786'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a_x = 0", document.getElementById('ID9994786300810185486'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_{x1} = v_{x2}", document.getElementById('ID18356798886110153680'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_{x1} = v_{x2}", document.getElementById('ID12406870735853228590'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_x", document.getElementById('ID11395399009861848265'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_x", document.getElementById('ID7968082909538193871'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x}\n                                       &= V_{x}\\cdot\\Delta{t} + 0\\\\\n                                       &= V_{x}\\cdot\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID7111565438882284754'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x}\n                                       &= V_{x}\\cdot\\Delta{t} + 0\\\\\n                                       &= V_{x}\\cdot\\Delta{t}\n            \\end{split}\\end{equation*}", document.getElementById('ID5024956921402766265'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID5057453968642875412"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID16030019810614029252"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x}\n                                       &= x_2 - x_1 = V_{0,x} \\dot t\\\\\n                                   v_{x}\n                                       &= v_{0,x} + a_x\n            \\end{split}\\end{equation*}", document.getElementById('ID12122206201363770258'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{x}\n                                       &= x_2 - x_1 = V_{0,x} \\dot t\\\\\n                                   v_{x}\n                                       &= v_{0,x} + a_x\n            \\end{split}\\end{equation*}", document.getElementById('ID4888969360050035416'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID12459344092124229867"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID5432935797959188639"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y}\n                                       &= y_2 - y_1 = V_{0,x} \\dot t\\\\\n                                   v_{y}\n                                       &= v_{0,y} + a_y\n            \\end{split}\\end{equation*}", document.getElementById('ID10948853682795047700'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\Delta{y}\n                                       &= y_2 - y_1 = V_{0,x} \\dot t\\\\\n                                   v_{y}\n                                       &= v_{0,y} + a_y\n            \\end{split}\\end{equation*}", document.getElementById('ID12339791271024084206'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            v_x &= v_o\\cdot\\cos\\theta\\\\\n                            v_y &= v_o\\cdot\\sin\\theta\n         \\end{split}\\end{equation*}", document.getElementById('ID7941758994550813121'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            v_x &= v_o\\cdot\\cos\\theta\\\\\n                            v_y &= v_o\\cdot\\sin\\theta\n         \\end{split}\\end{equation*}", document.getElementById('ID4878506851440832865'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            a_y &= -g\\\\\n                            a_x &= 0\n         \\end{split}\\end{equation*}", document.getElementById('ID5704387170143387653'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            a_y &= -g\\\\\n                            a_x &= 0\n         \\end{split}\\end{equation*}", document.getElementById('ID7207340297239522231'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{x} &= v_{0,x} \\cdot \\Delta{t}\\\\\n                            v_x &= v_{0,x}\n         \\end{split}\\end{equation*}", document.getElementById('ID12540685223675329372'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{x} &= v_{0,x} \\cdot \\Delta{t}\\\\\n                            v_x &= v_{0,x}\n         \\end{split}\\end{equation*}", document.getElementById('ID4528652783826021967'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{y} &= v_{0,y} \\cdot \\Delta{t} - \\frac{1}{2} g \\Delta{t^2}\\\\\n                            v_y &= v_{0,y} - g \\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID14303062925438577003'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            \\Delta{y} &= v_{0,y} \\cdot \\Delta{t} - \\frac{1}{2} g \\Delta{t^2}\\\\\n                            v_y &= v_{0,y} - g \\Delta{t}\n         \\end{split}\\end{equation*}", document.getElementById('ID3603347959031991443'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         t_{\\text{top}} &= \\frac{v_0\\cdot\\sin\\theta}{g}\\\\\n         \\Delta{y_{\\text{max}}} &= \\frac{v_0^2 + sin^2\\theta}{2g}\\\\\n         \\text{Range} &= \\frac{2 \\cdot v_0^2 \\cdot \\sin\\theta \\cdot \\cos\\theta}{g}\\end{split}\\end{equation*}", document.getElementById('ID4252347724819328128'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         t_{\\text{top}} &= \\frac{v_0\\cdot\\sin\\theta}{g}\\\\\n         \\Delta{y_{\\text{max}}} &= \\frac{v_0^2 + sin^2\\theta}{2g}\\\\\n         \\text{Range} &= \\frac{2 \\cdot v_0^2 \\cdot \\sin\\theta \\cdot \\cos\\theta}{g}\\end{split}\\end{equation*}", document.getElementById('ID7627814701765879028'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\theta", document.getElementById('ID17330551315905214505'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\theta", document.getElementById('ID16337433744257079640'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y_0", document.getElementById('ID10200068049362848721'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y_0", document.getElementById('ID10840084242882204424'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_0", document.getElementById('ID416675726855140826'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_0", document.getElementById('ID15984709573728994951'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID16377194215341271564'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID5591197748569099700'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID286527130653586713'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID572375596757206330'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         v_{0x} &= v_0 \\cdot \\cos\\theta\\\\\n                     v_{0y} &= v_0 \\cdot \\sin\\theta\n      \\end{split}\\end{equation*}", document.getElementById('ID8218461359188320879'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         v_{0x} &= v_0 \\cdot \\cos\\theta\\\\\n                     v_{0y} &= v_0 \\cdot \\sin\\theta\n      \\end{split}\\end{equation*}", document.getElementById('ID14369309755410944087'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\small\n                     \\text{displacement}\n                         &= \\text{initial displacement}\n                         + \\text{initial velocity} \\cdot \\Delta{t}\n                         + \\frac{1}{2}a\\Delta{t^2}\\\\\n                     \\text{velocity} &= \\text{initial velocity} + a\\cdot\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID4777869018643849147'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\small\n                     \\text{displacement}\n                         &= \\text{initial displacement}\n                         + \\text{initial velocity} \\cdot \\Delta{t}\n                         + \\frac{1}{2}a\\Delta{t^2}\\\\\n                     \\text{velocity} &= \\text{initial velocity} + a\\cdot\\Delta{t}\n      \\end{split}\\end{equation*}", document.getElementById('ID14411269629339488065'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID12413040174253562742'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID8109993251973741980'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID249887714615654598'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID10197151430221778460'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID6452670349436212264"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID1987401142467673422"]').forEach(function(x){katex.render("x", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID18035935144343473481'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID8798801097313474367'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               x(t) &= x_0 + v_{0x} t + \\frac{1}{2}a_x t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID17260896423700132253'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               x(t) &= x_0 + v_{0x} t + \\frac{1}{2}a_x t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID7119286682525523103'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x(0) = 0", document.getElementById('ID15077155953970800576'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x(0) = 0", document.getElementById('ID14034274015153639858'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x", document.getElementById('ID5516521030067908487'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x", document.getElementById('ID5743062875939114035'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a_x = 0", document.getElementById('ID4150936516342576978'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a_x = 0", document.getElementById('ID12400139951644911328'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_{0x} = v_0\\cdot\\cos\\theta", document.getElementById('ID13661942388283702740'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_{0x} = v_0\\cdot\\cos\\theta", document.getElementById('ID10851293774832475974'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               x(t) &= 0 + v_{0x}\\cdot t + \\frac{1}{2}0 t^2\\\\\n                                        &= v_{0x} t\\\\\n                                        &= v_0\\cos\\theta\\cdot t\n            \\end{split}\\end{equation*}", document.getElementById('ID7441562670349545244'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               x(t) &= 0 + v_{0x}\\cdot t + \\frac{1}{2}0 t^2\\\\\n                                        &= v_{0x} t\\\\\n                                        &= v_0\\cos\\theta\\cdot t\n            \\end{split}\\end{equation*}", document.getElementById('ID12085705271254362553'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               v_x &= v_{0x} + a_x\\cdot t\\\\\n                                       &= v_0\\cdot\\cos\\theta + 0\\cdot t\\\\\n                                       &= v_0\\cdot\\cos\\theta\n            \\end{split}\\end{equation*}", document.getElementById('ID99448811713973304'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               v_x &= v_{0x} + a_x\\cdot t\\\\\n                                       &= v_0\\cdot\\cos\\theta + 0\\cdot t\\\\\n                                       &= v_0\\cdot\\cos\\theta\n            \\end{split}\\end{equation*}", document.getElementById('ID10577198848368894334'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-document.querySelectorAll('[data-math-target="ID12917291791214953532"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
+document.querySelectorAll('[data-math-target="ID13201205669774297533"]').forEach(function(x){katex.render("y", x, {throwOnError: false,displayMode: false,strict: false,trust: true});})
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID15502373891016478417'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID13705617705978442452'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               y(t) &= y_0 + v_{0y} t + \\frac{1}{2}a_y t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID16758711376174543113'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               y(t) &= y_0 + v_{0y} t + \\frac{1}{2}a_y t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID10553318108989586698'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y_0", document.getElementById('ID4077585415569658181'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y_0", document.getElementById('ID214895034902115215'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y", document.getElementById('ID3530620688026589491'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y", document.getElementById('ID16083599906071388013'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a_y = -9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}", document.getElementById('ID7036127667290489848'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a_y = -9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}", document.getElementById('ID17328657278397064768'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_{0y} = v_0\\cdot\\sin\\theta", document.getElementById('ID15899362444017734776'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_{0y} = v_0\\cdot\\sin\\theta", document.getElementById('ID2140507357530638689'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               y(t) &= y_0 + v_{0y} t + \\frac{1}{2}a_y t^2\\\\\n                                        &= y_0\n                                        + v_0\\cdot\\sin\\theta\\cdot t\n                                        + \\frac{1}{2}\\left(-9.8\\right) t^2\\\\\n                                        &= y_0\n                                        + v_0\\cdot\\sin\\theta\\cdot t\n                                        - 4.9 t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID14796662451101665495'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               y(t) &= y_0 + v_{0y} t + \\frac{1}{2}a_y t^2\\\\\n                                        &= y_0\n                                        + v_0\\cdot\\sin\\theta\\cdot t\n                                        + \\frac{1}{2}\\left(-9.8\\right) t^2\\\\\n                                        &= y_0\n                                        + v_0\\cdot\\sin\\theta\\cdot t\n                                        - 4.9 t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID2996224345563047316'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               v_y &= v_{0y} + a_y\\cdot t = v_{0y} + g \\cdot t\\\\\n                   &= v_0\\cdot\\sin\\theta - 9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}\\end{split}\\end{equation*}", document.getElementById('ID5617166709252600341'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               v_y &= v_{0y} + a_y\\cdot t = v_{0y} + g \\cdot t\\\\\n                   &= v_0\\cdot\\sin\\theta - 9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}\\end{split}\\end{equation*}", document.getElementById('ID17665586165916127214'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            x(t) &= v_0\\cos\\theta\\cdot t\\;(1)\\\\\n                            v_x &= v_0\\cdot\\cos\\theta\\;(2)\n         \\end{split}\\end{equation*}", document.getElementById('ID6185257514017295185'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            x(t) &= v_0\\cos\\theta\\cdot t\\;(1)\\\\\n                            v_x &= v_0\\cdot\\cos\\theta\\;(2)\n         \\end{split}\\end{equation*}", document.getElementById('ID5835595247115533359'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            y(t) &= y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\\;(3)\\\\\n                                &= y_0 + v_0\\cdot\\sin\\theta\\cdot t - 4.9 t^2\\\\\n                            v_y &= v_0\\cdot\\sin\\theta + g \\cdot t\\;(4)\\\\\n                                &= v_0\\cdot\\sin\\theta - 9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}\\cdot t\n         \\end{split}\\end{equation*}", document.getElementById('ID8177250369729336074'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            y(t) &= y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\\;(3)\\\\\n                                &= y_0 + v_0\\cdot\\sin\\theta\\cdot t - 4.9 t^2\\\\\n                            v_y &= v_0\\cdot\\sin\\theta + g \\cdot t\\;(4)\\\\\n                                &= v_0\\cdot\\sin\\theta - 9.8\\frac{\\mathrm{m}}{\\mathrm{s^2}}\\cdot t\n         \\end{split}\\end{equation*}", document.getElementById('ID1138433044119209066'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y = 0", document.getElementById('ID5335651220521725719'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y = 0", document.getElementById('ID17464881223338771157'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(3)", document.getElementById('ID588132054189848243'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(3)", document.getElementById('ID2836309309954929251'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               y = y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID10443821872967393619'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               y = y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\n            \\end{split}\\end{equation*}", document.getElementById('ID5615380037293705662'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y = 0", document.getElementById('ID13831879484048482431'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y = 0", document.getElementById('ID6302180196786262929'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t", document.getElementById('ID7085315630665630752'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID14516872133485401677'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y = 0", document.getElementById('ID8443338303180893405'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y = 0", document.getElementById('ID6601236792850030884'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               0 = \\underbrace{\\frac{1}{2}g}_{\\text{a}}\\;t^2\n                                   + \\underbrace{v_0\\cdot\\sin\\theta}_{\\text{b}}\\; t\n                                   + \\underbrace{y_0}_{\\text{c}}\n            \\end{split}\\end{equation*}", document.getElementById('ID1091090608432715137'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               0 = \\underbrace{\\frac{1}{2}g}_{\\text{a}}\\;t^2\n                                   + \\underbrace{v_0\\cdot\\sin\\theta}_{\\text{b}}\\; t\n                                   + \\underbrace{y_0}_{\\text{c}}\n            \\end{split}\\end{equation*}", document.getElementById('ID9436728032742647743'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               t &= \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\\\\n                 &= \\frac{-v_0\\cdot\\sin\\theta\\pm\\sqrt{\\left(v_0\\cdot\\sin\\theta\\right)^2 - 4\\left(\\frac{1}{2}g\\right)y_0}}{2\\frac{1}{2}g}\\\\\n                  &= \\frac{-v_0\\cdot\\sin\\theta\\pm\\sqrt{\\left(v_0\\cdot\\sin\\theta\\right)^2 - 2 g y_0}}{g}\\end{split}\\end{equation*}", document.getElementById('ID7594035614645958157'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               t &= \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\\\\n                 &= \\frac{-v_0\\cdot\\sin\\theta\\pm\\sqrt{\\left(v_0\\cdot\\sin\\theta\\right)^2 - 4\\left(\\frac{1}{2}g\\right)y_0}}{2\\frac{1}{2}g}\\\\\n                  &= \\frac{-v_0\\cdot\\sin\\theta\\pm\\sqrt{\\left(v_0\\cdot\\sin\\theta\\right)^2 - 2 g y_0}}{g}\\end{split}\\end{equation*}", document.getElementById('ID8013188446060513439'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t", document.getElementById('ID16826303344242913783'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID6866420765677020212'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t", document.getElementById('ID14757549772417920715'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID15681323372661298829'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("x(t)", document.getElementById('ID14757638169625351625'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("x(t)", document.getElementById('ID11861060114285440858'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("y = 0", document.getElementById('ID2301970402674663081'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("y = 0", document.getElementById('ID1258841687036930650'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\text{range}\\;=x(t)\\;\\small\\text{where $t$ is the point at which $y=0$}\n            \\end{split}\\end{equation*}", document.getElementById('ID2728852043263534766'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\text{range}\\;=x(t)\\;\\small\\text{where $t$ is the point at which $y=0$}\n            \\end{split}\\end{equation*}", document.getElementById('ID5262924988023686805'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\text{(4)}", document.getElementById('ID12960166942547000988'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\text{(4)}", document.getElementById('ID9560995968276171650'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               v_y &= v_0\\cdot\\sin\\theta + g t\n            \\end{split}\\end{equation*}", document.getElementById('ID15616082472604069367'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               v_y &= v_0\\cdot\\sin\\theta + g t\n            \\end{split}\\end{equation*}", document.getElementById('ID3745505521990259448'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_y = 0", document.getElementById('ID16256144074592050563'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_y = 0", document.getElementById('ID203533833734819346'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t", document.getElementById('ID1206781451843824288'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID1217912077562466082'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               0 &= v_0\\cdot\\sin\\theta + g \\cdot t\\\\\n                                   -v_0\\cdot\\sin\\theta &= g \\cdot t\\\\\n                                   \\frac{-v_0\\cdot\\sin\\theta}{g}&= t\\\\\n                                   \\therefore\\;t &= \\frac{-v_0\\cdot\\sin\\theta}{g}\\end{split}\\end{equation*}", document.getElementById('ID17253155390312818641'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               0 &= v_0\\cdot\\sin\\theta + g \\cdot t\\\\\n                                   -v_0\\cdot\\sin\\theta &= g \\cdot t\\\\\n                                   \\frac{-v_0\\cdot\\sin\\theta}{g}&= t\\\\\n                                   \\therefore\\;t &= \\frac{-v_0\\cdot\\sin\\theta}{g}\\end{split}\\end{equation*}", document.getElementById('ID8497150256665818550'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t", document.getElementById('ID220092743615612911'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t", document.getElementById('ID13831602922025318961'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(4)", document.getElementById('ID17453228714589736856'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(4)", document.getElementById('ID14482948307259918530'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               y_{\\text{max}}\n                                       &= y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\\\\\n                                       &= \\small y_0 + v_0\\cdot\\sin\\theta\\cdot\\left(\\frac{-v_0\\cdot\\sin\\theta}{g}\\right)\n                                       + \\frac{1}{2}g \\left(\\frac{-v_0\\cdot\\sin\\theta}{g}\\right)^2\n            \\end{split}\\end{equation*}", document.getElementById('ID16311001926228757792'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               y_{\\text{max}}\n                                       &= y_0 + v_0\\cdot\\sin\\theta\\cdot t + \\frac{1}{2}g t^2\\\\\n                                       &= \\small y_0 + v_0\\cdot\\sin\\theta\\cdot\\left(\\frac{-v_0\\cdot\\sin\\theta}{g}\\right)\n                                       + \\frac{1}{2}g \\left(\\frac{-v_0\\cdot\\sin\\theta}{g}\\right)^2\n            \\end{split}\\end{equation*}", document.getElementById('ID15150085761927510180'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t_n", document.getElementById('ID9624737578359723265'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t_n", document.getElementById('ID17396333001716868238'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\theta", document.getElementById('ID12085464935430388717'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\theta", document.getElementById('ID10568498072532580149'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_0", document.getElementById('ID11852584477462777581'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_0", document.getElementById('ID3260007791282513693'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(2)", document.getElementById('ID1675411686054369363'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(2)", document.getElementById('ID10059574285734090052'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(4)", document.getElementById('ID15750539133870754277'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(4)", document.getElementById('ID16419447803691021566'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               v_x &= v_0\\cdot\\cos\\theta\\\\\n                                   v_y &= v_0\\cdot\\sin\\theta + g \\cdot t\n            \\end{split}\\end{equation*}", document.getElementById('ID8309778162462075000'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               v_x &= v_0\\cdot\\cos\\theta\\\\\n                                   v_y &= v_0\\cdot\\sin\\theta + g \\cdot t\n            \\end{split}\\end{equation*}", document.getElementById('ID1411253483538442429'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t_n", document.getElementById('ID11026567594188477846'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t_n", document.getElementById('ID17445581152832484270'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("t = t_n", document.getElementById('ID12233550057809980447'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("t = t_n", document.getElementById('ID12780205365562648468'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_n}", document.getElementById('ID11936026065885908900'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_n}", document.getElementById('ID7473381489561744085'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               A &= v_y(t_n)\\\\\n                                   B &= v_x(t_n)\\\\\n            \\end{split}\\end{equation*}", document.getElementById('ID4149614585633664774'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               A &= v_y(t_n)\\\\\n                                   B &= v_x(t_n)\\\\\n            \\end{split}\\end{equation*}", document.getElementById('ID9499504336962439056'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_x\\hat{i} + v_y\\hat{j}", document.getElementById('ID18268032259721828748'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_x\\hat{i} + v_y\\hat{j}", document.getElementById('ID14165213111752036259'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               \\vec{v_n} &= B\\hat{\\textbf{i}} + A\\hat{\\textbf{j}}\n            \\end{split}\\end{equation*}", document.getElementById('ID12595864013806434095'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               \\vec{v_n} &= B\\hat{\\textbf{i}} + A\\hat{\\textbf{j}}\n            \\end{split}\\end{equation*}", document.getElementById('ID1581163789411343617'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_n", document.getElementById('ID7187804687786480331'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_n", document.getElementById('ID388143755086735860'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\theta_n", document.getElementById('ID5839764350740071103'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\theta_n", document.getElementById('ID12513991075964797677'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n               v_n &= \\sqrt{A^2 + B^2}\\\\\n                                   \\theta_n &= \\tan^{-1}\\left(\\frac{A}{B}\\right)\n            \\end{split}\\end{equation*}", document.getElementById('ID162850490029279716'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n               v_n &= \\sqrt{A^2 + B^2}\\\\\n                                   \\theta_n &= \\tan^{-1}\\left(\\frac{A}{B}\\right)\n            \\end{split}\\end{equation*}", document.getElementById('ID2999543222522267464'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace\n                         {\\text{range}\\;=\\frac{v^2 \\cdot sin\\left(2\\theta\\right)}{g}}\n                         _{\\small{\\text{start/end elevation must be the same}}}\n      \\end{split}\\end{equation*}", document.getElementById('ID3659540748919841159'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace\n                         {\\text{range}\\;=\\frac{v^2 \\cdot sin\\left(2\\theta\\right)}{g}}\n                         _{\\small{\\text{start/end elevation must be the same}}}\n      \\end{split}\\end{equation*}", document.getElementById('ID18363096319966925834'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("v_0\\sin\\theta", document.getElementById('ID16223207797499441267'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("v_0\\sin\\theta", document.getElementById('ID2006723656065458905'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v}", document.getElementById('ID8953004870631050072'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v}", document.getElementById('ID8148799120781360818'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{w}", document.getElementById('ID12865655677864789971'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{w}", document.getElementById('ID16560044727317005531'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_F}", document.getElementById('ID2894624734677252298'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_F}", document.getElementById('ID7786889654178666625'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v} &= \\vec{w} + \\vec{v_F}\n      \\end{split}\\end{equation*}", document.getElementById('ID15944466722528416698'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v} &= \\vec{w} + \\vec{v_F}\n      \\end{split}\\end{equation*}", document.getElementById('ID17547068637508287072'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v}", document.getElementById('ID10006369017569275418'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v}", document.getElementById('ID8103383453610156600'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{w}", document.getElementById('ID6757325393630233538'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{w}", document.getElementById('ID5245794188873661004'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_F}", document.getElementById('ID13929303208934348049'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_F}", document.getElementById('ID12636993299120990683'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID2838980706168440166'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID15850996445204466951'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("O", document.getElementById('ID814110433183320712'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("O", document.getElementById('ID13768474785169419742'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("A", document.getElementById('ID11346297289751970693'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("A", document.getElementById('ID9019216371016029564'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID2153621272892092997'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID11357892561414826892'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_{O,A}}", document.getElementById('ID5812286100991319549'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_{O,A}}", document.getElementById('ID15169963320006484291'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("O", document.getElementById('ID12936536930213172377'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("O", document.getElementById('ID9271460459277892702'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("A", document.getElementById('ID978205460777497933'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("A", document.getElementById('ID5379907886402577929'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_{O,B}}", document.getElementById('ID16772233957081584196'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_{O,B}}", document.getElementById('ID15344790669472979743'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("O", document.getElementById('ID5836250269994618068'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("O", document.getElementById('ID6202414156179654759'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID9604299733480754131'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID10236692142174352059'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_{A,B}}", document.getElementById('ID1554441683772365576'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_{A,B}}", document.getElementById('ID1478077086853883379'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("A", document.getElementById('ID5405892649343389658'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("A", document.getElementById('ID7679842332070754512'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID4759413468862525086'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID12812428769466892552'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\vec{v_{B,A}}", document.getElementById('ID42680658722885102'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\vec{v_{B,A}}", document.getElementById('ID5815026059227080641'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID16130957908037369136'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID6964990372434363852'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("A", document.getElementById('ID5095318805050274071'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("A", document.getElementById('ID665857197081331085'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("A", document.getElementById('ID10202795278022514600'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("A", document.getElementById('ID11364785685221868944'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("B", document.getElementById('ID7355246755948847559'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("B", document.getElementById('ID12091891160108342295'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v_{O,B}} &= \\vec{v_{O,A}} + \\vec{v_{A,B}}\\\\\n                     \\vec{v_{O,A}} &= \\vec{v_{O,B}} + \\vec{v_{B,A}}\n      \\end{split}\\end{equation*}", document.getElementById('ID3109416966761595951'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\vec{v_{O,B}} &= \\vec{v_{O,A}} + \\vec{v_{A,B}}\\\\\n                     \\vec{v_{O,A}} &= \\vec{v_{O,B}} + \\vec{v_{B,A}}\n      \\end{split}\\end{equation*}", document.getElementById('ID12464777029024648308'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\small\\text{Angular velocity}\\normalsize= \\omega\n                  &= \\tau f\\\\\n                  &= \\frac{\\tau}{T}\\\\\n   \\end{split}\\end{equation*}", document.getElementById('ID17787300002461178707'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\small\\text{Angular velocity}\\normalsize= \\omega\n                  &= \\tau f\\\\\n                  &= \\frac{\\tau}{T}\\\\\n   \\end{split}\\end{equation*}", document.getElementById('ID11694790951699124173'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\small\\text{Centripetal acceleration}\\normalsize= a_C\n                  &= \\frac{v^2}{r}\\\\\n                  &= \\frac{\\omega^2 r^2}{r}\\\\\n                  &= \\omega^2 r\n   \\end{split}\\end{equation*}", document.getElementById('ID9529090550159301665'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\small\\text{Centripetal acceleration}\\normalsize= a_C\n                  &= \\frac{v^2}{r}\\\\\n                  &= \\frac{\\omega^2 r^2}{r}\\\\\n                  &= \\omega^2 r\n   \\end{split}\\end{equation*}", document.getElementById('ID4668679981933198520'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\text{Period} = T &= \\frac{1}{f}= \\frac{\\tau}{\\omega}\\end{split}\\end{equation*}", document.getElementById('ID14709343940838811046'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\text{Period} = T &= \\frac{1}{f}= \\frac{\\tau}{\\omega}\\end{split}\\end{equation*}", document.getElementById('ID5802976196080254234'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\vec{v} &\\perp \\vec{r}\\\\\n              \\vec{a} &\\perp \\vec{v}\\\\\n   \\end{split}\\end{equation*}", document.getElementById('ID5725097942569121444'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\vec{v} &\\perp \\vec{r}\\\\\n              \\vec{a} &\\perp \\vec{v}\\\\\n   \\end{split}\\end{equation*}", document.getElementById('ID14236900471777102106'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n      \\begin{rcases}\n         \\vec{a} &\\parallel \\vec{r}\\\\\n         \\vec{a} &\\propto \\vec{r}\n      \\end{rcases}\\;\\small\\text{They are anti-parallel}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID7761881342701739815'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n      \\begin{rcases}\n         \\vec{a} &\\parallel \\vec{r}\\\\\n         \\vec{a} &\\propto \\vec{r}\n      \\end{rcases}\\;\\small\\text{They are anti-parallel}\\normalsize\\end{split}\\end{equation*}", document.getElementById('ID17157697765949765626'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\text{Period} = T &= \\frac{1}{f}= \\frac{\\tau}{\\omega}\\end{split}\\end{equation*}", document.getElementById('ID6874607210036900619'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\text{Period} = T &= \\frac{1}{f}= \\frac{\\tau}{\\omega}\\end{split}\\end{equation*}", document.getElementById('ID11895571317274136164'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\theta\n                         &= \\omega \\cdot t\\\\\n                         &= \\omega_1 \\cdot t + \\frac{1}{2}\\alpha t^2\\\\\n                     \\omega_2 &= \\omega_1 + \\alpha \\cdot t\\\\\n                     \\omega_2^2 &= \\omega_1^2 + 2\\cdot\\alpha\\cdot\\theta\\\\\n                     v &= \\small{\\frac{1 \\text{circumference}}{1 \\text{period}}}\\normalsize\\\\\n                         &= \\frac{2 \\pi r}{T}\\end{split}\\end{equation*}", document.getElementById('ID7051747930765591579'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\theta\n                         &= \\omega \\cdot t\\\\\n                         &= \\omega_1 \\cdot t + \\frac{1}{2}\\alpha t^2\\\\\n                     \\omega_2 &= \\omega_1 + \\alpha \\cdot t\\\\\n                     \\omega_2^2 &= \\omega_1^2 + 2\\cdot\\alpha\\cdot\\theta\\\\\n                     v &= \\small{\\frac{1 \\text{circumference}}{1 \\text{period}}}\\normalsize\\\\\n                         &= \\frac{2 \\pi r}{T}\\end{split}\\end{equation*}", document.getElementById('ID5062073975504268131'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2 = \\omega_1 + \\alpha\\Delta{t}", document.getElementById('ID14745382562776601030'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2 = \\omega_1 + \\alpha\\Delta{t}", document.getElementById('ID15053809249841870435'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta", document.getElementById('ID13422556988010349673'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta", document.getElementById('ID15827696895365862466'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_1", document.getElementById('ID12103514723665811932'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_1", document.getElementById('ID14138246079648214288'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2", document.getElementById('ID15780573265817651324'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2", document.getElementById('ID2725990164724112408'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\alpha", document.getElementById('ID14440233389019445338'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\alpha", document.getElementById('ID17013380798456715349'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID9620999185824632531'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID3419877886436292743'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta = \\left(\\frac{\\omega_2 + \\omega_1}{2}\\right)\\Delta{t}", document.getElementById('ID15060658400476689567'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta = \\left(\\frac{\\omega_2 + \\omega_1}{2}\\right)\\Delta{t}", document.getElementById('ID9499087620529113701'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("a", document.getElementById('ID9621535819309907216'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("a", document.getElementById('ID18335243586187123800'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta", document.getElementById('ID13069042748732401539'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta", document.getElementById('ID14546926418743829893'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_1", document.getElementById('ID11071732991255876878'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_1", document.getElementById('ID3436012146585586852'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID3084555323965311199'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID14355276473422395763'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2", document.getElementById('ID13556685409850779101'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2", document.getElementById('ID3089106186910697344'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta = \\omega_1 \\Delta{t} + \\frac{1}{2}\\alpha\\Delta{t^2}", document.getElementById('ID12122327558148737396'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta = \\omega_1 \\Delta{t} + \\frac{1}{2}\\alpha\\Delta{t^2}", document.getElementById('ID11686732511564025917'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2", document.getElementById('ID18441693354796715959'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2", document.getElementById('ID9319502013611659101'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta", document.getElementById('ID5250271889902257571'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta", document.getElementById('ID14537703353417714801'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_1", document.getElementById('ID2632604879936092398'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_1", document.getElementById('ID328572795792436123'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID11901759878876992128'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID7126316758565837708'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\alpha", document.getElementById('ID17379790664634731981'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\alpha", document.getElementById('ID14575899020394960672'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta = \\omega_2\\Delta{t} - \\frac{1}{2}\\alpha\\Delta{t^2}", document.getElementById('ID8388432377944846916'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta = \\omega_2\\Delta{t} - \\frac{1}{2}\\alpha\\Delta{t^2}", document.getElementById('ID2764446112523944043'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_1", document.getElementById('ID11367509033068762107'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_1", document.getElementById('ID5269661391506863001'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta", document.getElementById('ID16051177506622994150'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta", document.getElementById('ID13338786095799310444'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2", document.getElementById('ID2470352022744549690'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2", document.getElementById('ID5355208771260420504'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID10886049006580517939'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID18239442242586284475'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\alpha", document.getElementById('ID10842261900827392705'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\alpha", document.getElementById('ID4702858431749673065'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("(\\omega_2)^2 = (\\omega_1)^2 + 2\\alpha\\Delta\\theta", document.getElementById('ID6838130139930284573'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("(\\omega_2)^2 = (\\omega_1)^2 + 2\\alpha\\Delta\\theta", document.getElementById('ID1618851795150204845'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta{t}", document.getElementById('ID4860137807493234605'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta{t}", document.getElementById('ID5956802544216643401'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\Delta\\theta", document.getElementById('ID3008119468699549784'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\Delta\\theta", document.getElementById('ID12542786715035025095'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_1", document.getElementById('ID9813602682667479916'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_1", document.getElementById('ID14727323554799725260'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\omega_2", document.getElementById('ID4419068794984353237'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\omega_2", document.getElementById('ID454199896227189017'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\alpha", document.getElementById('ID8966755591148006889'), {throwOnError: false,displayMode: false,strict: false,trust: true});
+katex.render("\\alpha", document.getElementById('ID10942127073529967985'), {throwOnError: false,displayMode: false,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n            \\underbrace{\\small\\text{Arc Length}\\normalsize}_{S}\n                                &=  \\underbrace{\\small\\text{radius}\\normalsize}_{r}\n                                    \\cdot\n                                    \\underbrace{\\small\\text{Central angle}\\normalsize}_{\\theta}\\\\\n                            S &= r\\cdot\\theta\\\\\n         \\end{split}\\end{equation*}", document.getElementById('ID10549885389387771053'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n            \\underbrace{\\small\\text{Arc Length}\\normalsize}_{S}\n                                &=  \\underbrace{\\small\\text{radius}\\normalsize}_{r}\n                                    \\cdot\n                                    \\underbrace{\\small\\text{Central angle}\\normalsize}_{\\theta}\\\\\n                            S &= r\\cdot\\theta\\\\\n         \\end{split}\\end{equation*}", document.getElementById('ID4809916416905159618'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{\\small\\text{Linear displacement}\\normalsize}_{\\Delta{x}}\n                         &= \\underbrace{\\small\\text{Angular displacement}\\normalsize}_{\\theta}\n                             \\cdot\n                            \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     \\Delta{x} &= \\theta \\cdot r\\\\\n                     \\underbrace{\\small\\text{Linear velocity}\\normalsize}_{v}\n                         &=  \\underbrace{\\small\\text{Angular Velocity}\\normalsize}_{\\omega}\n                             \\cdot\n                             \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     v &= \\omega \\cdot r\\\\\n                     \\underbrace{\\small\\text{Linear acceleration}\\normalsize}_{a}\n                         &=  \\underbrace{\\small\\text{Angular acceleration}\\normalsize}_{\\alpha}\n                             \\cdot\n                             \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     a &= \\alpha \\cdot r\n      \\end{split}\\end{equation*}", document.getElementById('ID13677363792527751511'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{\\small\\text{Linear displacement}\\normalsize}_{\\Delta{x}}\n                         &= \\underbrace{\\small\\text{Angular displacement}\\normalsize}_{\\theta}\n                             \\cdot\n                            \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     \\Delta{x} &= \\theta \\cdot r\\\\\n                     \\underbrace{\\small\\text{Linear velocity}\\normalsize}_{v}\n                         &=  \\underbrace{\\small\\text{Angular Velocity}\\normalsize}_{\\omega}\n                             \\cdot\n                             \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     v &= \\omega \\cdot r\\\\\n                     \\underbrace{\\small\\text{Linear acceleration}\\normalsize}_{a}\n                         &=  \\underbrace{\\small\\text{Angular acceleration}\\normalsize}_{\\alpha}\n                             \\cdot\n                             \\underbrace{\\small\\text{radius}\\normalsize}_{r}\\\\\n                     a &= \\alpha \\cdot r\n      \\end{split}\\end{equation*}", document.getElementById('ID6803125453091087750'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 
 try{
-katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{\\small\\text{Angular displacement}\\normalsize}_{\\theta}\n                         &= \\underbrace{\\small\\text{Angular speed}\\normalsize}_{\\omega}\n                             \\cdot\n                            \\underbrace{\\small\\text{time}\\normalsize}_{t}\\\\\n                     \\theta &= \\omega \\cdot t\n      \\end{split}\\end{equation*}", document.getElementById('ID9290427708087483486'), {throwOnError: false,displayMode: true,strict: false,trust: true});
+katex.render("\\begin{equation*}\\begin{split}\n         \\underbrace{\\small\\text{Angular displacement}\\normalsize}_{\\theta}\n                         &= \\underbrace{\\small\\text{Angular speed}\\normalsize}_{\\omega}\n                             \\cdot\n                            \\underbrace{\\small\\text{time}\\normalsize}_{t}\\\\\n                     \\theta &= \\omega \\cdot t\n      \\end{split}\\end{equation*}", document.getElementById('ID1410900584168134184'), {throwOnError: false,displayMode: true,strict: false,trust: true});
 
 }catch(msg){console.log("Error", msg)}
 </script></body></html>
